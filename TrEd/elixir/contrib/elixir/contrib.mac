@@ -1,0 +1,75 @@
+# -*- perl -*-
+
+#ifndef elixir
+#define elixir
+
+#include <contrib/pml/PML.mak>
+
+package ElixirFM;
+
+BEGIN {
+
+    use Exporter 'import';
+
+    our @EXPORT_OK = ('switch_context_hook', 'pre_switch_context_hook');
+
+    import TredMacro;
+}
+
+sub initialize_direction {
+
+    $TrEd::Convert::lefttoright = $_[0] ne 'right-to-left' || $^O eq 'MSWin32' || $Tk::VERSION gt 804.00;
+
+    $TrEd::Config::valueLineReverseLines = $_[0] eq 'right-to-left';
+    $TrEd::Config::valueLineAlign = $_[1];
+
+    $main::treeViewOpts->{reverseNodeOrder} = $_[0] eq 'right-to-left';
+
+    $TrEd::TreeView::DefaultNodeStyle{NodeLabel} = [ -valign => 'top', -halign => $_[1] ];
+    $TrEd::TreeView::DefaultNodeStyle{Node} = [ -textalign => $_[1] ];
+
+    $_->treeView->apply_options($main::treeViewOpts) foreach @{$grp->{framegroup}->{treeWindows}};
+
+    main::update_value_line($grp->{framegroup});
+}
+
+sub switch_context_hook {
+
+    return unless GUI();
+
+    my $class = $_[1];
+
+    my $style = &{$class . '::CreateStylesheets'}();
+
+    SetStylesheetPatterns($style, $class, 1) unless StylesheetExists($class);
+
+    my $sheet = GetCurrentStylesheet();
+
+    SetCurrentStylesheet($class) unless $sheet =~ $class;
+
+    initialize_direction('right-to-left', 'right');
+}
+
+sub pre_switch_context_hook {
+
+    return unless GUI();
+
+    return if $_[0] =~ /ElixirFM/ and $_[1] =~ /ElixirFM/;
+
+    initialize_direction('left-to-right', 'left');
+}
+
+#include "ElixirFM.mak"
+
+package TredMacro;
+
+push @AUTO_CONTEXT_GUESSING, sub {
+
+    my $schema = PML::SchemaName();
+
+    return $schema if defined $schema and $schema =~ /ElixirFM/;
+
+    return;
+};
+
+#endif elixir

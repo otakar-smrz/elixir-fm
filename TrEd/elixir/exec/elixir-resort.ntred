@@ -1,0 +1,93 @@
+#!/usr/bin/ntred
+
+package TredMacro;
+
+use Encode;
+
+use strict;
+
+our $grp;
+
+sub autostart {
+
+    my $list = $grp->{'FSFile'}->treeList();
+
+    my @data;
+
+    $data[0] = [ grep { isNull($_) } @{$list} ];
+
+    @{$list} = grep { not isNull($_) } @{$list};
+
+
+    $data[3] = [ grep { ElixirFM::isMoony($_->firstson()->{'root'}) } @{$list} ];
+
+    $data[2] = [ grep {     isForeign($_) } @{$data[3]} ];
+    $data[3] = [ grep { not isForeign($_) } @{$data[3]} ];
+
+    $data[1] = [ grep { ElixirFM::isComplex($_->firstson()->{'root'}) } @{$data[3]} ];
+    $data[3] = [ grep { ElixirFM::isRegular($_->firstson()->{'root'}) } @{$data[3]} ];
+
+
+    $data[6] = [ grep { ElixirFM::isSunny($_->firstson()->{'root'}) } @{$list} ];
+
+    $data[5] = [ grep {     isForeign($_) } @{$data[6]} ];
+    $data[6] = [ grep { not isForeign($_) } @{$data[6]} ];
+
+    $data[4] = [ grep { ElixirFM::isComplex($_->firstson()->{'root'}) } @{$data[6]} ];
+    $data[6] = [ grep { ElixirFM::isRegular($_->firstson()->{'root'}) } @{$data[6]} ];
+
+
+    @{$list} = map { my $null = Treex::PML::Factory->createNode(); DetermineNodeType($null); $null,
+                     sort { stringCompare($a->firstson()->{'root'},
+                                          $b->firstson()->{'root'}) } @{$_} } @data[1 .. 6];
+
+
+    warn "Null Clusters: " . @{$data[0]} . "\n";
+    warn "Moony Complex: " . @{$data[1]} . "\n";
+    warn "Moony Foreign: " . @{$data[2]} . "\n";
+    warn "Moony Regular: " . @{$data[3]} . "\n";
+    warn "Sunny Complex: " . @{$data[4]} . "\n";
+    warn "Sunny Foreign: " . @{$data[5]} . "\n";
+    warn "Sunny Regular: " . @{$data[6]} . "\n";
+
+    ChangingFile(1);
+}
+
+sub isNull {
+
+    return not $_[0]->children();
+}
+
+sub isForeign {
+
+    my $this = shift;
+
+    while ($this = $this->following()) {
+
+        return if $this->{'#name'} eq 'Entry' and ElixirFM::entity($this)->[0] !~ /^(?:Xtra|Ynit|Zero|Grph)$/;
+    }
+
+    return 1;
+}
+
+sub stringCompare {
+
+    my ($x, $y) = @_;
+
+    my @x = ElixirFM::letters $x;
+
+    my @y = ElixirFM::letters $y;
+
+    my $i;
+
+    my %cmp = map { $_, $i++ } qw "' b t _t ^g .h _h d _d r z s ^s .s .d .t .z ` .g f q k l m n h w y";
+
+    for ($i = 0; $i < @x and $i < @y; $i++) {
+
+        my $cmp = $cmp{$x[$i]} <=> $cmp{$y[$i]};
+
+        return $cmp if $cmp;
+    }
+
+    return @x <=> @y;
+}

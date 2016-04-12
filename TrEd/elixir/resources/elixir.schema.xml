@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pml_schema version="1.1" xmlns="http://ufal.mff.cuni.cz/pdt/pml/schema/">
+    <revision>1.2.1</revision>
+    <description>ElixirFM Lexicon</description>
+
+    <root name="ElixirFM" type="Lexicon"/>
+
+    <type name="Lexicon">
+        <structure>
+            <member name="meta">
+                <structure>
+                    <member name="revision">
+                        <cdata format="any"/>
+                    </member>
+                    <member name="date">
+                        <cdata format="any"/>
+                    </member>
+                </structure>
+            </member>
+            <member name="data" required="1">
+                <sequence role="#TREES">
+                    <element name="Cluster" type="Cluster"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Cluster">
+        <container role="#NODE">
+            <sequence role="#CHILDNODES">
+                <element name="Nest" type="Nest"/>
+            </sequence>
+        </container>
+    </type>
+
+    <type name="Nest">
+        <structure role="#NODE">
+            <member name="root" type="Root"/>
+            <member name="ents" role="#CHILDNODES">
+                <sequence>
+                    <element name="Entry" type="Entry"/>
+                </sequence>
+            </member>
+            <member name="note" type="String"/>
+        </structure>
+    </type>
+
+    <type name="Entry">
+        <structure role="#NODE">
+            <member name="morphs" type="Morphs" required="1"/>
+            <member name="entity" type="Entity" required="1"/>
+            <member name="limits" type="Limits"/>
+            <member name="reflex" type="Reflex" required="1"/>
+            <member name="vallex" type="Vallex" role="#CHILDNODES"/>
+            <member name="note" type="String"/>
+        </structure>
+    </type>
+
+    <type name="Root">
+        <cdata format="any"/>
+    </type>
+
+    <type name="Entity">
+        <sequence content_pattern="(Verb|Noun|Adj|Pron|Num|Adv|Prep|Conj|Part|Intj|Xtra|Ynit|Zero|Grph)">
+            <element name="Verb">
+                <structure>
+                    <member name="form" required="1">
+                        <list type="Form" ordered="1"/>
+                    </member>
+                    <member name="pfirst">
+                        <list type="Pattern" ordered="1"/>
+                    </member>
+                    <member name="imperf">
+                        <list type="Pattern" ordered="1"/>
+                    </member>
+                    <member name="second">
+                        <list type="Pattern" ordered="1"/>
+                    </member>
+                    <member name="tense" type="Tense"/>
+                    <member name="voice" type="Voice"/>
+                    <member name="masdar">
+                        <list type="Morphs" ordered="1"/>
+                    </member>
+                </structure>
+            </element>
+            <element name="Noun">
+                <structure>
+                    <member name="plural" type="Plural"/>
+                    <member name="femini" type="Femini"/>
+                    <member name="except" type="Except"/>
+                </structure>
+            </element>
+            <element name="Adj" >
+                <structure>
+                    <member name="plural" type="Plural"/>
+                    <member name="femini" type="Femini"/>
+                </structure>
+            </element>
+            <element name="Pron">
+                <container/>
+            </element>
+            <element name="Num">
+                <structure>
+                    <member name="plural" type="Plural"/>
+                    <member name="femini" type="Femini"/>
+                </structure>
+            </element>
+            <element name="Adv">
+                <container/>
+            </element>
+            <element name="Prep">
+                <container/>
+            </element>
+            <element name="Conj">
+                <container/>
+            </element>
+            <element name="Part">
+                <container/>
+            </element>
+            <element name="Intj">
+                <container/>
+            </element>
+            <element name="Xtra">
+                <container/>
+            </element>
+            <element name="Ynit">
+                <container/>
+            </element>
+            <element name="Zero">
+                <container/>
+            </element>
+            <element name="Grph">
+                <container/>
+            </element>
+        </sequence>
+    </type>
+
+    <type name="Form">
+        <choice>
+            <value>I</value>
+            <value>II</value>
+            <value>III</value>
+            <value>IV</value>
+            <value>V</value>
+            <value>VI</value>
+            <value>VII</value>
+            <value>VIII</value>
+            <value>IX</value>
+            <value>X</value>
+            <value>XI</value>
+            <value>XII</value>
+            <value>XIII</value>
+            <value>XIV</value>
+            <value>XV</value>
+        </choice>
+    </type>
+
+    <type name="Tense">
+        <choice>
+            <value>Perfect</value>
+            <value>Imperfect</value>
+        </choice>
+    </type>
+
+    <type name="Voice">
+        <choice>
+            <value>Active</value>
+            <value>Passive</value>
+        </choice>
+    </type>
+
+    <type name="Plural">
+        <list type="Morphs" ordered="1"/>
+    </type>
+
+    <type name="Femini">
+        <list type="Morphs" ordered="1"/>
+    </type>
+
+    <type name="Except">
+        <choice>
+            <value>Diptote</value>
+            <value>Triptote</value>
+        </choice>
+    </type>
+
+    <type name="Morphs">
+        <cdata format="any"/>
+    </type>
+
+    <type name="Pattern">
+        <cdata format="any"/>
+    </type>
+
+    <type name="String">
+        <cdata format="any"/>
+    </type>
+
+    <type name="Reflex">
+        <list type="String" ordered="1"/>
+    </type>
+
+    <type name="Limits">
+        <structure>
+            <member name="fst" type="Tags"/>
+            <member name="snd">
+                <list ordered="1">
+                    <structure>
+                        <member name="fst">
+                            <list type="Tags" ordered="1"/>
+                        </member>
+                        <member name="snd">
+                            <list type="Morphs" ordered="1"/>
+                        </member>
+                    </structure>
+                </list>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Tags">
+        <cdata format="any"/>
+    </type>
+
+    <type name="Vallex">
+        <sequence>
+            <element name="Frame" type="Frame"/>
+        </sequence>
+    </type>
+
+    <type name="Frame">
+        <structure role="#NODE">
+            <member name="reflex">
+                <structure>
+                    <member name="en" type="Reflex"/>
+                    <member name="cs" type="Reflex"/>
+                </structure>
+            </member>
+            <member name="class" type="String"/>
+            <member name="example" type="Example"/>
+            <member name="passivity">
+                <structure>
+                    <member name="comment" type="String"/>
+                    <member name="example" type="Example"/>
+                </structure>
+            </member>
+            <member name="reciprocity">
+                <structure>
+                    <member name="comment" type="String"/>
+                    <member name="example" type="Example"/>
+                </structure>
+            </member>
+            <member name="links">
+                <list type="String" ordered="1"/>
+            </member>
+            <member name="slots" role="#CHILDNODES">
+                <sequence>
+                    <element name="Slot" type="Slot"/>
+                </sequence>
+            </member>
+            <member name="note" type="String"/>
+        </structure>
+    </type>
+
+    <type name="Example">
+        <list ordered="1">
+            <structure>
+                <member name="ar" type="String"/>
+                <member name="en" type="String"/>
+                <member name="cs" type="String"/>
+            </structure>
+        </list>
+    </type>
+
+    <type name="Slot">
+        <structure role="#NODE">
+            <member name="role" type="Functor"/>
+            <member name="type" type="Type"/>
+            <member name="data" role="#CHILDNODES">
+                <sequence>
+                    <element name="Node" type="Node"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Node">
+        <structure role="#NODE">
+            <member name="form" type="String"/>
+            <member name="tag" type="Tags"/>
+            <member name="with" role="#CHILDNODES">
+                <sequence>
+                    <element name="Node" type="Node"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Functor">
+        <choice>
+            <value>ACT</value>
+            <value>PAT</value>
+            <value>ADDR</value>
+            <value>EFF</value>
+            <value>ORIG</value>
+            <value>ACMP</value>
+            <value>ADVS</value>
+            <value>AIM</value>
+            <value>APP</value>
+            <value>APPS</value>
+            <value>ATT</value>
+            <value>BEN</value>
+            <value>CAUS</value>
+            <value>CNCS</value>
+            <value>COMPL</value>
+            <value>COND</value>
+            <value>CONJ</value>
+            <value>CONFR</value>
+            <value>CPHR</value>
+            <value>CPR</value>
+            <value>CRIT</value>
+            <value>CSQ</value>
+            <value>CTERF</value>
+            <value>DENOM</value>
+            <value>DES</value>
+            <value>DIFF</value>
+            <value>DIR</value>
+            <value>DIR1</value>
+            <value>DIR2</value>
+            <value>DIR3</value>
+            <value>DIR!</value>
+            <value>DIR1!</value>
+            <value>DIR2!</value>
+            <value>DIR3!</value>
+            <value>DISJ</value>
+            <value>DPHR</value>
+            <value>ETHD</value>
+            <value>EXT</value>
+            <value>EV</value>
+            <value>FPHR</value>
+            <value>GRAD</value>
+            <value>HER</value>
+            <value>ID</value>
+            <value>INTF</value>
+            <value>INTT</value>
+            <value>LOC</value>
+            <value>MANN</value>
+            <value>MAT</value>
+            <value>MEANS</value>
+            <value>MOD</value>
+            <value>NA</value>
+            <value>NORM</value>
+            <value>OPER</value>
+            <value>PAR</value>
+            <value>PARTL</value>
+            <value>PN</value>
+            <value>PREC</value>
+            <value>PRED</value>
+            <value>REAS</value>
+            <value>REG</value>
+            <value>RESL</value>
+            <value>RESTR</value>
+            <value>RHEM</value>
+            <value>RSTR</value>
+            <value>SUBS</value>
+            <value>TFHL</value>
+            <value>TFRWH</value>
+            <value>THL</value>
+            <value>THL!</value>
+            <value>THO</value>
+            <value>TOWH</value>
+            <value>TPAR</value>
+            <value>TSIN</value>
+            <value>TTILL</value>
+            <value>TWHEN</value>
+            <value>VOC</value>
+            <value>VOCAT</value>
+            <value>SENT</value>
+        </choice>
+    </type>
+
+    <type name="Type">
+        <choice>
+            <value>OBL</value>
+            <value>OPT</value>
+            <value>TYP</value>
+        </choice>
+    </type>
+
+</pml_schema>

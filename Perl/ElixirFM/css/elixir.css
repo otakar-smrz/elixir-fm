@@ -1,0 +1,381 @@
+@import url(http://openfontlibrary.org/face/droid-arabic-naskh);
+@import url(http://openfontlibrary.org/face/droid-arabic-kufi);
+
+/*
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+*/
+
+/* The following resource incorporates links to font software which is the valuable 
+copyrighted property of Rosetta and/or its suppliers. You may not attempt to copy,
+install, redistribute, convert, modify or reverse engineer this font software. 
+Please contact Rosetta with any questions regarding Web Fonts: info@rosettatype.com */
+
+/*
+@font-face {
+    font-family: "BBCNassim";
+    src: url("http://www.bbc.co.uk/worldservice/fonts/arabic/nassim/bbc-nassim-regular.eot");
+    src: local("☺"),
+         url("http://www.bbc.co.uk/worldservice/fonts/arabic/nassim/bbc-nassim-regular.woff") format("woff"),
+	 url("http://www.bbc.co.uk/worldservice/fonts/arabic/nassim/bbc-nassim-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "BBCNassim";
+    src: url("http://www.bbc.co.uk/worldservice/fonts/arabic/nassim/bbc-nassim-bold.eot");
+    src: local("☺"),
+         url("http://www.bbc.co.uk/worldservice/fonts/arabic/nassim/bbc-nassim-bold.woff") format("woff"),
+	 url("http://www.bbc.co.uk/worldservice/fonts/arabic/nassim/bbc-nassim-bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+*/
+
+.phon {
+    font-style: italic;
+}
+
+.orth {
+    font-family: Droid Arabic Naskh, DejaVu Sans;
+    font-size: medium;
+    /* display: none; */
+    line-height: 150%;
+    direction: rtl;
+}
+
+.xtag {
+    font-family: Courier New;
+}
+
+.root {
+    font-family: Droid Arabic Naskh, 
+                 DejaVu Sans Condensed, DejaVu Sans, Tahoma, Arial Unicode MS, Verdana, Arial, Helvetica, sans-serif;
+    color: #4B0082 /*indigo*/;
+    white-space: nowrap;
+}
+
+.morphs {
+    font-family: DejaVu Sans /*Courier New*/;
+    color: #FF8C00 /*darkorange*/;
+    white-space: nowrap;
+}
+
+.class {
+    font-family: Courier New;
+    color: #FF4500 /*orangered*/;
+}
+
+.stems {
+    font-family: DejaVu Sans /*Courier New*/;
+    color: #FF8C00 /*darkorange*/;
+}
+
+.word {
+    font-size: large;
+}
+
+.notice {
+    color: #FF4500 /*orangered*/;
+}
+
+body {
+    font-family: DejaVu Sans Condensed, DejaVu Sans, Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: medium;
+    color: black;
+    background-color: white;
+}
+
+p {
+    margin: 12px 0px;
+}
+
+table {
+    margin: 0px;
+    margin-bottom: 3px;
+    border-spacing: 0px;
+}
+
+table.lexeme {
+    width: 98%;
+    margin: 0px;
+    padding: 2px 0px;
+    border-spacing: 0px;
+}
+
+.lexeme td.xtag {
+    width: 2ex;
+}
+
+.lexeme td.phon {
+    width: 6em;
+}
+
+.lexeme td.orth {
+    width: 4em;
+    padding-right: 1em;
+}
+
+.lexeme td.atex {
+    width: 3em;
+}
+
+.lexeme td.root {
+    text-align: center;
+    width: 9ex;
+}
+
+.lexeme td.morphs {
+    width: 8em;
+}
+
+.lexeme td.class {
+    width: 3em;
+}
+
+.lexeme td.reflex {
+    width: 25em;
+}
+
+.lexeme td.button {
+    min-width: 10em;
+    text-align: right;
+    white-space: nowrap;
+}
+
+table.nest {
+    width: 98%;
+    margin: 0px;
+    padding: 2px 0px;
+    border-spacing: 0px;
+}
+
+ul.listexpander > li > span {
+    font-family: Droid Arabic Naskh, 
+                 DejaVu Sans Condensed, DejaVu Sans, Tahoma, Arial Unicode MS, Verdana, Arial, Helvetica, sans-serif;
+}
+
+.nest td.root {
+    font-weight: bold;
+}
+
+.nest td.button {
+    min-width: 10em;
+    text-align: right;
+    white-space: nowrap;
+}
+
+td {
+    border: 0px;
+    padding: 0px;
+    padding-right: 25px;
+    font-size: medium;
+    font-weight: normal;
+    text-indent: 0px;
+    text-decoration: none;
+    vertical-align: baseline;
+}
+
+td.orth {
+    text-align: right;
+}
+
+td.xtag input {
+    font-family: Courier New;
+    direction: ltr;
+}
+
+td.xtag input#text {
+    font-family: Droid Arabic Naskh, 
+                 Courier New;
+    direction: ltr;
+}
+
+input#text {
+    font-family: Droid Arabic Naskh, 
+                 DejaVu Sans Condensed, DejaVu Sans, Tahoma, Arial Unicode MS, Verdana, Arial, Helvetica, sans-serif;
+    font-size: medium;
+    direction: rtl;
+}
+
+input#clip {
+    font-family: Droid Arabic Naskh, 
+                 DejaVu Sans Condensed, DejaVu Sans, Tahoma, Arial Unicode MS, Verdana, Arial, Helvetica, sans-serif;
+    font-size: medium;
+    direction: rtl;
+}
+
+input {
+    font-family: DejaVu Sans Condensed, DejaVu Sans, Tahoma, Arial Unicode MS, Verdana, Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+h1 {
+    font-size: x-large;
+    font-weight: bold;
+    color: #EEE8AA /*palegoldenrod*/;
+    background-color: #4B0082 /*indigo*/;
+    padding: 3px 6px;
+}
+
+h2 {
+    font-size: large;
+    font-weight: bold;
+    line-height: 130%;
+    color: #4B0082 /*indigo*/;
+    border: 1px;
+    border-style: solid;
+    border-color: #DAA520 /*goldenrod*/;
+    padding: 2px 5px;
+    margin-top: 25px;
+}
+
+h3 {
+    font-size: large;
+    font-weight: bold;
+    line-height: 130%;
+    color: black;
+    border: 1px;
+    border-style: solid;
+    border-color: #FFD700 /*gold*/;
+    padding: 2px 5px;
+    margin-bottom: 10px;
+}
+
+h3 span.mode {
+    font-size: medium;
+    font-weight: normal;
+    margin-right: 0.4em;
+}
+
+h3 span.word {
+    font-family: Droid Arabic Naskh, 
+                 DejaVu Sans Condensed, DejaVu Sans, Tahoma, Arial Unicode MS, Verdana, Arial, Helvetica, sans-serif;
+    margin-right: 0em;
+}
+
+a:link {
+    color: #4B0082 /*indigo*/;
+    text-decoration: none;
+}
+
+h1 a:link {
+    color: #FFD700 /*gold*/;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #4B0082 /*indigo*/;
+    text-decoration: none;
+}
+
+h1 a:visited {
+    color: #FFD700 /*gold*/;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4B0082 /*indigo*/;
+    text-decoration: none;
+    background-color: #EEE8AA /*palegoldenrod*/;
+}
+
+h1 a:hover {
+    color: #FFD700 /*gold*/;
+    text-decoration: none;
+    background-color: #4B0082 /*indigo*/;
+}
+
+a:active {
+    color: #FFD700 /*gold*/;
+    text-decoration: none;
+}
+
+code {
+    font-family: Courier New;
+    font-size: medium;
+}
+
+span {
+    display: inline;
+    margin-right: 1em;
+}
+
+.button a {
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    margin-right: 0em;
+    background-color: white;
+    text-align: right;
+    /* position: relative; */
+    /* left: 200px; */
+}
+
+.button a:visited {
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    margin-right: 0em;
+}
+
+.button a:hover {
+    padding: 0 5px;
+    border: 1px solid #FFD700 /*gold*/;
+    margin-right: 0em;
+    color: #FF4500 /*orangered*/;
+}
+
+.button a:active {
+    padding: 0 5px;
+    border: 1px solid #FFD700 /*gold*/;
+    margin-right: 0em;
+    color: #FFD700 /*gold*/;
+}
+
+div.menu {
+    /* min-width: 10em; */
+    /* line-height: 0%; */
+    font-weight: bold;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.menu span {
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    margin-right: 0em;
+    background-color: white;
+    text-align: right;
+    /* position: relative; */
+    /* left: 200px; */
+}
+
+.menu a {
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    margin-right: 0em;
+    background-color: white;
+    text-align: right;
+    /* position: relative; */
+    /* left: 200px; */
+}
+
+.menu a:visited {
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    margin-right: 0em;
+}
+
+.menu a:hover {
+    padding: 0 5px;
+    border: 1px solid #FFD700 /*gold*/;
+    margin-right: 0em;
+    color: #FF4500 /*orangered*/;
+}
+
+.menu a:active {
+    padding: 0 5px;
+    border: 1px solid #FFD700 /*gold*/;
+    margin-right: 0em;
+    color: #FFD700 /*gold*/;
+}

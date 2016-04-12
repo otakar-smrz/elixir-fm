@@ -1,0 +1,129 @@
+/*
+  List Expander
+*/
+
+.listexpander{width: 100%}
+
+.listexpander,
+.listexpander ul,
+.listexpander li{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    line-height: 150%;
+}
+.listexpander ul{
+  /*
+    Uncomment this if you want to initially hide the child lists.
+    If you do, Javascript disabled and CSS enabled browsers will not be able to use this list.
+    display: none;
+  */
+}
+.listexpander li{
+    line-height: 150%;
+    border-top: 2px white solid;
+    cursor: default;
+    text-indent: 30px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.listexpander table {
+    margin-left: 15px;
+    border: 0px;
+    border-spacing: 0px;
+}
+
+.listexpander td {
+    padding-left: 20px;
+    padding-right: 0px;
+}
+
+.listexpander li.collapsed,
+.listexpander li.expanded{cursor: pointer}
+
+/* first level */
+
+.listexpander li{background: #EEE8AA /*palegoldenrod*/}
+.listexpander li.collapsed{background: #EEE8AA /*palegoldenrod*/ url(collapsed.gif) no-repeat 5px .4em}
+.listexpander li.expanded{background: #EEE8AA /*palegoldenrod*/ url(expanded.gif) no-repeat 5px .4em}
+
+ul.listexpander li.empty{cursor: default; background: #f8e7e7 url(empty.gif) no-repeat 5px .4em}
+
+/* second level */
+
+.listexpander li ul,
+.listexpander li li{background: #eed; font-weight: normal}
+.listexpander li li.collapsed{background: #eed url(collapsed.gif) no-repeat 5px .5em}
+.listexpander li li.expanded{background: #eed url(expanded.gif) no-repeat 5px .5em}
+
+/* third level */
+
+.listexpander li li ul,
+.listexpander li li li{background: #ffe}
+.listexpander li li li.collapsed{background: #ffe url(collapsed.gif) no-repeat 5px .5em}
+.listexpander li li li.expanded{background: #ffe url(expanded.gif) no-repeat 5px .5em}
+
+/* fourth level */
+
+.listexpander li li li li{background: #fff} /* li{text-indent: 0; margin-left: 30px; width: auto} */
+
+/* etc. */
+
+/* buttons */
+
+p.listexpander{
+    margin: 0em;
+    margin-top: 0.5em;
+    margin-bottom: 0.2em;
+}
+p.listexpander a{
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    margin-right: 5px;
+    cursor: pointer;
+}
+p.listexpander a:hover{
+    background: #eee;
+}
+
+p.listexpander input.exclude {
+    float: right;
+    margin: 3px 0px;
+    line-height: 110%;
+    padding: 0 5px;
+    font-family: Courier New;
+    font-size: smaller;
+    direction: ltr;
+}
+
+p.listexpander a.exclude {
+    float: right;
+    margin: 3px 0px;
+    line-height: 110%;
+    padding: 0px 5px;
+    border: 1px solid #ddd;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* float fix */
+.listexpander li:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.listexpander li{
+    display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .listexpander li{
+    height: 1%;
+}
+.listexpander li{
+    display: block;
+}
+/* End hide from IE-mac */
+/* end float fix */
