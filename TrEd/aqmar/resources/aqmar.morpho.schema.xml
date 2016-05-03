@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pml_schema version="1.1" xmlns="http://ufal.mff.cuni.cz/pdt/pml/schema/">
+    <revision>0.1.0</revision>
+    <description>AQMAR Morpho Annotation</description>
+
+    <!--
+    <reference name="words" readas="trees"/>
+    -->
+
+    <root name="AQMAR-Morpho" type="Trees"/>
+
+    <type name="Trees">
+        <structure>
+            <member name="meta">
+                <structure>
+                    <member name="revision">
+                        <cdata format="any"/>
+                    </member>
+                    <member name="date">
+                        <cdata format="any"/>
+                    </member>
+                </structure>
+            </member>
+            <member name="data" required="1">
+                <sequence role="#TREES">
+                    <element name="Unit" type="Unit"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Unit">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" required="1" role="#ID" type="ID"/>
+            <!--
+            <member name="w.rf">
+                <cdata format="PMLREF"/>
+            </member>
+            -->
+            <member name="form" type="String"/>
+            <member name="data" type="String"/>
+            <member name="note" type="String"/>
+            <member name="with" role="#CHILDNODES">
+                <sequence>
+                    <element name="Word" type="Word"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Word">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" required="1" role="#ID" type="ID"/>
+            <!--
+            <member name="w.rf">
+                <cdata format="PMLREF"/>
+            </member>
+            -->
+            <member name="form" type="String"/>
+            <member name="data" type="String"/>
+            <member name="note" type="String"/>
+            <member name="score" type="Score"/>
+            <!--
+            <member name="data">
+                <list type="Tuple" ordered="1"/>
+            </member>
+            -->
+            <member name="with" role="#CHILDNODES">
+                <list type="Tuple" ordered="1"/>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Tuple">
+        <container role="#NODE">
+            <attribute name="form" type="String"/>
+            <attribute name="note" type="String"/>
+            <sequence role="#CHILDNODES">
+                <element name="Token" type="Token"/>
+            </sequence>
+        </container>
+    </type>
+
+    <type name="Token">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" required="1" role="#ID" type="ID"/>
+            <member name="morphs" type="Morphs"/>
+            <member name="tag" type="Tags"/>
+            <member name="form" type="String"/>
+            <member name="note" type="String"/>
+            <member name="extra" type="String"/>
+            <member name="sense" type="String"/>
+            <member name="root" type="Root"/>
+            <member name="cite" type="Entry"/>
+            <member name="lemma" type="String"/>
+            <member name="score" type="Score"/>
+        </structure>
+    </type>
+
+
+
+    <type name="Element.Trees">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" required="1" role="#ID" type="ID"/>
+            <member name="form" type="String"/>
+            <member name="note" type="String"/>
+            <member name="apply" type="String"/>
+            <member name="score" type="Score"/>
+            <member name="restrict" type="String"/>
+            <member name="inherit" type="String"/>
+            <member name="hide" type="String" role="#HIDE"/>
+            <member name="tips" type="String"/>
+            <member name="with" role="#CHILDNODES">
+                <sequence>
+                    <element name="Partition" type="Partition.Trees"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Partition.Trees">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" role="#ID" type="ID"/>
+            <member name="form" type="String"/>
+            <member name="note" type="String"/>
+            <member name="apply" type="String"/>
+            <member name="score" type="Score"/>
+            <member name="restrict" type="String"/>
+            <member name="inherit" type="String"/>
+            <member name="hide" type="String" role="#HIDE"/>
+            <member name="tips" type="String"/>
+            <member name="with" role="#CHILDNODES">
+                <sequence>
+                    <element name="Component" type="Component.Trees"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Component.Trees">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" role="#ID" type="ID"/>
+            <member name="form" type="String"/>
+            <member name="note" type="String"/>
+            <member name="apply" type="String"/>
+            <member name="score" type="Score"/>
+            <member name="restrict" type="String"/>
+            <member name="inherit" type="String"/>
+            <member name="hide" type="String" role="#HIDE"/>
+            <member name="tips" type="String"/>
+            <member name="with" role="#CHILDNODES">
+                <sequence>
+                    <element name="Lexeme" type="Lexeme.Trees"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Lexeme.Trees">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" role="#ID" type="ID"/>
+            <member name="root" type="Root"/>
+            <member name="cite" type="Entry"/>
+            <member name="form" type="String"/>
+            <member name="note" type="String"/>
+            <member name="apply" type="String"/>
+            <member name="score" type="Score"/>
+            <member name="restrict" type="String"/>
+            <member name="inherit" type="String"/>
+            <member name="hide" type="String" role="#HIDE"/>
+            <member name="tips" type="String"/>
+            <member name="with" role="#CHILDNODES">
+                <sequence>
+                    <element name="Token" type="Token.Trees"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Token.Trees">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" role="#ID" type="ID"/>
+            <member name="morphs" type="Morphs"/>
+            <member name="tag" type="Tags"/>
+            <member name="form" type="String"/>
+            <member name="note" type="String"/>
+            <member name="sense" type="String"/>
+            <member name="apply" type="String"/>
+            <member name="score" type="Score"/>
+            <member name="inherit" type="String"/>
+            <member name="hide" type="String" role="#HIDE"/>
+        </structure>
+    </type>
+
+
+
+
+
+    <type name="Element.Lists">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" required="1" role="#ID" type="ID"/>
+            <member name="form" type="String"/>
+            <member name="note" type="String"/>
+            <member name="apply" type="String"/>
+            <member name="score" type="Score"/>
+            <member name="restrict">
+                <list type="String" ordered="1"/>
+            </member>
+            <member name="current">
+                <cdata format="nonNegativeInteger"/>
+            </member>
+            <member name="with" role="#CHILDNODES">
+                <sequence>
+                    <element name="Partition" type="Partition.Lists"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Partition.Lists">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" role="#ID" type="ID"/>
+            <member name="form" type="String"/>
+            <member name="note" type="String"/>
+            <member name="apply" type="String"/>
+            <member name="score" type="Score"/>
+            <member name="hide" type="String" role="#HIDE"/>
+            <member name="with" role="#CHILDNODES">
+                <sequence>
+                    <element name="Group" type="Group.Lists"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Group.Lists">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" role="#ID" type="ID"/>
+            <member name="form" type="String"/>
+            <member name="note" type="String"/>
+            <member name="apply" type="String"/>
+            <member name="score" type="Score"/>
+            <member name="hide" type="String" role="#HIDE"/>
+            <member name="data">
+                <sequence>
+                    <element name="Lexeme" type="Lexeme.Lists"/>
+                </sequence>
+            </member>
+            <member name="with" role="#CHILDNODES">
+                <sequence>
+                    <element name="Tuple" type="Tuple.Lists"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Lexeme.Lists">
+        <structure>
+            <member name="root" type="Root"/>
+            <member name="cite" type="Entry"/>
+            <member name="form" type="String"/>
+            <member name="note" type="String"/>
+        </structure>
+    </type>
+
+    <type name="Tuple.Lists">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" role="#ID" type="ID"/>
+            <member name="form" type="String"/>
+            <member name="note" type="String"/>
+            <member name="apply" type="String"/>
+            <member name="score" type="Score"/>
+            <member name="hide" type="String" role="#HIDE"/>
+            <member name="with" role="#CHILDNODES">
+                <sequence>
+                    <element name="Token" type="Token.Lists"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Token.Lists">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" role="#ID" type="ID"/>
+            <member name="morphs" type="Morphs"/>
+            <member name="tag" type="Tags"/>
+            <member name="form" type="String"/>
+            <member name="note" type="String"/>
+            <member name="sense" type="String"/>
+            <member name="apply" type="String"/>
+            <member name="score" type="Score"/>
+            <member name="hide" type="String" role="#HIDE"/>
+        </structure>
+    </type>
+
+
+
+    <import schema="elixir.schema.xml" type="Morphs"/>
+
+    <import schema="elixir.schema.xml" type="Limits"/>
+
+    <import schema="elixir.schema.xml" type="Reflex"/>
+
+    <import schema="elixir.schema.xml" type="String"/>
+
+    <import schema="elixir.schema.xml" type="Plural"/>
+
+    <import schema="elixir.schema.xml" type="Femini"/>
+
+    <import schema="elixir.schema.xml" type="Pattern"/>
+
+    <import schema="elixir.schema.xml" type="Root"/>
+
+    <import schema="elixir.schema.xml" type="Tags"/>
+
+    <type name="Entry">
+        <structure role="#NODE">
+            <member name="morphs" type="Morphs"/>
+            <member name="entity" type="Entity"/>
+            <member name="limits" type="Limits"/>
+            <member name="reflex" type="Reflex"/>
+            <member name="note">
+                <list type="String" ordered="1"/>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Entity">
+        <sequence content_pattern="(Verb|Noun|Adj|Pron|Num|Adv|Prep|Conj|Part|Intj|Xtra|Ynit|Zero|Grph)">
+            <element name="Verb">
+                <structure>
+                    <member name="pfirst">
+                        <list type="Pattern" ordered="1"/>
+                    </member>
+                    <member name="imperf">
+                        <list type="Pattern" ordered="1"/>
+                    </member>
+                    <member name="second">
+                        <list type="Pattern" ordered="1"/>
+                    </member>
+                </structure>
+            </element>
+            <element name="Noun">
+                <structure>
+                    <member name="plural" type="Plural"/>
+                </structure>
+            </element>
+            <element name="Adj" >
+                <structure>
+                    <member name="plural" type="Plural"/>
+                    <member name="femini" type="Femini"/>
+                </structure>
+            </element>
+            <element name="Pron">
+                <container/>
+            </element>
+            <element name="Num">
+                <structure>
+                    <member name="plural" type="Plural"/>
+                    <member name="femini" type="Femini"/>
+                </structure>
+            </element>
+            <element name="Adv">
+                <container/>
+            </element>
+            <element name="Prep">
+                <container/>
+            </element>
+            <element name="Conj">
+                <container/>
+            </element>
+            <element name="Part">
+                <container/>
+            </element>
+            <element name="Intj">
+                <container/>
+            </element>
+            <element name="Xtra">
+                <container/>
+            </element>
+            <element name="Ynit">
+                <container/>
+            </element>
+            <element name="Zero">
+                <container/>
+            </element>
+            <element name="Grph">
+                <container/>
+            </element>
+        </sequence>
+    </type>
+
+    <type name="Score">
+        <cdata format="any"/>
+    </type>
+
+    <type name="ID">
+        <cdata format="ID"/>
+    </type>
+
+</pml_schema>

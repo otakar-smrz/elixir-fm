@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tred_extension xmlns="http://ufal.mff.cuni.cz/pdt/pml/" install_size="">
+  <head>
+    <schema href="tred_extension_schema.xml"/>
+  </head>
+  <pkgname>aqmar</pkgname>
+  <repository href="."/>
+  <title>AQMAR Proof of Concept</title>
+  <version>0.1.0</version>
+  <copyright year="2011-2016">Otakar Smrž</copyright>
+  <description>Combining ElixirFM and PADT with MADA and CATiB.</description>
+  <require>
+    <tred min_version="1.4484"/>
+    <extension name="elixir"/>
+    <perl_module name="perl" min_version="5.008"/>
+    <perl_module name="Algorithm::Diff">
+      <ppm name="Algorithm-Diff" href="http://www.bribes.org/perl/ppm/Algorithm-Diff.ppd"/>
+      <other href="http://cpan.uwinnipeg.ca/dist/Algorithm-Diff"/>
+    </perl_module>
+    <perl_module name="JSON">
+      <ppm name="JSON" href="http://www.bribes.org/perl/ppm/JSON.ppd"/>
+      <other href="http://cpan.uwinnipeg.ca/dist/JSON"/>
+    </perl_module>
+  </require>
+</tred_extension>

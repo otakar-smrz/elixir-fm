@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pml_schema version="1.1" xmlns="http://ufal.mff.cuni.cz/pdt/pml/schema/">
+    <revision>0.1.0</revision>
+    <description>AQMAR Syntax Annotation</description>
+
+    <reference name="morpho" readas="pml"/>
+
+    <import schema="aqmar.morpho.schema.xml" type="Unit"/>
+
+    <derive type="Unit">
+        <structure>
+            <member name="id" as_attribute="1" required="1" role="#ID">
+                <cdata format="PMLREF"/>
+            </member>
+        </structure>
+    </derive>
+
+    <import schema="aqmar.morpho.schema.xml" type="Word"/>
+
+    <derive type="Word">
+        <structure>
+            <member name="id" as_attribute="1" required="1" role="#ID">
+                <cdata format="PMLREF"/>
+            </member>
+        </structure>
+    </derive>
+
+    <import schema="aqmar.morpho.schema.xml" type="Token"/>
+
+    <derive type="Token">
+        <structure>
+            <member name="id" as_attribute="1" required="1" role="#ID">
+                <cdata format="PMLREF"/>
+            </member>
+        </structure>
+    </derive>
+
+    <import schema="aqmar.morpho.schema.xml" type="String"/>
+
+    <import schema="aqmar.morpho.schema.xml" type="ID"/>
+
+    <root name="AQMAR-Syntax" type="Trees"/>
+
+    <type name="Trees">
+        <structure>
+            <member name="meta">
+                <structure>
+                    <member name="revision">
+                        <cdata format="any"/>
+                    </member>
+                    <member name="date">
+                        <cdata format="any"/>
+                    </member>
+                </structure>
+            </member>
+            <member name="data" required="1">
+                <sequence role="#TREES">
+                    <element name="Tree" type="Tree"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Tree">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" required="1" role="#ID" type="ID"/>
+            <member name="w.rf" role="#KNIT" type="Unit">
+                <cdata format="PMLREF"/>
+            </member>
+            <member name="ord" required="1" role="#ORDER" type="ORDER"/>
+            <member name="note" type="String"/>
+            <member name="form" type="String"/>
+            <member name="hide" type="String" role="#HIDE"/>
+            <member name="with" role="#CHILDNODES">
+                <sequence>
+                    <element name="Node" type="Node"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Node">
+        <structure role="#NODE">
+            <member name="id" as_attribute="1" required="1" role="#ID" type="ID"/>
+            <member name="w.rf" role="#KNIT" type="Word">
+                <cdata format="PMLREF"/>
+            </member>
+            <member name="m.rf" role="#KNIT" type="Token">
+                <cdata format="PMLREF"/>
+            </member>
+            <member name="ord" required="1" role="#ORDER" type="ORDER"/>
+            <member name="role" type="Role"/>
+            <member name="note" type="String"/>
+            <member name="hide" type="String" role="#HIDE"/>
+            <member name="with" role="#CHILDNODES">
+                <sequence>
+                    <element name="Node" type="Node"/>
+                </sequence>
+            </member>
+        </structure>
+    </type>
+
+    <type name="Role">
+        <choice>
+            <value>SBJ</value>
+            <value>OBJ</value>
+            <value>PRD</value>
+            <value>TPC</value>
+            <value>MOD</value>
+            <value>IDF</value>
+            <value>TMZ</value>
+            <value>---</value>
+        </choice>
+    </type>
+
+    <type name="ORDER">
+        <cdata format="nonNegativeInteger"/>
+    </type>
+
+</pml_schema>
