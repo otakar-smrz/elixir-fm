@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tred_extension xmlns="http://ufal.mff.cuni.cz/pdt/pml/" install_size="25281135">
+<tred_extension xmlns="http://ufal.mff.cuni.cz/pdt/pml/" install_size="">
   <head>
     <schema href="tred_extension_schema.xml"/>
   </head>
@@ -7,8 +7,8 @@
   <icon>icons/elixir.png</icon>
   <repository href="http://ufal.mff.cuni.cz/tred/extensions/core/"/>
   <title>ElixirFM Lexicon</title>
-  <version>1.2.1.2</version>
-  <copyright year="2006-2013">Otakar Smrž</copyright>
+  <version>1.2.1.3</version>
+  <copyright year="2006-2016">Otakar Smrž</copyright>
   <description>Editing, browsing, and processing of the ElixirFM lexicon.</description>
   <require>
     <tred min_version="2.4936"/>
