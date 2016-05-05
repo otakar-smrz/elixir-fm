@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ElixirFM xmlns="http://ufal.mff.cuni.cz/pdt/pml/">
   <head>
-    <schema href="elixir.schema.xml" />
+    <schema href="elixir.schema.xml"/>
   </head>
   <meta>
     <revision>$Revision: 255 $</revision>

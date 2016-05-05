@@ -22,7 +22,7 @@ sub recurse {
 
             my $data = ElixirFM::merge $root, $text;
 
-            $data = encode "utf8", join "\t", $text, $data, (decode "arabtex", $data), (decode "zdmg", $data);
+            $data = join "\t", $text, $data, (decode "arabtex", $data), (decode "zdmg", $data);
 
             $elem->set_text($data);
         }
@@ -31,8 +31,6 @@ sub recurse {
             recurse $twig, $node;
         }
     }
-
-    $elem->flush();
 }
 
 sub root {
@@ -41,14 +39,13 @@ sub root {
 
     $root = $elem->text();
 
-    my $data = encode "utf8", join "\t", $root, (decode "arabtex", $root), (decode "zdmg", $root);
+    my $data = join "\t", $root, (decode "arabtex", $root), (decode "zdmg", $root);
 
     $elem->set_text($data);
-
-    $elem->flush();
 }
 
-my $twig = XML::Twig->new('twig_roots' => { 'Nest/root' => \&root,
+my $twig = XML::Twig->new('twig_roots' => { 'ElixirFM' => sub { },
+                                            'Nest/root' => \&root,
 
                                             map { $_ => \&recurse }
 
@@ -61,7 +58,7 @@ my $twig = XML::Twig->new('twig_roots' => { 'Nest/root' => \&root,
                                             'Entry/entity/*/second',
                                             'Entry/limits/snd//snd',
                           },
-                          'twig_print_outside_roots' => 1,
-                          'pretty_print' => 'none');
+                          'pretty_print' => 'indented');
 
 $twig->parse(STDIN);
+$twig->print();

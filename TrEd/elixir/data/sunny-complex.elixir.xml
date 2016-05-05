@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ElixirFM xmlns="http://ufal.mff.cuni.cz/pdt/pml/">
   <head>
-    <schema href="elixir.schema.xml" />
+    <schema href="elixir.schema.xml"/>
   </head>
   <meta>
-    <revision>$Revision: 344 $</revision>
-    <date>$Date: 2013-05-05 02:37:39 +0200 (Sun, 05 May 2013) $</date>
+    <revision>$Revision: 730 $</revision>
+    <date>$Date: 2016-05-05 01:04:12 +0200 (Thu, 05 May 2016) $</date>
   </meta>
   <data>
     <Cluster>
@@ -121,7 +121,7 @@
             <entity>
               <Noun>
                 <plural>FawACiL</plural>
-                <derive>------F---</derive>
+                <femini>FawCaL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>twin</reflex>
@@ -195,7 +195,6 @@
               </Verb>
             </entity>
             <reflex>be Anglicized</reflex>
-            
           </Entry>
         </ents>
       </Nest>
@@ -212,7 +211,6 @@
               </Verb>
             </entity>
             <reflex>be Anglicized</reflex>
-            
           </Entry>
         </ents>
       </Nest>
@@ -229,7 +227,6 @@
               </Verb>
             </entity>
             <reflex>be Anglicized</reflex>
-            
           </Entry>
         </ents>
       </Nest>
@@ -331,7 +328,6 @@
               <LM>become sour</LM>
               <LM>ferment</LM>
             </reflex>
-            
           </Entry>
         </ents>
       </Nest>
@@ -466,7 +462,6 @@
               <LM>be devout</LM>
               <LM>be pious</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCIL</morphs>
@@ -665,23 +660,27 @@
               <Verb>
                 <form>I</form>
                 <imperf>FCU</imperf>
+                <masdar>FuCUL</masdar>
               </Verb>
             </entity>
+            <limits/>
             <reflex>
               <LM>follow</LM>
-              <LM>recite</LM>
+              <LM>come after</LM>
             </reflex>
           </Entry>
           <Entry>
-            <morphs>TaFACY</morphs>
+            <morphs>FaCA</morphs>
             <entity>
               <Verb>
-                <form>VI</form>
+                <form>I</form>
+                <imperf>FCU</imperf>
+                <masdar>FiCAL |&lt; aT</masdar>
               </Verb>
             </entity>
             <reflex>
-              <LM>follow one another</LM>
-              <LM>be successive</LM>
+              <LM>recite</LM>
+              <LM>read aloud</LM>
             </reflex>
           </Entry>
           <Entry>
@@ -694,6 +693,18 @@
             <reflex>
               <LM>make follow</LM>
               <LM>put next</LM>
+            </reflex>
+          </Entry>
+          <Entry>
+            <morphs>TaFACY</morphs>
+            <entity>
+              <Verb>
+                <form>VI</form>
+              </Verb>
+            </entity>
+            <reflex>
+              <LM>follow one another</LM>
+              <LM>be successive</LM>
             </reflex>
           </Entry>
           <Entry>
@@ -786,6 +797,10 @@
                 <form>I</form>
                 <pfirst>FaCaL</pfirst>
                 <imperf>FiCL</imperf>
+                <masdar>
+                  <LM>FaCL</LM>
+                  <LM>FaCAL</LM>
+                </masdar>
               </Verb>
             </entity>
             <reflex>
@@ -828,7 +843,6 @@
               <LM>be completed</LM>
               <LM>be finished</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCAL</morphs>
@@ -951,7 +965,7 @@
             <entity>
               <Noun>
                 <plural>FuCCAL</plural>
-                <derive>------F---</derive>
+                <femini>FACiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>resident</reflex>
@@ -1147,7 +1161,6 @@
               </Verb>
             </entity>
             <reflex>be crowned</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FAL</morphs>
@@ -1445,6 +1458,11 @@
               <Verb>
                 <form>I</form>
                 <imperf>FIL</imperf>
+                <masdar>
+                  <LM>FaCL</LM>
+                  <LM>FIL</LM>
+                  <LM>FaCaLAn</LM>
+                </masdar>
               </Verb>
             </entity>
             <reflex>
@@ -1749,7 +1767,6 @@
               <LM>be infatuated</LM>
               <LM>be enslaved</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -2010,14 +2027,13 @@
               </Verb>
             </entity>
             <reflex>be covered with warts</reflex>
-            
           </Entry>
           <Entry>
             <morphs>KuRDUS</morphs>
             <entity>
               <Noun>
                 <plural>KaRADIS</plural>
-                <derive>------F---</derive>
+                <femini>KuRDUS |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>wart</reflex>
@@ -2056,7 +2072,6 @@
               <LM>flow</LM>
               <LM>stream</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCAL</morphs>
@@ -2185,7 +2200,6 @@
               </Verb>
             </entity>
             <reflex>become wealthy</reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -2371,7 +2385,6 @@
               <LM>be subverted</LM>
               <LM>be overthrown</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FuCL |&lt; aT</morphs>
@@ -2559,7 +2572,6 @@
               <LM>be doubled</LM>
               <LM>be repeated</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>InFaCY</morphs>
@@ -2894,7 +2906,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>clothes merchant</reflex>
@@ -2957,7 +2969,6 @@
               <LM>revolt</LM>
               <LM>arise</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -2983,7 +2994,6 @@
               <LM>provoke</LM>
               <LM>agitate</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFAL</morphs>
@@ -3095,7 +3105,7 @@
             <entity>
               <Noun>
                 <plural>FuCCAL</plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -3227,7 +3237,6 @@
             <entity>
               <Verb>
                 <form>I</form>
-                <voice>Passive</voice>
               </Verb>
             </entity>
             <reflex>be buried</reflex>
@@ -3667,7 +3676,6 @@
               </Verb>
             </entity>
             <reflex>be armed</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FuCL</morphs>
@@ -3721,7 +3729,6 @@
               </Verb>
             </entity>
             <reflex>be gloomy</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCA</morphs>
@@ -3851,7 +3858,6 @@
               <LM>pamper</LM>
               <LM>spoil</LM>
             </reflex>
-            
           </Entry>
         </ents>
       </Nest>
@@ -4290,7 +4296,6 @@
               </Verb>
             </entity>
             <reflex>be hidden</reflex>
-            
           </Entry>
           <Entry>
             <morphs>InFaCL</morphs>
@@ -4322,7 +4327,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -4361,7 +4366,6 @@
               <LM>be concealed</LM>
               <LM>penetrate</LM>
             </reflex>
-            
           </Entry>
         </ents>
       </Nest>
@@ -4691,7 +4695,7 @@
             <entity>
               <Noun>
                 <plural>FuCY |&lt; aT</plural>
-                <derive>------F---</derive>
+                <femini>FACI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -4747,7 +4751,7 @@
             <entity>
               <Noun>
                 <plural>MuFtaCI |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFtaCI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -4767,7 +4771,7 @@
             <entity>
               <Noun>
                 <plural>MuFtaCY |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFtaCY |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>defendant</reflex>
@@ -4789,7 +4793,7 @@
             <entity>
               <Noun>
                 <plural>MustaFCI |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MustaFCI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -4802,7 +4806,7 @@
             <entity>
               <Noun>
                 <plural>MustaFCY |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MustaFCY |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -4829,7 +4833,6 @@
               <LM>feel warm</LM>
               <LM>be warm</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCuL</morphs>
@@ -4843,7 +4846,6 @@
               <LM>feel warm</LM>
               <LM>be warm</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -4877,7 +4879,6 @@
               </Verb>
             </entity>
             <reflex>be warmed</reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCaL</morphs>
@@ -4887,7 +4888,6 @@
               </Verb>
             </entity>
             <reflex>get warm</reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFCaL</morphs>
@@ -4897,7 +4897,6 @@
               </Verb>
             </entity>
             <reflex>be warmed</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FiCL</morphs>
@@ -5102,7 +5101,6 @@
               <LM>be minute</LM>
               <LM>be fragile</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -5118,7 +5116,6 @@
               <LM>strike</LM>
               <LM>throb</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -5131,7 +5128,6 @@
               <LM>be precise</LM>
               <LM>be exact</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FACL</morphs>
@@ -5162,7 +5158,6 @@
               </Verb>
             </entity>
             <reflex>be broken</reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFaCL</morphs>
@@ -5175,7 +5170,6 @@
               <LM>be fine</LM>
               <LM>be thin</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -5313,7 +5307,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -5403,7 +5397,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>checker</reflex>
@@ -5473,7 +5467,6 @@
               <LM>be crushed</LM>
               <LM>be leveled</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -5626,7 +5619,6 @@
               </Verb>
             </entity>
             <reflex>be conceited</reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCaL</morphs>
@@ -5710,7 +5702,7 @@
             <entity>
               <Noun>
                 <plural>FaCA'iL</plural>
-                <derive>------F---</derive>
+                <femini>FaCIL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -5723,7 +5715,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -5929,7 +5921,6 @@
               <LM>be suspended</LM>
               <LM>be lowered</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -6212,7 +6203,6 @@
               <LM>be vile</LM>
               <LM>be despicable</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCuL</morphs>
@@ -6226,7 +6216,6 @@
               <LM>be vile</LM>
               <LM>be despicable</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCIL</morphs>
@@ -6335,7 +6324,6 @@
               <LM>be mean</LM>
               <LM>be despicable</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCY</morphs>
@@ -6372,7 +6360,6 @@
               <LM>be near</LM>
               <LM>approach</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCY</morphs>
@@ -6406,7 +6393,6 @@
               <LM>be near</LM>
               <LM>approach</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFCY</morphs>
@@ -6551,7 +6537,6 @@
               <LM>deteriorate</LM>
               <LM>decline</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaKaRDuS</morphs>
@@ -6594,7 +6579,6 @@
               <LM>be clever</LM>
               <LM>be wily</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCY</morphs>
@@ -6608,7 +6592,6 @@
               <LM>befall</LM>
               <LM>strike</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCY</morphs>
@@ -6720,7 +6703,6 @@
               </Verb>
             </entity>
             <reflex>be worn out</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -6794,7 +6776,7 @@
             <entity>
               <Noun>
                 <plural>HaFCAL</plural>
-                <derive>------F---</derive>
+                <femini>FaCL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -6832,7 +6814,6 @@
               </Verb>
             </entity>
             <reflex>conquer</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FAL</morphs>
@@ -6846,7 +6827,6 @@
               <LM>be humble</LM>
               <LM>be nauseated</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -6904,7 +6884,6 @@
               </Verb>
             </entity>
             <reflex>become worm - eaten</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FUL</morphs>
@@ -7020,7 +6999,6 @@
               </Verb>
             </entity>
             <reflex>be circular</reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFAL</morphs>
@@ -7328,7 +7306,7 @@
             <entity>
               <Noun>
                 <plural>HiFAL |&lt; Iy |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>HiFAL |&lt; Iy |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>officer</reflex>
@@ -7430,7 +7408,7 @@
                   <LM>MuFaLA'</LM>
                   <LM>MuFIL |&lt; Un</LM>
                 </plural>
-                <derive>------F---</derive>
+                <femini>MuFIL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -7479,7 +7457,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -7528,7 +7506,7 @@
             <entity>
               <Noun>
                 <plural>FaCLAn |&lt; Iy |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCLAn |&lt; Iy |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>monk</reflex>
@@ -7589,7 +7567,6 @@
               <LM>step on</LM>
               <LM>run over</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>InFAL</morphs>
@@ -7603,7 +7580,6 @@
               <LM>be crushed</LM>
               <LM>be run over</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -7993,7 +7969,6 @@
               <LM>persevere</LM>
               <LM>continue</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -8261,7 +8236,6 @@
               <LM>be registered</LM>
               <LM>be collected</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FayCAL</morphs>
@@ -8318,7 +8292,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCaL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCaL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -8396,7 +8370,6 @@
               <LM>be treated</LM>
               <LM>be nursed</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCY</morphs>
@@ -8817,7 +8790,6 @@
               </Verb>
             </entity>
             <reflex>be indebted to</reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFAL</morphs>
@@ -8839,7 +8811,6 @@
               </Verb>
             </entity>
             <reflex>be indebted</reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACaL</morphs>
@@ -8935,7 +8906,7 @@
             <entity>
               <Noun>
                 <plural>FA'iL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -8948,7 +8919,7 @@
             <entity>
               <Noun>
                 <plural>MaFIL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MaFIL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>debtor</reflex>
@@ -8968,7 +8939,7 @@
             <entity>
               <Noun>
                 <plural>MuFIL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFIL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -9110,7 +9081,6 @@
               <LM>be wolflike</LM>
               <LM>be lupine</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FiCL</morphs>
@@ -9618,7 +9588,6 @@
               </Verb>
             </entity>
             <reflex>be sharp - witted</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCA'</morphs>
@@ -9691,7 +9660,6 @@
               <LM>be humble</LM>
               <LM>be obsequious</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFaCL</morphs>
@@ -9948,7 +9916,6 @@
               </Verb>
             </entity>
             <reflex>be near death</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCA'</morphs>
@@ -9973,6 +9940,10 @@
               <Verb>
                 <form>I</form>
                 <imperf>FUL</imperf>
+                <masdar>
+                  <LM>FaCL</LM>
+                  <LM>FaCaLAn</LM>
+                </masdar>
               </Verb>
             </entity>
             <reflex>
@@ -9980,7 +9951,6 @@
               <LM>be melted</LM>
               <LM>dwindle</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -10143,7 +10113,7 @@
             <entity>
               <Noun>
                 <plural>FAL |&lt; aT</plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -10280,7 +10250,7 @@
             <entity>
               <Noun>
                 <plural>MutaFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MutaFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -10307,7 +10277,6 @@
               <LM>wither</LM>
               <LM>fade</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCI</morphs>
@@ -10321,7 +10290,6 @@
               <LM>wither</LM>
               <LM>fade</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -10365,7 +10333,6 @@
               <LM>circulate</LM>
               <LM>become public</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFAL</morphs>
@@ -10442,7 +10409,7 @@
             <entity>
               <Noun>
                 <plural>MuFIL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFIL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -10670,7 +10637,6 @@
               </Verb>
             </entity>
             <reflex>be chief</reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCaL</morphs>
@@ -10696,7 +10662,6 @@
               <LM>be chief</LM>
               <LM>be director</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -10762,7 +10727,7 @@
             <entity>
               <Noun>
                 <plural>FuCaLA'</plural>
-                <derive>------F---</derive>
+                <femini>FaCIL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -11066,7 +11031,6 @@
               <LM>be hypocritical</LM>
               <LM>be ostentatious</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFY</morphs>
@@ -11269,7 +11233,7 @@
             <entity>
               <Noun>
                 <plural>MuFACI |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFACI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>hypocrite</reflex>
@@ -11351,7 +11315,6 @@
               <LM>be master of</LM>
               <LM>control</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -11561,7 +11524,6 @@
               <LM>raise</LM>
               <LM>grow</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FACY</morphs>
@@ -11598,7 +11560,6 @@
               <LM>be brought up</LM>
               <LM>be bred</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -11693,7 +11654,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCI |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -11729,7 +11690,7 @@
             <entity>
               <Noun>
                 <plural>MuFACI |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFACI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -11826,14 +11787,13 @@
               <LM>be ragged</LM>
               <LM>be shabby</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
             <entity>
               <Noun>
                 <plural>FiCAL</plural>
-                <derive>------F---</derive>
+                <femini>FaCL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -11993,7 +11953,7 @@
             <entity>
               <Noun>
                 <plural>MuFCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -12288,7 +12248,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>grinder</reflex>
@@ -12414,7 +12374,6 @@
               <LM>be loose</LM>
               <LM>slacken</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCI</morphs>
@@ -12428,7 +12387,6 @@
               <LM>be loose</LM>
               <LM>slacken</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -12637,7 +12595,6 @@
               </Verb>
             </entity>
             <reflex>be bad</reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCaL</morphs>
@@ -12647,7 +12604,6 @@
               </Verb>
             </entity>
             <reflex>be spoiled</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCIL</morphs>
@@ -12734,7 +12690,6 @@
               <LM>be hesitant</LM>
               <LM>have doubts</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCL</morphs>
@@ -12884,7 +12839,7 @@
             <entity>
               <Noun>
                 <plural>MaFCUL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MaFCUL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -12905,7 +12860,7 @@
             <entity>
               <Noun>
                 <plural>MuFtaCL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFtaCL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -13198,14 +13153,12 @@
             <entity>
               <Verb>
                 <form>I</form>
-                <voice>Passive</voice>
               </Verb>
             </entity>
             <reflex>
               <LM>incur a loss</LM>
               <LM>be afflicted</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FuCL</morphs>
@@ -13312,7 +13265,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>rice merchant</reflex>
@@ -13636,7 +13589,6 @@
               <LM>be pressed together</LM>
               <LM>be compacted</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCAL</morphs>
@@ -13752,7 +13704,6 @@
               <LM>agree</LM>
               <LM>approve</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCY</morphs>
@@ -13823,7 +13774,6 @@
               <LM>agree</LM>
               <LM>approve</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFCY</morphs>
@@ -14180,7 +14130,6 @@
               <LM>graze</LM>
               <LM>pasture</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFCY</morphs>
@@ -14598,7 +14547,6 @@
               <LM>be thin</LM>
               <LM>be delicate</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -14635,7 +14583,6 @@
               <LM>be refined</LM>
               <LM>be atomized</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFaCL</morphs>
@@ -14649,7 +14596,6 @@
               <LM>be delicate</LM>
               <LM>enslave</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FiCL</morphs>
@@ -14826,7 +14772,6 @@
               <LM>promote</LM>
               <LM>advance</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCY</morphs>
@@ -15032,7 +14977,6 @@
               <LM>be weak</LM>
               <LM>be poor</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -15044,7 +14988,6 @@
               </Verb>
             </entity>
             <reflex>entrust</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FiCL |&lt; aT</morphs>
@@ -15129,7 +15072,6 @@
               <LM>repair</LM>
               <LM>overhaul</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -15144,7 +15086,6 @@
               <LM>decay</LM>
               <LM>rot</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -15171,7 +15112,6 @@
               <LM>be restored</LM>
               <LM>be renovated</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -15272,7 +15212,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -15967,7 +15907,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>promoter</reflex>
@@ -15985,6 +15925,7 @@
               <Verb>
                 <form>I</form>
                 <imperf>FUL</imperf>
+                <masdar>FaCAL</masdar>
               </Verb>
             </entity>
             <reflex>
@@ -16075,7 +16016,6 @@
               <LM>relax</LM>
               <LM>be satisfied</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFAL</morphs>
@@ -16426,7 +16366,7 @@
             <entity>
               <Noun>
                 <plural>FA'iL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>going</reflex>
@@ -16710,7 +16650,7 @@
             <entity>
               <Noun>
                 <plural>FuCCAL</plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -16743,7 +16683,7 @@
             <entity>
               <Noun>
                 <plural>MuFIL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFIL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -16974,7 +16914,6 @@
               </Verb>
             </entity>
             <reflex>be cheerful</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL |&lt; aT</morphs>
@@ -17018,7 +16957,7 @@
             <entity>
               <Noun>
                 <plural>FiyAL |&lt; Iy |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FiyAL |&lt; Iy |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>mathematician</reflex>
@@ -17093,7 +17032,10 @@
                 <form>II</form>
               </Verb>
             </entity>
-            <reflex>frighten</reflex>
+            <reflex>
+              <LM>terrify</LM>
+              <LM>frighten</LM>
+            </reflex>
           </Entry>
           <Entry>
             <morphs>HaFAL</morphs>
@@ -17112,7 +17054,6 @@
               </Verb>
             </entity>
             <reflex>be frightened</reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtAL</morphs>
@@ -17122,7 +17063,6 @@
               </Verb>
             </entity>
             <reflex>be frightened</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -17169,6 +17109,16 @@
               <Adj/>
             </entity>
             <reflex>more / most magnificent</reflex>
+          </Entry>
+          <Entry>
+            <morphs>TaFCIL</morphs>
+            <entity>
+              <Noun/>
+            </entity>
+            <reflex>
+              <LM>terrifying</LM>
+              <LM>frightening</LM>
+            </reflex>
           </Entry>
           <Entry>
             <morphs>IFtiyAL</morphs>
@@ -17730,7 +17680,6 @@
               </Verb>
             </entity>
             <reflex>be irrigated</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FayL</morphs>
@@ -18179,7 +18128,6 @@
               </Verb>
             </entity>
             <reflex>become wealthy</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FIL</morphs>
@@ -18920,7 +18868,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>glazier</reflex>
@@ -19245,7 +19193,7 @@
             <entity>
               <Noun>
                 <plural>KaRADIS</plural>
-                <derive>------F---</derive>
+                <femini>KuRDUS |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -19523,7 +19471,6 @@
               </Verb>
             </entity>
             <reflex>be purified</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCA'</morphs>
@@ -19738,7 +19685,6 @@
               <LM>be restricted</LM>
               <LM>be suppressed</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCaL</morphs>
@@ -19749,7 +19695,6 @@
               </Verb>
             </entity>
             <reflex>retain</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -19881,14 +19826,12 @@
             <entity>
               <Verb>
                 <form>I</form>
-                <voice>Passive</voice>
               </Verb>
             </entity>
             <reflex>
               <LM>be conceited</LM>
               <LM>be boastful</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -19913,7 +19856,6 @@
               <LM>be conceited</LM>
               <LM>be boastful</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -20060,7 +20002,6 @@
               <LM>join</LM>
               <LM>marry off</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FACaL</morphs>
@@ -20083,7 +20024,6 @@
               </Verb>
             </entity>
             <reflex>get married</reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACaL</morphs>
@@ -20108,7 +20048,6 @@
               <LM>be double</LM>
               <LM>be in pairs</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -20330,7 +20269,6 @@
               <LM>be supplied</LM>
               <LM>be provided</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCuL</morphs>
@@ -20380,7 +20318,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>supplier</reflex>
@@ -20623,7 +20561,7 @@
                   <LM>FA'iL |&lt; Un</LM>
                   <LM>FuCCAL</LM>
                 </plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -20650,7 +20588,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -20946,7 +20884,6 @@
               <LM>be disjointed</LM>
               <LM>cease</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FiCAL</morphs>
@@ -21128,7 +21065,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -21581,7 +21518,7 @@
             <entity>
               <Noun>
                 <plural>MuFACiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFACiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -21747,7 +21684,6 @@
               </Verb>
             </entity>
             <reflex>be false</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -21820,7 +21756,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -21911,7 +21847,6 @@
               <LM>be embellished</LM>
               <LM>be decorated</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtAL</morphs>
@@ -21924,7 +21859,6 @@
               <LM>be embellished</LM>
               <LM>be decorated</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -22071,7 +22005,6 @@
               <LM>be dressed</LM>
               <LM>be clothed</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FIL</morphs>
@@ -22177,7 +22110,6 @@
               <LM>inquire</LM>
               <LM>request</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FACaL</morphs>
@@ -22223,7 +22155,6 @@
               <LM>ask</LM>
               <LM>wonder</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FuCL</morphs>
@@ -22300,7 +22231,7 @@
             <entity>
               <Noun>
                 <plural>FACiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FACiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -22320,7 +22251,7 @@
             <entity>
               <Noun>
                 <plural>MaFCUL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MaFCUL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -22383,7 +22314,6 @@
               <LM>be tired</LM>
               <LM>be bored</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCaL</morphs>
@@ -22503,7 +22433,6 @@
               <LM>be produced</LM>
               <LM>be provoked</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCuL</morphs>
@@ -22585,7 +22514,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -22653,7 +22582,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -22676,7 +22605,7 @@
             <entity>
               <Noun>
                 <plural>MutaFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MutaFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -22731,7 +22660,7 @@
             <entity>
               <Noun>
                 <plural>FaCALY</plural>
-                <derive>------F---</derive>
+                <femini>FaCIL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -22829,7 +22758,6 @@
               <LM>be quiet</LM>
               <LM>be tranquil</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCY</morphs>
@@ -22848,7 +22776,6 @@
               </Verb>
             </entity>
             <reflex>be shrouded</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCIy |&lt; aT</morphs>
@@ -23002,7 +22929,6 @@
               <LM>be generous</LM>
               <LM>bestow</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCI</morphs>
@@ -23016,7 +22942,6 @@
               <LM>be generous</LM>
               <LM>bestow</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCY</morphs>
@@ -23026,7 +22951,6 @@
               </Verb>
             </entity>
             <reflex>be generous</reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACY</morphs>
@@ -23036,7 +22960,6 @@
               </Verb>
             </entity>
             <reflex>be generous</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCA'</morphs>
@@ -23092,7 +23015,6 @@
               <LM>block</LM>
               <LM>obstruct</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -23107,7 +23029,6 @@
               <LM>defray</LM>
               <LM>fulfill</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -23119,7 +23040,6 @@
               </Verb>
             </entity>
             <reflex>be right</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -23155,7 +23075,6 @@
               <LM>be guided</LM>
               <LM>be directed</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>InFaCL</morphs>
@@ -23168,7 +23087,6 @@
               <LM>be obstructed</LM>
               <LM>be clogged</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -23384,7 +23302,6 @@
               </Verb>
             </entity>
             <reflex>confer</reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -23447,7 +23364,6 @@
               <LM>delight</LM>
               <LM>make happy</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -23459,7 +23375,6 @@
               </Verb>
             </entity>
             <reflex>be happy</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -23780,7 +23695,6 @@
               <LM>distract</LM>
               <LM>be rid of worries</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>InFaCY</morphs>
@@ -23793,7 +23707,6 @@
               <LM>be rid of worries</LM>
               <LM>be distracted</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -24293,7 +24206,7 @@
                   <LM>FACI |&lt; Un</LM>
                   <LM>FuCY |&lt; aT</LM>
                 </plural>
-                <derive>------F---</derive>
+                <femini>FACI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -24795,7 +24708,6 @@
               <LM>lock</LM>
               <LM>mint</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -24807,7 +24719,6 @@
               </Verb>
             </entity>
             <reflex>become deaf</reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCL</morphs>
@@ -24817,7 +24728,6 @@
               </Verb>
             </entity>
             <reflex>become deaf</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -25324,7 +25234,6 @@
               </Verb>
             </entity>
             <reflex>be poisoned</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -25432,7 +25341,6 @@
               <LM>be elevated</LM>
               <LM>be exalted</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FACY</morphs>
@@ -25612,7 +25520,6 @@
               <LM>be called</LM>
               <LM>be named</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFC</morphs>
@@ -25841,7 +25748,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -25996,7 +25903,6 @@
               <LM>be feasible</LM>
               <LM>be possible</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCY</morphs>
@@ -26155,7 +26061,6 @@
               <LM>be distracted</LM>
               <LM>overlook</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -26213,7 +26118,6 @@
               <LM>become bad</LM>
               <LM>become evil</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -26259,7 +26163,6 @@
               <LM>be dissatisfied</LM>
               <LM>be discontent</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FUL</morphs>
@@ -26466,7 +26369,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -26482,7 +26385,7 @@
                   <LM>FA'iL |&lt; Un</LM>
                   <LM>FuCCAL</LM>
                 </plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <limits/>
@@ -26511,7 +26414,6 @@
               <LM>sink</LM>
               <LM>swoon</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -26531,112 +26433,6 @@
         <root>s w d</root>
         <ents>
           <Entry>
-            <morphs>FaCCaL</morphs>
-            <entity>
-              <Verb>
-                <form>II</form>
-              </Verb>
-            </entity>
-            <reflex>blacken</reflex>
-            
-          </Entry>
-          <Entry>
-            <morphs>IFCaLL</morphs>
-            <entity>
-              <Verb>
-                <form>IX</form>
-              </Verb>
-            </entity>
-            <reflex>become black</reflex>
-            
-          </Entry>
-          <Entry>
-            <morphs>HaFCaL</morphs>
-            <entity>
-              <Adj>
-                <plural>FUL</plural>
-                <femini>FaCLA'</femini>
-              </Adj>
-            </entity>
-            <reflex>black</reflex>
-          </Entry>
-          <Entry>
-            <morphs>FaCAL</morphs>
-            <entity>
-              <Noun>
-                <plural>HaFCiL |&lt; aT</plural>
-              </Noun>
-            </entity>
-            <reflex>blackness</reflex>
-          </Entry>
-          <Entry>
-            <morphs>FuCayL |&lt; Iy</morphs>
-            <entity>
-              <Adj/>
-            </entity>
-            <reflex>
-              <LM>Suweidi</LM>
-              <LM>Suwaidi</LM>
-              <LM>Souaidi</LM>
-            </reflex>
-          </Entry>
-          <Entry>
-            <morphs>FuCayLA'</morphs>
-            <entity>
-              <Noun/>
-            </entity>
-            <reflex>melancholy</reflex>
-          </Entry>
-          <Entry>
-            <morphs>FaCLA' |&lt; Iy</morphs>
-            <entity>
-              <Adj/>
-            </entity>
-            <reflex>melancholic</reflex>
-          </Entry>
-          <Entry>
-            <morphs>FULAn |&lt; Iy</morphs>
-            <entity>
-              <Adj/>
-            </entity>
-            <reflex>Sudanese</reflex>
-          </Entry>
-          <Entry>
-            <morphs>TaFCIL</morphs>
-            <entity>
-              <Noun>
-                <plural>TaFCIL |&lt; At</plural>
-              </Noun>
-            </entity>
-            <reflex>rough draft</reflex>
-          </Entry>
-          <Entry>
-            <morphs>MuFaCCaL |&lt; aT</morphs>
-            <entity>
-              <Noun/>
-            </entity>
-            <reflex>rough draft</reflex>
-          </Entry>
-          <Entry>
-            <morphs>MuFCaLL |&lt; aT</morphs>
-            <entity>
-              <Noun/>
-            </entity>
-            <reflex>rough draft</reflex>
-          </Entry>
-          <Entry>
-            <morphs>FULAn</morphs>
-            <entity>
-              <Noun/>
-            </entity>
-            <reflex>Sudan</reflex>
-          </Entry>
-        </ents>
-      </Nest>
-      <Nest>
-        <root>s w d</root>
-        <ents>
-          <Entry>
             <morphs>FAL</morphs>
             <entity>
               <Verb>
@@ -26651,7 +26447,6 @@
               <LM>rule</LM>
               <LM>govern</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>Fu'LuL</morphs>
@@ -26750,6 +26545,110 @@
           </Entry>
         </ents>
       </Nest>
+      <Nest>
+        <root>s w d</root>
+        <ents>
+          <Entry>
+            <morphs>FaCCaL</morphs>
+            <entity>
+              <Verb>
+                <form>II</form>
+              </Verb>
+            </entity>
+            <reflex>blacken</reflex>
+          </Entry>
+          <Entry>
+            <morphs>IFCaLL</morphs>
+            <entity>
+              <Verb>
+                <form>IX</form>
+              </Verb>
+            </entity>
+            <reflex>become black</reflex>
+          </Entry>
+          <Entry>
+            <morphs>HaFCaL</morphs>
+            <entity>
+              <Adj>
+                <plural>FUL</plural>
+                <femini>FaCLA'</femini>
+              </Adj>
+            </entity>
+            <reflex>black</reflex>
+          </Entry>
+          <Entry>
+            <morphs>FaCAL</morphs>
+            <entity>
+              <Noun>
+                <plural>HaFCiL |&lt; aT</plural>
+              </Noun>
+            </entity>
+            <reflex>blackness</reflex>
+          </Entry>
+          <Entry>
+            <morphs>FuCayL |&lt; Iy</morphs>
+            <entity>
+              <Adj/>
+            </entity>
+            <reflex>
+              <LM>Suweidi</LM>
+              <LM>Suwaidi</LM>
+              <LM>Souaidi</LM>
+            </reflex>
+          </Entry>
+          <Entry>
+            <morphs>FuCayLA'</morphs>
+            <entity>
+              <Noun/>
+            </entity>
+            <reflex>melancholy</reflex>
+          </Entry>
+          <Entry>
+            <morphs>FaCLA' |&lt; Iy</morphs>
+            <entity>
+              <Adj/>
+            </entity>
+            <reflex>melancholic</reflex>
+          </Entry>
+          <Entry>
+            <morphs>FULAn |&lt; Iy</morphs>
+            <entity>
+              <Adj/>
+            </entity>
+            <reflex>Sudanese</reflex>
+          </Entry>
+          <Entry>
+            <morphs>TaFCIL</morphs>
+            <entity>
+              <Noun>
+                <plural>TaFCIL |&lt; At</plural>
+              </Noun>
+            </entity>
+            <reflex>rough draft</reflex>
+          </Entry>
+          <Entry>
+            <morphs>MuFaCCaL |&lt; aT</morphs>
+            <entity>
+              <Noun/>
+            </entity>
+            <reflex>rough draft</reflex>
+          </Entry>
+          <Entry>
+            <morphs>MuFCaLL |&lt; aT</morphs>
+            <entity>
+              <Noun/>
+            </entity>
+            <reflex>rough draft</reflex>
+          </Entry>
+          <Entry>
+            <morphs>FULAn</morphs>
+            <entity>
+              <Noun/>
+            </entity>
+            <reflex>Sudan</reflex>
+          </Entry>
+        </ents>
+      </Nest>
     </Cluster>
     <Cluster>
       <Nest>
@@ -26772,7 +26671,6 @@
               </Verb>
             </entity>
             <reflex>be Sudanized</reflex>
-            
           </Entry>
           <Entry>
             <morphs>KaRDaS |&lt; aT</morphs>
@@ -26961,7 +26859,6 @@
               <LM>become worm - eaten</LM>
               <LM>decay</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -26974,7 +26871,6 @@
               <LM>become worm - eaten</LM>
               <LM>decay</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCaL</morphs>
@@ -26987,7 +26883,6 @@
               <LM>become worm - eaten</LM>
               <LM>decay</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FUL</morphs>
@@ -27050,7 +26945,7 @@
                   <LM>FiyAL |&lt; Iy |&lt; Un</LM>
                   <LM>FAL |&lt; aT</LM>
                 </plural>
-                <derive>------F---</derive>
+                <femini>FiyAL |&lt; Iy |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -27082,7 +26977,7 @@
             <entity>
               <Noun>
                 <plural>FuCCAL</plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -27147,7 +27042,7 @@
             <entity>
               <Noun>
                 <plural>_____ |&lt; Iy |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>_____ |&lt; Iy |&lt; aT</femini>
               </Noun>
             </entity>
             <limits/>
@@ -27270,7 +27165,6 @@
               <LM>be permitted</LM>
               <LM>accept</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -27514,7 +27408,6 @@
               <LM>be driven</LM>
               <LM>be carried away</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtAL</morphs>
@@ -27631,7 +27524,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -27712,7 +27605,7 @@
             <entity>
               <Noun>
                 <plural>FA'iL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -27875,7 +27768,7 @@
             <entity>
               <Noun>
                 <plural>MutaFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MutaFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>beggar</reflex>
@@ -27956,7 +27849,6 @@
               <LM>be ordained</LM>
               <LM>be consecrated</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtAL</morphs>
@@ -28144,7 +28036,6 @@
               <LM>be balanced</LM>
               <LM>be equal</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCY</morphs>
@@ -28157,7 +28048,6 @@
               <LM>be equivalent</LM>
               <LM>be ripe</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FiCY</morphs>
@@ -28396,7 +28286,6 @@
               <LM>be careless</LM>
               <LM>neglect</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>InFAL</morphs>
@@ -28476,7 +28365,6 @@
               <LM>be fenced in</LM>
               <LM>be surrounded</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FiCAL</morphs>
@@ -28568,7 +28456,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>traveler</reflex>
@@ -28581,7 +28469,7 @@
                   <LM>FuCCAL</LM>
                   <LM>FA'iL |&lt; Un</LM>
                 </plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>tourist</reflex>
@@ -28629,7 +28517,6 @@
               </Verb>
             </entity>
             <reflex>sink</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -28901,7 +28788,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -28938,7 +28825,6 @@
               <LM>seize</LM>
               <LM>command</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaKaRDaS</morphs>
@@ -28952,7 +28838,6 @@
               <LM>seize</LM>
               <LM>command</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>KaRDaS |&lt; aT</morphs>
@@ -29026,7 +28911,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>executioner</reflex>
@@ -29359,7 +29244,6 @@
               </Verb>
             </entity>
             <reflex>be pessimistic</reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFCaL</morphs>
@@ -29517,7 +29401,6 @@
             </entity>
             <limits/>
             <reflex>grow up</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -29533,7 +29416,6 @@
               </Verb>
             </entity>
             <reflex>burn</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -29805,7 +29687,6 @@
               <LM>be dispersed</LM>
               <LM>be scattered</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -30027,7 +29908,6 @@
               <LM>be saddened</LM>
               <LM>be distressed</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCY</morphs>
@@ -30141,7 +30021,6 @@
               <LM>be covetous</LM>
               <LM>economize</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FACL</morphs>
@@ -30345,7 +30224,6 @@
               </Verb>
             </entity>
             <reflex>become intense</reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACL</morphs>
@@ -30555,7 +30433,7 @@
             <entity>
               <Noun>
                 <plural>MutaFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MutaFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -30821,7 +30699,6 @@
               <LM>crane the neck</LM>
               <LM>stretch the neck</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IKRiDSAS</morphs>
@@ -30865,7 +30742,6 @@
               <LM>be evil</LM>
               <LM>be malicious</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -30880,7 +30756,6 @@
               <LM>be evil</LM>
               <LM>be malicious</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -31039,7 +30914,6 @@
               <LM>buy</LM>
               <LM>purchase</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCY</morphs>
@@ -31053,7 +30927,6 @@
               <LM>buy</LM>
               <LM>purchase</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFCY</morphs>
@@ -31131,7 +31004,7 @@
             <entity>
               <Noun>
                 <plural>FuCY |&lt; aT</plural>
-                <derive>------F---</derive>
+                <femini>FACI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -31151,7 +31024,7 @@
             <entity>
               <Noun>
                 <plural>MuFtaCI |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFtaCI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>buyer</reflex>
@@ -31179,7 +31052,7 @@
             <entity>
               <Noun>
                 <plural>MuFtaCY |&lt; At</plural>
-                <derive>------F---</derive>
+                <femini>MuFtaCY |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>purchased goods</reflex>
@@ -31273,7 +31146,6 @@
               <LM>be excessive</LM>
               <LM>go too far</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCL</morphs>
@@ -31286,7 +31158,6 @@
               <LM>be excessive</LM>
               <LM>go too far</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -31357,7 +31228,6 @@
               <LM>be splintered</LM>
               <LM>be shattered</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCY</morphs>
@@ -31370,7 +31240,6 @@
               <LM>be splintered</LM>
               <LM>be shattered</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCIL |&lt; aT</morphs>
@@ -31442,7 +31311,7 @@
             <entity>
               <Noun>
                 <plural>HaFiCL |&lt; aT</plural>
-                <derive>------F---</derive>
+                <femini>FuCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>rays</reflex>
@@ -31571,7 +31440,7 @@
             <entity>
               <Noun>
                 <plural>MuKaRDiS |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuKaRDiS |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -31628,7 +31497,6 @@
               <LM>be thin</LM>
               <LM>be transparent</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCL</morphs>
@@ -31740,7 +31608,6 @@
               <LM>be very close</LM>
               <LM>be on the verge</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCA</morphs>
@@ -31796,7 +31663,6 @@
               <LM>be cured</LM>
               <LM>be healed</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCY</morphs>
@@ -31809,7 +31675,6 @@
               <LM>be cured</LM>
               <LM>be healed</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFCY</morphs>
@@ -31947,7 +31812,6 @@
               </Verb>
             </entity>
             <reflex>be split</reflex>
-            
           </Entry>
           <Entry>
             <morphs>InFaCL</morphs>
@@ -31957,7 +31821,6 @@
               </Verb>
             </entity>
             <reflex>split off</reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCL</morphs>
@@ -32159,7 +32022,7 @@
             <entity>
               <Noun>
                 <plural>MunFaCL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MunFaCL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -32209,7 +32072,6 @@
               <LM>be unhappy</LM>
               <LM>suffer</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -32344,7 +32206,6 @@
               <LM>be skeptical</LM>
               <LM>have misgivings</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -32488,7 +32349,6 @@
               <LM>complain</LM>
               <LM>suffer</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCY</morphs>
@@ -32501,7 +32361,6 @@
               <LM>complain</LM>
               <LM>suffer</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACY</morphs>
@@ -32520,7 +32379,6 @@
               </Verb>
             </entity>
             <reflex>complain</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -32683,7 +32541,6 @@
               <LM>be paralyzed</LM>
               <LM>be immobile</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -32699,7 +32556,6 @@
               <LM>immobilize</LM>
               <LM>neutralize</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFaCL</morphs>
@@ -32726,7 +32582,6 @@
               <LM>be immobilized</LM>
               <LM>be neutralized</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCaL</morphs>
@@ -32844,7 +32699,6 @@
               <LM>be disgusted</LM>
               <LM>be nauseated</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IKRiDSAS</morphs>
@@ -33063,7 +32917,6 @@
               <LM>wage</LM>
               <LM>launch</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFaCL</morphs>
@@ -33284,7 +33137,6 @@
               <LM>corrupt</LM>
               <LM>adulterate</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -33386,7 +33238,6 @@
               <LM>gesticulate</LM>
               <LM>beckon</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FACaL</morphs>
@@ -33399,7 +33250,6 @@
               <LM>take counsel with</LM>
               <LM>consult with</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFAL</morphs>
@@ -33413,7 +33263,6 @@
               <LM>mention</LM>
               <LM>cite</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACaL</morphs>
@@ -33426,7 +33275,6 @@
               <LM>deliberate</LM>
               <LM>consult</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFAL</morphs>
@@ -33439,7 +33287,6 @@
               <LM>consult</LM>
               <LM>seek the advice of</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FAL |&lt; aT</morphs>
@@ -33541,7 +33388,7 @@
             <entity>
               <Noun>
                 <plural>HiFAL |&lt;&lt; "^g" |&lt; Iy |&lt; aT</plural>
-                <derive>------F---</derive>
+                <femini>HiFAL |&lt;&lt; "^g" |&lt; Iy |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>signalman</reflex>
@@ -33606,7 +33453,7 @@
             <entity>
               <Noun>
                 <plural>MuFACaL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFACaL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -33629,7 +33476,7 @@
             <entity>
               <Noun>
                 <plural>MuFIL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFIL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -33649,7 +33496,7 @@
             <entity>
               <Noun>
                 <plural>MustaFAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MustaFAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -33762,7 +33609,6 @@
               <LM>be confused</LM>
               <LM>be disturbed</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FAL</morphs>
@@ -34287,7 +34133,6 @@
               </Verb>
             </entity>
             <reflex>be sparse</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FACaL</morphs>
@@ -34496,7 +34341,6 @@
               <LM>be distorted</LM>
               <LM>become ugly</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCiL</morphs>
@@ -34511,7 +34355,6 @@
               <LM>be distorted</LM>
               <LM>become ugly</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -34536,7 +34379,6 @@
               <LM>be distorted</LM>
               <LM>be tarnished</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCaL</morphs>
@@ -34746,7 +34588,6 @@
               <LM>desire</LM>
               <LM>wish</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCaL</morphs>
@@ -34756,7 +34597,6 @@
               </Verb>
             </entity>
             <reflex>calm down</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -34884,7 +34724,6 @@
               <LM>become gray - haired</LM>
               <LM>turn gray</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -35281,7 +35120,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -35351,7 +35190,6 @@
               </Verb>
             </entity>
             <reflex>be burned</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -35385,7 +35223,6 @@
               </Verb>
             </entity>
             <reflex>be burned</reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFAL</morphs>
@@ -35444,7 +35281,6 @@
               </Verb>
             </entity>
             <reflex>be devilish</reflex>
-            
           </Entry>
           <Entry>
             <morphs>KaRDAS</morphs>
@@ -35687,7 +35523,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -35730,7 +35566,7 @@
             <entity>
               <Noun>
                 <plural>MuFtAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFtAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -35852,7 +35688,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -35879,7 +35715,6 @@
               <LM>be on the lookout for</LM>
               <LM>expect</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FIL |&lt; aT</morphs>
@@ -36009,7 +35844,6 @@
               <LM>become communist</LM>
               <LM>be pro - communist</LM>
             </reflex>
-            
           </Entry>
         </ents>
       </Nest>
@@ -36206,7 +36040,6 @@
               <LM>be poured out</LM>
               <LM>flow</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -36358,7 +36191,6 @@
               <LM>be childish</LM>
               <LM>be infantile</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCY</morphs>
@@ -36380,7 +36212,6 @@
               <LM>be childish</LM>
               <LM>be infantile</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACY</morphs>
@@ -36393,7 +36224,6 @@
               <LM>be childish</LM>
               <LM>be infantile</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFCY</morphs>
@@ -36406,7 +36236,6 @@
               <LM>be childish</LM>
               <LM>be infantile</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FiCA'</morphs>
@@ -36543,7 +36372,6 @@
               <LM>be correct</LM>
               <LM>be true</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -36556,7 +36384,6 @@
               <LM>correct</LM>
               <LM>confirm</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCaL</morphs>
@@ -36569,7 +36396,6 @@
               <LM>be corrected</LM>
               <LM>be confirmed</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FiCL |&lt; aT</morphs>
@@ -36683,6 +36509,7 @@
               <Verb>
                 <form>I</form>
                 <imperf>FCU</imperf>
+                <masdar>FaCL</masdar>
               </Verb>
             </entity>
             <reflex>
@@ -36696,6 +36523,7 @@
               <Verb>
                 <form>I</form>
                 <imperf>FCY</imperf>
+                <masdar>FaCA</masdar>
               </Verb>
             </entity>
             <reflex>
@@ -36714,7 +36542,6 @@
               <LM>awaken</LM>
               <LM>rouse</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -36813,7 +36640,6 @@
               <LM>oxidize</LM>
               <LM>be rusty</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCuL</morphs>
@@ -36827,7 +36653,6 @@
               <LM>oxidize</LM>
               <LM>be rusty</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -37049,7 +36874,6 @@
               </Verb>
             </entity>
             <reflex>be thirsty</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCY</morphs>
@@ -37346,7 +37170,7 @@
             <entity>
               <Noun>
                 <plural>FACI |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FACI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -37369,7 +37193,7 @@
             <entity>
               <Noun>
                 <plural>MuFCI |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFCI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -37428,7 +37252,6 @@
               <LM>be arranged</LM>
               <LM>get in line</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCL</morphs>
@@ -37543,7 +37366,6 @@
               </Verb>
             </entity>
             <reflex>be pure</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCY</morphs>
@@ -37569,7 +37391,6 @@
               <LM>be sincere with</LM>
               <LM>deal honestly with</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -37594,7 +37415,6 @@
               <LM>be sincere with each other</LM>
               <LM>deal honestly with each other</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCY</morphs>
@@ -38219,7 +38039,6 @@
               <LM>decide</LM>
               <LM>design</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFaCL</morphs>
@@ -38390,7 +38209,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -38443,7 +38262,6 @@
               </Verb>
             </entity>
             <reflex>be fatally wounded</reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -38971,7 +38789,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>voter</reflex>
@@ -39092,7 +38910,6 @@
               <LM>sink</LM>
               <LM>swoon</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -39239,7 +39056,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>photographer</reflex>
@@ -39464,7 +39281,7 @@
                   <LM>FuCCAL</LM>
                   <LM>FuyyAL</LM>
                 </plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>jeweler</reflex>
@@ -39519,7 +39336,6 @@
               <LM>become a Sufi</LM>
               <LM>become a mystic</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FUL</morphs>
@@ -39607,7 +39423,7 @@
             <entity>
               <Noun>
                 <plural>MutaFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MutaFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -39895,7 +39711,7 @@
             <entity>
               <Noun>
                 <plural>FA'iL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -40145,7 +39961,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -40419,7 +40235,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>summer vacationer</reflex>
@@ -40439,7 +40255,7 @@
             <entity>
               <Noun>
                 <plural>MuFtAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFtAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -40538,7 +40354,6 @@
               <LM>be sparse</LM>
               <LM>dwindle</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACaL</morphs>
@@ -40779,7 +40594,6 @@
               <LM>be noisy</LM>
               <LM>clamor</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFaCL</morphs>
@@ -40792,7 +40606,6 @@
               <LM>be noisy</LM>
               <LM>clamor</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL |&lt; aT</morphs>
@@ -40863,7 +40676,6 @@
               <LM>be visible</LM>
               <LM>be in the sun</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCA</morphs>
@@ -40889,7 +40701,6 @@
               <LM>sacrifice</LM>
               <LM>immolate</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -41167,7 +40978,6 @@
               <LM>harm</LM>
               <LM>injure</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -41180,7 +40990,6 @@
               <LM>damage</LM>
               <LM>injure</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFaCL</morphs>
@@ -41193,7 +41002,6 @@
               <LM>damage</LM>
               <LM>injure</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCaL</morphs>
@@ -41206,7 +41014,6 @@
               <LM>complain</LM>
               <LM>be injured</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCL</morphs>
@@ -41220,7 +41027,6 @@
               <LM>force</LM>
               <LM>oblige</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FiCL</morphs>
@@ -41938,7 +41744,6 @@
               <LM>become emaciated</LM>
               <LM>languish</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -41951,7 +41756,6 @@
               <LM>become emaciated</LM>
               <LM>languish</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCY</morphs>
@@ -42144,7 +41948,6 @@
               <LM>be lit</LM>
               <LM>become clear</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -42406,7 +42209,6 @@
               <LM>emanate</LM>
               <LM>be fragrant</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCaL</morphs>
@@ -42419,7 +42221,6 @@
               <LM>emanate</LM>
               <LM>be fragrant</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -42541,7 +42342,6 @@
               <LM>disappear</LM>
               <LM>vanish</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -42702,7 +42502,6 @@
               <LM>be a host to</LM>
               <LM>receive as guest</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFAL</morphs>
@@ -42716,7 +42515,6 @@
               <LM>attach</LM>
               <LM>receive as guest</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACaL</morphs>
@@ -42735,7 +42533,6 @@
               </Verb>
             </entity>
             <reflex>be added</reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFAL</morphs>
@@ -42748,7 +42545,6 @@
               <LM>host</LM>
               <LM>invite</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -42902,7 +42698,6 @@
               <LM>be confined</LM>
               <LM>be small</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -42939,7 +42734,6 @@
               <LM>be inconvenienced</LM>
               <LM>be annoyed</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FIL</morphs>
@@ -43277,7 +43071,7 @@
                   <LM>HaFiCLA'</LM>
                   <LM>HaFiCL |&lt; aT</LM>
                 </plural>
-                <derive>------F---</derive>
+                <femini>FaCIL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -43325,7 +43119,7 @@
             <entity>
               <Noun>
                 <plural>MutaFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MutaFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -43393,7 +43187,6 @@
               <LM>occur</LM>
               <LM>happen</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCaL</morphs>
@@ -43582,7 +43375,6 @@
               <LM>be fresh</LM>
               <LM>be tender</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCI</morphs>
@@ -43596,7 +43388,6 @@
               <LM>be fresh</LM>
               <LM>be tender</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCY</morphs>
@@ -43768,7 +43559,7 @@
             <entity>
               <Noun>
                 <plural>FuCY |&lt; aT</plural>
-                <derive>------F---</derive>
+                <femini>FACI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -43804,7 +43595,6 @@
               <LM>die out</LM>
               <LM>be extinguished</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCaL</morphs>
@@ -43859,7 +43649,7 @@
             <entity>
               <Noun>
                 <plural>HiFCAL |&lt; Iy |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>HiFCAL |&lt; Iy |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>fire fighter</reflex>
@@ -43880,7 +43670,7 @@
             <entity>
               <Noun>
                 <plural>MuFCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>fire extinguisher</reflex>
@@ -43917,7 +43707,6 @@
               <LM>be stingy</LM>
               <LM>give incompletely</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCIL</morphs>
@@ -44229,7 +44018,6 @@
               </Verb>
             </entity>
             <reflex>be deceived</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -44265,7 +44053,6 @@
               </Verb>
             </entity>
             <reflex>be Italianized</reflex>
-            
           </Entry>
           <Entry>
             <morphs>KaRDaS |&lt; aT</morphs>
@@ -44318,7 +44105,6 @@
               <LM>pacify</LM>
               <LM>assuage</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaKaRDaS</morphs>
@@ -44331,7 +44117,6 @@
               <LM>be pacified</LM>
               <LM>be assuaged</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IKRaDaSS</morphs>
@@ -44344,7 +44129,6 @@
               <LM>be calm</LM>
               <LM>be reassured</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>KaRDaS |&lt; aT</morphs>
@@ -44433,7 +44217,6 @@
               <LM>be inundated</LM>
               <LM>be engulfed</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -44592,7 +44375,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -44632,7 +44415,6 @@
               <LM>cook</LM>
               <LM>stew</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>MaFCUL</morphs>
@@ -44688,7 +44470,7 @@
             <entity>
               <Noun>
                 <plural>FuCY |&lt; aT</plural>
-                <derive>------F---</derive>
+                <femini>FACI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>cook</reflex>
@@ -44719,7 +44501,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>brick - maker</reflex>
@@ -44827,7 +44609,6 @@
               </Verb>
             </entity>
             <reflex>go astray</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -44917,7 +44698,6 @@
               </Verb>
             </entity>
             <reflex>be lost</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -45282,7 +45062,6 @@
               <LM>be capable</LM>
               <LM>be possible</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FAL |&lt; aT</morphs>
@@ -45439,7 +45218,7 @@
             <entity>
               <Noun>
                 <plural>MutaFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MutaFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -45452,7 +45231,7 @@
             <entity>
               <Noun>
                 <plural>MuFtAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFtAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -45688,7 +45467,6 @@
               <LM>be able</LM>
               <LM>be capable</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -45725,7 +45503,6 @@
               <LM>be encircled</LM>
               <LM>be surrounded</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FAL</morphs>
@@ -45868,7 +45645,6 @@
               </Verb>
             </entity>
             <reflex>be long</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -45908,7 +45684,6 @@
               <LM>be lengthened</LM>
               <LM>be insolent</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFAL</morphs>
@@ -45921,7 +45696,6 @@
               <LM>be lengthened</LM>
               <LM>be insolent</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -46333,7 +46107,6 @@
               <LM>be good</LM>
               <LM>be pleasant</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -46471,7 +46244,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>masseur</reflex>
@@ -46588,7 +46361,6 @@
               </Verb>
             </entity>
             <reflex>be superstitious</reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACaL</morphs>
@@ -46620,11 +46392,9 @@
             <entity>
               <Verb>
                 <form>X</form>
-                <voice>Passive</voice>
               </Verb>
             </entity>
             <reflex>be terrified</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -46657,7 +46427,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -46806,7 +46576,6 @@
               <LM>be frivolous</LM>
               <LM>miss the mark</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FA'iL</morphs>
@@ -47101,7 +46870,6 @@
               </Verb>
             </entity>
             <reflex>be shaded</reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFaCL</morphs>
@@ -47218,10 +46986,10 @@
               <Verb>
                 <form>I</form>
                 <imperf>FCaL</imperf>
+                <masdar>FaCaL</masdar>
               </Verb>
             </entity>
             <reflex>be thirsty</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -47292,6 +47060,7 @@
                 <form>I</form>
                 <pfirst>FaCaL</pfirst>
                 <imperf>FuCL</imperf>
+                <masdar>FaCL</masdar>
               </Verb>
             </entity>
             <reflex>
@@ -47449,7 +47218,6 @@
               <LM>shine</LM>
               <LM>sparkle</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>KaRDaS |&lt; aT</morphs>
@@ -47542,7 +47310,6 @@
               </Verb>
             </entity>
             <reflex>be ignoble</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FACaL</morphs>
@@ -47556,7 +47323,6 @@
               <LM>be appropriate</LM>
               <LM>be adequate</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCaL</morphs>
@@ -47579,7 +47345,6 @@
               <LM>be in harmony with</LM>
               <LM>be consistent with</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCaL</morphs>
@@ -47593,7 +47358,6 @@
               <LM>be mended</LM>
               <LM>be in harmony with</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -47732,7 +47496,6 @@
               </Verb>
             </entity>
             <reflex>remain</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -47744,7 +47507,6 @@
               </Verb>
             </entity>
             <reflex>be sensible</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -47766,7 +47528,6 @@
               <LM>be prepared</LM>
               <LM>get ready</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL |&lt;&lt; "ay" |&lt;&lt; "ka"</morphs>
@@ -47915,7 +47676,6 @@
               <LM>carry out</LM>
               <LM>respond to</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFCI |&lt; aT</morphs>
@@ -47980,7 +47740,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -48147,7 +47907,7 @@
             <entity>
               <Noun>
                 <plural>FACiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FACiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -48167,7 +47927,7 @@
             <entity>
               <Noun>
                 <plural>MuFtaCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFtaCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -48198,7 +47958,6 @@
               <LM>be stubborn</LM>
               <LM>persist</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FACL</morphs>
@@ -48223,7 +47982,6 @@
               <LM>be noisy</LM>
               <LM>be uproarious</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FuCL</morphs>
@@ -48285,7 +48043,7 @@
             <entity>
               <Noun>
                 <plural>FACL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FACL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -48310,7 +48068,6 @@
               </Verb>
             </entity>
             <reflex>be close</reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFaCL</morphs>
@@ -48554,7 +48311,6 @@
               </Verb>
             </entity>
             <reflex>be bewildered</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCaL</morphs>
@@ -48648,7 +48404,6 @@
               <LM>be delightful</LM>
               <LM>be pleasing</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -48685,7 +48440,6 @@
               <LM>be pleased</LM>
               <LM>be delighted</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCL</morphs>
@@ -48698,7 +48452,6 @@
               <LM>be pleased</LM>
               <LM>be delighted</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFaCL</morphs>
@@ -48771,7 +48524,7 @@
             <entity>
               <Noun>
                 <plural>MutaFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MutaFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>epicure</reflex>
@@ -48851,7 +48604,6 @@
               <LM>be joined</LM>
               <LM>adhere</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACL</morphs>
@@ -48864,7 +48616,6 @@
               <LM>be crammed together</LM>
               <LM>lie close together</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCL</morphs>
@@ -48878,7 +48629,6 @@
               <LM>be joined</LM>
               <LM>adhere</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -48959,7 +48709,6 @@
               <LM>be destroyed</LM>
               <LM>disappear</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>MuFACY |&lt; aT</morphs>
@@ -49027,7 +48776,6 @@
               <LM>become a thief</LM>
               <LM>spy</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FiCL</morphs>
@@ -49037,7 +48785,7 @@
                   <LM>HaFCAL</LM>
                   <LM>FuCUL</LM>
                 </plural>
-                <derive>------F---</derive>
+                <femini>FiCL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>thief</reflex>
@@ -49081,7 +48829,6 @@
               <LM>be ablaze</LM>
               <LM>burn brightly</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCY</morphs>
@@ -49094,7 +48841,6 @@
               <LM>be ablaze</LM>
               <LM>burn brightly</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCY</morphs>
@@ -49107,7 +48853,6 @@
               <LM>be ablaze</LM>
               <LM>burn brightly</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCY</morphs>
@@ -49206,7 +48951,7 @@
             <entity>
               <Noun>
                 <plural>FuCA |&lt; Iy |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FuCA |&lt; Iy |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>linguist</reflex>
@@ -49294,7 +49039,6 @@
               </Verb>
             </entity>
             <reflex>be wrapped</reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCL</morphs>
@@ -49500,7 +49244,7 @@
             <entity>
               <Noun>
                 <plural>MuFtaCL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFtaCL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -49619,7 +49363,6 @@
               <LM>meet</LM>
               <LM>encounter</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -49904,7 +49647,6 @@
               </Verb>
             </entity>
             <reflex>remain</reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCaL</morphs>
@@ -49917,7 +49659,6 @@
               <LM>be slow</LM>
               <LM>hesitate</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -50006,7 +49747,6 @@
               </Verb>
             </entity>
             <reflex>be crowded</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -50044,7 +49784,6 @@
               </Verb>
             </entity>
             <reflex>be acquainted</reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCL</morphs>
@@ -50272,7 +50011,6 @@
               <LM>be amused</LM>
               <LM>be entertained</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACY</morphs>
@@ -50285,7 +50023,6 @@
               <LM>be amused</LM>
               <LM>be entertained</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCY</morphs>
@@ -50299,7 +50036,6 @@
               <LM>be entertained</LM>
               <LM>play with</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -50506,7 +50242,6 @@
               </Verb>
             </entity>
             <reflex>be polluted</reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtAL</morphs>
@@ -50519,7 +50254,6 @@
               <LM>be muddy</LM>
               <LM>be murky</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -50589,7 +50323,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -50821,7 +50555,7 @@
             <entity>
               <Noun>
                 <plural>FA'iL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>refugee</reflex>
@@ -51015,7 +50749,6 @@
               <LM>be impatient</LM>
               <LM>torment</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -51037,7 +50770,6 @@
               <LM>be burning</LM>
               <LM>be languishing</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtAL</morphs>
@@ -51050,7 +50782,6 @@
               <LM>be burning</LM>
               <LM>be languishing</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL |&lt; aT</morphs>
@@ -51239,7 +50970,6 @@
               <LM>be slow</LM>
               <LM>linger</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACaL</morphs>
@@ -51261,7 +50991,6 @@
               <LM>be blamed</LM>
               <LM>be censured</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFAL</morphs>
@@ -51274,7 +51003,6 @@
               <LM>be blameworthy</LM>
               <LM>be reprehensible</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -51337,7 +51065,7 @@
                   <LM>FuCCAL</LM>
                   <LM>FuCCaL</LM>
                 </plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -51453,7 +51181,6 @@
               <LM>be colored</LM>
               <LM>be colorful</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -51614,7 +51341,6 @@
               <LM>distort</LM>
               <LM>be bent</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCI</morphs>
@@ -51628,7 +51354,6 @@
               <LM>be crooked</LM>
               <LM>be bent</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCY</morphs>
@@ -51670,7 +51395,6 @@
               <LM>be bent</LM>
               <LM>wriggle</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCY</morphs>
@@ -51684,7 +51408,6 @@
               <LM>be twisted</LM>
               <LM>be distorted</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCY</morphs>
@@ -52025,7 +51748,6 @@
               </Verb>
             </entity>
             <reflex>be valiant</reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCaL</morphs>
@@ -52064,7 +51786,6 @@
               <LM>become fibrous</LM>
               <LM>form fibers</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FIL</morphs>
@@ -52139,7 +51860,6 @@
               <LM>be proper for</LM>
               <LM>be suitable for</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -52323,7 +52043,6 @@
               <LM>be flexible</LM>
               <LM>be delicate</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -52349,7 +52068,6 @@
               <LM>be lenient with</LM>
               <LM>be kind to</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFAL</morphs>
@@ -52375,7 +52093,6 @@
               <LM>become flexible</LM>
               <LM>soften</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FIL</morphs>
@@ -52578,7 +52295,6 @@
               <LM>be distant</LM>
               <LM>go away</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FACY</morphs>
@@ -52588,7 +52304,6 @@
               </Verb>
             </entity>
             <reflex>keep far away</reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -52626,7 +52341,6 @@
               <LM>be distant</LM>
               <LM>go away</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -52707,7 +52421,7 @@
                   <LM>FaCIy |&lt; Un</LM>
                   <LM>HaFCiyA'</LM>
                 </plural>
-                <derive>------F---</derive>
+                <femini>FaCIy |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>prophet</reflex>
@@ -52717,7 +52431,7 @@
             <entity>
               <Noun>
                 <plural>MutaFaCCI |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MutaFaCCI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>would - be - prophet</reflex>
@@ -52759,7 +52473,6 @@
               <LM>overcome</LM>
               <LM>withdraw</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -52796,7 +52509,6 @@
               <LM>predict</LM>
               <LM>forecast</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFCaL</morphs>
@@ -52970,7 +52682,6 @@
               <LM>bounce off</LM>
               <LM>disagree</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -53092,7 +52803,7 @@
             <entity>
               <Noun>
                 <plural>HaFCiyA'</plural>
-                <derive>------F---</derive>
+                <femini>FaCIy |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -53453,7 +53164,7 @@
             <entity>
               <Noun>
                 <plural>FaCL |&lt; Iy |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCL |&lt; Iy |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>grammarian</reflex>
@@ -53492,7 +53203,7 @@
             <entity>
               <Noun>
                 <plural>FuCY |&lt; aT</plural>
-                <derive>------F---</derive>
+                <femini>FACI |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>grammarian</reflex>
@@ -53550,7 +53261,6 @@
               <LM>be proud</LM>
               <LM>be haughty</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCY</morphs>
@@ -53655,7 +53365,7 @@
             <entity>
               <Noun>
                 <plural>FuCaLA'</plural>
-                <derive>------F---</derive>
+                <femini>FaCIL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -53879,7 +53589,6 @@
               <LM>be moist</LM>
               <LM>be damp</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCY</morphs>
@@ -53916,7 +53625,6 @@
               <LM>be moistened</LM>
               <LM>appear generous</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCY</morphs>
@@ -54361,7 +54069,6 @@
               <LM>forget</LM>
               <LM>be forgotten</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>HaFCY</morphs>
@@ -54371,7 +54078,6 @@
               </Verb>
             </entity>
             <reflex>make forget</reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACY</morphs>
@@ -54385,7 +54091,6 @@
               <LM>neglect</LM>
               <LM>be oblivious of</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -54488,7 +54193,6 @@
               <LM>rise</LM>
               <LM>grow</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCaL</morphs>
@@ -54674,7 +54378,7 @@
             <entity>
               <Noun>
                 <plural>FACiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FACiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -54694,7 +54398,7 @@
             <entity>
               <Noun>
                 <plural>MuFCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -54787,7 +54491,6 @@
               </Verb>
             </entity>
             <reflex>become intoxicated</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCY</morphs>
@@ -54809,7 +54512,6 @@
               <LM>become intoxicated</LM>
               <LM>be starched</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFCY</morphs>
@@ -54822,7 +54524,6 @@
               <LM>smell</LM>
               <LM>inhale</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFCY</morphs>
@@ -55192,7 +54893,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -55367,7 +55068,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -55434,7 +55135,6 @@
               <LM>be contradicting</LM>
               <LM>be incompatible</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCY</morphs>
@@ -55448,7 +55148,6 @@
               <LM>be denied</LM>
               <LM>be omitted</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFCY</morphs>
@@ -55643,7 +55342,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -55684,7 +55383,6 @@
               </Verb>
             </entity>
             <reflex>be pure</reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCY</morphs>
@@ -55946,7 +55644,7 @@
                   <LM>FaCL |&lt; Un</LM>
                   <LM>HaFiCLA'</LM>
                 </plural>
-                <derive>------F---</derive>
+                <femini>FaCL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -55966,7 +55664,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -56308,7 +56006,6 @@
             <entity>
               <Verb>
                 <form>I</form>
-                <voice>Passive</voice>
               </Verb>
             </entity>
             <reflex>
@@ -56339,7 +56036,6 @@
               <LM>be completed</LM>
               <LM>be communicated</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCY</morphs>
@@ -56352,7 +56048,6 @@
               <LM>be concluded</LM>
               <LM>be completed</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FuCY</morphs>
@@ -56600,7 +56295,6 @@
               <LM>bear with difficulty</LM>
               <LM>be oppressed</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FACaL</morphs>
@@ -56661,7 +56355,7 @@
             <entity>
               <Noun>
                 <plural>MuFACiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFACiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -56909,7 +56603,7 @@
             <entity>
               <Noun>
                 <plural>FuCCAL</plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -56935,7 +56629,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -57119,7 +56813,6 @@
               <LM>be opposite</LM>
               <LM>face</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFaCCaL</morphs>
@@ -57159,7 +56852,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>mourner</reflex>
@@ -57352,7 +57045,7 @@
             <entity>
               <Noun>
                 <plural>MuFACiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFACiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -57416,7 +57109,6 @@
               <LM>be lit</LM>
               <LM>be enlightened</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFAL</morphs>
@@ -57690,7 +57382,7 @@
             <entity>
               <Noun>
                 <plural>FaCACIL</plural>
-                <derive>------F---</derive>
+                <femini>FuCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -58043,7 +57735,6 @@
               <LM>be diverse</LM>
               <LM>be complex</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -58306,7 +57997,6 @@
               <LM>be squeamish</LM>
               <LM>be choosy</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IstaFCaL</morphs>
@@ -58379,7 +58069,6 @@
               <LM>hand over</LM>
               <LM>deliver</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>TaFACaL</morphs>
@@ -58392,7 +58081,6 @@
               <LM>deal with</LM>
               <LM>eat</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -58517,6 +58205,7 @@
               <Verb>
                 <form>I</form>
                 <imperf>FAL</imperf>
+                <masdar>FaCL</masdar>
               </Verb>
             </entity>
             <reflex>
@@ -58574,7 +58263,6 @@
               <LM>comply</LM>
               <LM>trust</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCL</morphs>
@@ -58615,7 +58303,7 @@
             <entity>
               <Noun>
                 <plural>FaCCAL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FaCCAL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>sleeper</reflex>
@@ -58707,7 +58395,7 @@
             <entity>
               <Noun>
                 <plural>MuFaCCiL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>MuFaCCiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>hypnotist</reflex>
@@ -58839,7 +58527,6 @@
               <LM>be hostile to</LM>
               <LM>fall out with</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>IFtaCY</morphs>
@@ -58953,7 +58640,6 @@
               <LM>be raw</LM>
               <LM>be uncooked</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FIL</morphs>
@@ -59168,7 +58854,6 @@
               <LM>be squeamish</LM>
               <LM>fastidious</LM>
             </reflex>
-            
           </Entry>
           <Entry>
             <morphs>FaCCiL</morphs>
@@ -59266,7 +58951,7 @@
             <entity>
               <Noun>
                 <plural>FA'iL |&lt; Un</plural>
-                <derive>------F---</derive>
+                <femini>FA'iL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
