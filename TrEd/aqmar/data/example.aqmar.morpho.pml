@@ -122,20 +122,22 @@
           <note>في</note>
           <score>*1.033497</score>
           <with>
-            <LM form="فِي">
+            <LM form="fI">
               <Token id="m-p1w1t1">
-                <morphs>fiy</morphs>
+                <morphs>_____</morphs>
                 <tag>P---------</tag>
-                <form>فِي</form>
-                <extra>PREP</extra>
-                <sense>in</sense>
+                <form>fI</form>
+                <root>fI</root>
                 <cite>
-                  <morphs>fiy</morphs>
+                  <morphs>_____</morphs>
+                  <entity>
+                    <Prep/>
+                  </entity>
                   <reflex>
                     <LM>in</LM>
                   </reflex>
                 </cite>
-                <lemma>فِي</lemma>
+                <lemma>fI</lemma>
               </Token>
             </LM>
           </with>
@@ -148,22 +150,28 @@
           <note>تطور</note>
           <score>*1.006242</score>
           <with>
-            <LM form="تَطَوُّرٍ">
+            <LM form="ta.tawwuriN">
               <Token id="m-p1w2t1">
-                <morphs>taTaw~ur+K</morphs>
-                <tag>N-------2I</tag>
-                <form>تَطَوُّرٍ</form>
-                <note>N-----MS2I</note>
-                <extra>NOUN+CASE_INDEF_GEN</extra>
-                <sense>event;development</sense>
+                <morphs>TaFaCCuL |&lt;&lt; "iN"</morphs>
+                <tag>N------S2I</tag>
+                <form>ta.tawwuriN</form>
+                <root>.t w r</root>
                 <cite>
-                  <morphs>taTaw~ur</morphs>
+                  <morphs>TaFaCCuL</morphs>
+                  <entity>
+                    <Noun>
+                      <plural>
+                        <LM>TaFaCCuL |&lt; At</LM>
+                      </plural>
+                    </Noun>
+                  </entity>
                   <reflex>
-                    <LM>event</LM>
                     <LM>development</LM>
+                    <LM>progress</LM>
+                    <LM>event</LM>
                   </reflex>
                 </cite>
-                <lemma>تَطَوُّر</lemma>
+                <lemma>ta.tawwur</lemma>
               </Token>
             </LM>
           </with>
@@ -176,21 +184,22 @@
           <note>فاجا</note>
           <score>*1.005981</score>
           <with>
-            <LM form="فاجَأَ">
+            <LM form="fA^ga'a">
               <Token id="m-p1w3t1">
-                <morphs>fAja>+a</morphs>
-                <tag>VP---3MS--</tag>
-                <form>فاجَأَ</form>
-                <note>VPIA-3MS--</note>
-                <extra>PV+PVSUFF_SUBJ:3MS</extra>
-                <sense>surprise</sense>
+                <morphs>FACaL |&lt;&lt; "a"</morphs>
+                <tag>VP-A-3MS--</tag>
+                <form>fA^ga'a</form>
+                <root>f ^g '</root>
                 <cite>
-                  <morphs>fAja></morphs>
+                  <morphs>FACaL</morphs>
+                  <entity>
+                    <Verb/>
+                  </entity>
                   <reflex>
                     <LM>surprise</LM>
                   </reflex>
                 </cite>
-                <lemma>فاجَأ</lemma>
+                <lemma>fA^ga'</lemma>
               </Token>
             </LM>
           </with>
@@ -203,22 +212,27 @@
           <note>علماء</note>
           <score>*1.014419</score>
           <with>
-            <LM form="عُلَماءِ">
+            <LM form="`ulamA'a">
               <Token id="m-p1w4t1">
-                <morphs>EulamA'+i</morphs>
-                <tag>N-------2R</tag>
-                <form>عُلَماءِ</form>
-                <note>N-----MS2R</note>
-                <extra>NOUN+CASE_DEF_GEN</extra>
-                <sense>scholars;scientists</sense>
+                <morphs>FuCaLA' |&lt;&lt; "a"</morphs>
+                <tag>N------P4R</tag>
+                <form>`ulamA'a</form>
+                <root>` l m</root>
                 <cite>
-                  <morphs>EAlim</morphs>
+                  <morphs>FACiL</morphs>
+                  <entity>
+                    <Noun>
+                      <plural>
+                        <LM>FuCaLA'</LM>
+                      </plural>
+                    </Noun>
+                  </entity>
                   <reflex>
-                    <LM>scholars</LM>
-                    <LM>scientists</LM>
+                    <LM>scientist</LM>
+                    <LM>scholar</LM>
                   </reflex>
                 </cite>
-                <lemma>عالِم</lemma>
+                <lemma>`Alim</lemma>
               </Token>
             </LM>
           </with>
@@ -231,20 +245,26 @@
           <note>الكمبيوترات</note>
           <score>*0.981798</score>
           <with>
-            <LM form="الكَمبِيُوتِراتِ">
+            <LM form="al-kambyUtirAti">
               <Token id="m-p1w5t1">
-                <morphs>Al+kambiyuwtir+At+i</morphs>
-                <tag>N-----FP2D</tag>
-                <form>الكَمبِيُوتِراتِ</form>
-                <extra>DET+NOUN+NSUFF_FEM_PL+CASE_DEF_GEN</extra>
-                <sense>computer</sense>
+                <morphs>al >| _____ |&lt; At |&lt;&lt; "i"</morphs>
+                <tag>N------P2D</tag>
+                <form>al-kambyUtirAti</form>
+                <root>kambyUtir</root>
                 <cite>
-                  <morphs>kambiyuwtir</morphs>
+                  <morphs>_____</morphs>
+                  <entity>
+                    <Noun>
+                      <plural>
+                        <LM>_____ |&lt; At</LM>
+                      </plural>
+                    </Noun>
+                  </entity>
                   <reflex>
                     <LM>computer</LM>
                   </reflex>
                 </cite>
-                <lemma>كَمبِيُوتِر</lemma>
+                <lemma>kambyUtir</lemma>
               </Token>
             </LM>
           </with>
@@ -257,21 +277,23 @@
           <note>عالية</note>
           <score>*0.979655</score>
           <with>
-            <LM form="عالِيَةِ">
+            <LM form="`AliyaTi">
               <Token id="m-p1w6t1">
-                <morphs>EAliy+ap+i</morphs>
-                <tag>A-----FS2R</tag>
-                <form>عالِيَةِ</form>
-                <extra>ADJ+NSUFF_FEM_SG+CASE_DEF_GEN</extra>
-                <sense>high;elevated</sense>
+                <morphs>FACI |&lt; aT |&lt;&lt; "i"</morphs>
+                <tag>A-----FS2L</tag>
+                <form>`AliyaTi</form>
+                <root>` l w</root>
                 <cite>
-                  <morphs>EAliy</morphs>
+                  <morphs>FACI</morphs>
+                  <entity>
+                    <Adj/>
+                  </entity>
                   <reflex>
                     <LM>high</LM>
                     <LM>elevated</LM>
                   </reflex>
                 </cite>
-                <lemma>عالِي</lemma>
+                <lemma>`AlI</lemma>
               </Token>
             </LM>
           </with>
@@ -284,22 +306,23 @@
           <note>الاداء</note>
           <score>*1.019825</score>
           <with>
-            <LM form="الأَداءِ">
+            <LM form="al-'adA'i">
               <Token id="m-p1w7t1">
-                <morphs>Al+>adA'+i</morphs>
-                <tag>N-------2D</tag>
-                <form>الأَداءِ</form>
-                <note>N-----MS2D</note>
-                <extra>DET+NOUN+CASE_DEF_GEN</extra>
-                <sense>performance;fulfillment</sense>
+                <morphs>al >| FaCA' |&lt;&lt; "i"</morphs>
+                <tag>N------S2D</tag>
+                <form>al-'adA'i</form>
+                <root>' d y</root>
                 <cite>
-                  <morphs>>adA'</morphs>
+                  <morphs>FaCA'</morphs>
+                  <entity>
+                    <Noun/>
+                  </entity>
                   <reflex>
                     <LM>performance</LM>
                     <LM>fulfillment</LM>
                   </reflex>
                 </cite>
-                <lemma>أَداء</lemma>
+                <lemma>'adA'</lemma>
               </Token>
             </LM>
           </with>
@@ -312,20 +335,22 @@
           <note>في</note>
           <score>*1.033497</score>
           <with>
-            <LM form="فِي">
+            <LM form="fI">
               <Token id="m-p1w8t1">
-                <morphs>fiy</morphs>
+                <morphs>_____</morphs>
                 <tag>P---------</tag>
-                <form>فِي</form>
-                <extra>PREP</extra>
-                <sense>in</sense>
+                <form>fI</form>
+                <root>fI</root>
                 <cite>
-                  <morphs>fiy</morphs>
+                  <morphs>_____</morphs>
+                  <entity>
+                    <Prep/>
+                  </entity>
                   <reflex>
                     <LM>in</LM>
                   </reflex>
                 </cite>
-                <lemma>فِي</lemma>
+                <lemma>fI</lemma>
               </Token>
             </LM>
           </with>
@@ -338,20 +363,27 @@
           <note>الولايات</note>
           <score>*1.002204</score>
           <with>
-            <LM form="الوِلاياتِ">
+            <LM form="al-wilAyAti">
               <Token id="m-p1w9t1">
-                <morphs>Al+wilAy+At+i</morphs>
-                <tag>N-----FP2D</tag>
-                <form>الوِلاياتِ</form>
-                <extra>DET+NOUN+NSUFF_FEM_PL+CASE_DEF_GEN</extra>
-                <sense>States</sense>
+                <morphs>al >| FiCAL |&lt; At |&lt;&lt; "i"</morphs>
+                <tag>N------P2D</tag>
+                <form>al-wilAyAti</form>
+                <root>w l y</root>
                 <cite>
-                  <morphs>wilAyap</morphs>
+                  <morphs>FiCAL |&lt; aT</morphs>
+                  <entity>
+                    <Noun>
+                      <plural>
+                        <LM>FiCAL |&lt; At</LM>
+                      </plural>
+                    </Noun>
+                  </entity>
                   <reflex>
-                    <LM>States</LM>
+                    <LM>state</LM>
+                    <LM>province</LM>
                   </reflex>
                 </cite>
-                <lemma>وِلايَة</lemma>
+                <lemma>wilAyaT</lemma>
               </Token>
             </LM>
           </with>
@@ -364,20 +396,22 @@
           <note>المتحدة</note>
           <score>*1.009738</score>
           <with>
-            <LM form="المُتَّحِدَةِ">
+            <LM form="al-mutta.hidaTi">
               <Token id="m-p1w10t1">
-                <morphs>Al+mut~aHid+ap+i</morphs>
+                <morphs>al >| MuFtaCiL |&lt; aT |&lt;&lt; "i"</morphs>
                 <tag>A-----FS2D</tag>
-                <form>المُتَّحِدَةِ</form>
-                <extra>DET+ADJ+NSUFF_FEM_SG+CASE_DEF_GEN</extra>
-                <sense>United</sense>
+                <form>al-mutta.hidaTi</form>
+                <root>w .h d</root>
                 <cite>
-                  <morphs>mut~aHid</morphs>
+                  <morphs>MuFtaCiL</morphs>
+                  <entity>
+                    <Adj/>
+                  </entity>
                   <reflex>
-                    <LM>United</LM>
+                    <LM>united</LM>
                   </reflex>
                 </cite>
-                <lemma>مُتَّحِد</lemma>
+                <lemma>mutta.hid</lemma>
               </Token>
             </LM>
           </with>
@@ -392,18 +426,15 @@
           <with>
             <LM form="،">
               <Token id="m-p1w11t1">
-                <morphs>,</morphs>
+                <morphs>"\1548"</morphs>
                 <tag>G---------</tag>
-                <form>,</form>
-                <extra>PUNC</extra>
-                <sense>,</sense>
+                <form>،</form>
                 <cite>
-                  <morphs>,</morphs>
-                  <reflex>
-                    <LM>,</LM>
-                  </reflex>
+                  <morphs>""</morphs>
+                  <entity>
+                    <Grph/>
+                  </entity>
                 </cite>
-                <lemma>،</lemma>
               </Token>
             </LM>
           </with>
@@ -416,22 +447,23 @@
           <note>اعلنت</note>
           <score>*0.944528</score>
           <with>
-            <LM form="أَعلَنَت">
+            <LM form="'a`lanat">
               <Token id="m-p1w12t1">
-                <morphs>>aElan+at</morphs>
+                <morphs>HaFCaL |&lt;&lt; "at"</morphs>
                 <tag>VP-A-3FS--</tag>
-                <form>أَعلَنَت</form>
-                <note>VPIA-3FS--</note>
-                <extra>PV+PVSUFF_SUBJ:3FS</extra>
-                <sense>announce;declare</sense>
+                <form>'a`lanat</form>
+                <root>` l n</root>
                 <cite>
-                  <morphs>>aElan</morphs>
+                  <morphs>HaFCaL</morphs>
+                  <entity>
+                    <Verb/>
+                  </entity>
                   <reflex>
                     <LM>announce</LM>
                     <LM>declare</LM>
                   </reflex>
                 </cite>
-                <lemma>أَعلَن</lemma>
+                <lemma>'a`lan</lemma>
               </Token>
             </LM>
           </with>
@@ -444,21 +476,22 @@
           <note>الصين</note>
           <score>*0.979915</score>
           <with>
-            <LM form="الصِّينُ">
+            <LM form="a.s-.sInu">
               <Token id="m-p1w13t1">
-                <morphs>Al+Siyn+u</morphs>
-                <tag>Z-------1D</tag>
-                <form>الصِينُ</form>
-                <note>N-----MS1D</note>
-                <extra>DET+NOUN_PROP+CASE_DEF_NOM</extra>
-                <sense>China</sense>
+                <morphs>al >| _____ |&lt;&lt; "u"</morphs>
+                <tag>N------S1D</tag>
+                <form>a.s-.sInu</form>
+                <root>.sIn</root>
                 <cite>
-                  <morphs>Siyn</morphs>
+                  <morphs>_____</morphs>
+                  <entity>
+                    <Noun/>
+                  </entity>
                   <reflex>
                     <LM>China</LM>
                   </reflex>
                 </cite>
-                <lemma>صِين</lemma>
+                <lemma>.sIn</lemma>
               </Token>
             </LM>
           </with>
@@ -471,20 +504,23 @@
           <note>عن</note>
           <score>*1.033497</score>
           <with>
-            <LM form="عَن">
+            <LM form="`an">
               <Token id="m-p1w14t1">
-                <morphs>Ean</morphs>
+                <morphs>_____</morphs>
                 <tag>P---------</tag>
-                <form>عَن</form>
-                <extra>PREP</extra>
-                <sense>(away) from, off, about, on, over</sense>
+                <form>`an</form>
+                <root>`an</root>
                 <cite>
-                  <morphs>Ean</morphs>
+                  <morphs>_____</morphs>
+                  <entity>
+                    <Prep/>
+                  </entity>
                   <reflex>
-                    <LM>(away) from, off, about, on, over</LM>
+                    <LM>about</LM>
+                    <LM>from</LM>
                   </reflex>
                 </cite>
-                <lemma>عَن</lemma>
+                <lemma>`an</lemma>
               </Token>
             </LM>
           </with>
@@ -497,22 +533,27 @@
           <note>انتاج</note>
           <score>*0.955359</score>
           <with>
-            <LM form="إِنتاجِ">
+            <LM form="'intA^gi">
               <Token id="m-p1w15t1">
-                <morphs>&lt;intAj+i</morphs>
-                <tag>N-------2R</tag>
-                <form>إِنتاجِ</form>
-                <note>N-----MS2R</note>
-                <extra>NOUN+CASE_DEF_GEN</extra>
-                <sense>production;output</sense>
+                <morphs>HiFCAL |&lt;&lt; "i"</morphs>
+                <tag>N------S2R</tag>
+                <form>'intA^gi</form>
+                <root>n t ^g</root>
                 <cite>
-                  <morphs>&lt;intAj</morphs>
+                  <morphs>HiFCAL</morphs>
+                  <entity>
+                    <Noun>
+                      <plural>
+                        <LM>HiFCAL |&lt; At</LM>
+                      </plural>
+                    </Noun>
+                  </entity>
                   <reflex>
                     <LM>production</LM>
                     <LM>output</LM>
                   </reflex>
                 </cite>
-                <lemma>إِنتاج</lemma>
+                <lemma>'intA^g</lemma>
               </Token>
             </LM>
           </with>
@@ -525,21 +566,33 @@
           <note>اول</note>
           <score>*0.920851</score>
           <with>
-            <LM form="أَوَّلِ">
+            <LM form="'awwali">
               <Token id="m-p1w16t1">
-                <morphs>>aw~al+i</morphs>
-                <tag>----------</tag>
-                <form>أَوَّلِ</form>
-                <note>A-----MS2R</note>
-                <extra>ADJ_NUM+CASE_DEF_GEN</extra>
-                <sense>first</sense>
+                <morphs>HawCaL |&lt;&lt; "i"</morphs>
+                <tag>A-----MS2R</tag>
+                <form>'awwali</form>
+                <root>' w l</root>
                 <cite>
-                  <morphs>>aw~al</morphs>
+                  <morphs>HawCaL</morphs>
+                  <entity>
+                    <Adj>
+                      <plural>
+                        <LM>FaCA'iL</LM>
+                        <LM>FuCaL</LM>
+                        <LM>HawCaL |&lt; Un</LM>
+                      </plural>
+                      <femini>
+                        <LM>FULY</LM>
+                      </femini>
+                    </Adj>
+                  </entity>
                   <reflex>
                     <LM>first</LM>
+                    <LM>foremost</LM>
+                    <LM>early</LM>
                   </reflex>
                 </cite>
-                <lemma>أَوَّل</lemma>
+                <lemma>'awwal</lemma>
               </Token>
             </LM>
           </with>
@@ -552,21 +605,26 @@
           <note>كمبيوتر</note>
           <score>*0.985849</score>
           <with>
-            <LM form="كَمبِيُوتِرٍ">
+            <LM form="kambyUtiriN">
               <Token id="m-p1w17t1">
-                <morphs>kambiyuwtir+K</morphs>
-                <tag>N-------2I</tag>
-                <form>كَمبِيُوتِرٍ</form>
-                <note>N-----MS2I</note>
-                <extra>NOUN+CASE_INDEF_GEN</extra>
-                <sense>computer</sense>
+                <morphs>_____ |&lt;&lt; "iN"</morphs>
+                <tag>N------S2I</tag>
+                <form>kambyUtiriN</form>
+                <root>kambyUtir</root>
                 <cite>
-                  <morphs>kambiyuwtir</morphs>
+                  <morphs>_____</morphs>
+                  <entity>
+                    <Noun>
+                      <plural>
+                        <LM>_____ |&lt; At</LM>
+                      </plural>
+                    </Noun>
+                  </entity>
                   <reflex>
                     <LM>computer</LM>
                   </reflex>
                 </cite>
-                <lemma>كَمبِيُوتِر</lemma>
+                <lemma>kambyUtir</lemma>
               </Token>
             </LM>
           </with>
@@ -579,22 +637,25 @@
           <note>خارق</note>
           <score>*0.981593</score>
           <with>
-            <LM form="خارِقٍ">
+            <LM form="_hAriqiN">
               <Token id="m-p1w18t1">
-                <morphs>xAriq+K</morphs>
-                <tag>A-------2I</tag>
-                <form>خارِقٍ</form>
-                <note>A-----MS2I</note>
-                <extra>ADJ+CASE_INDEF_GEN</extra>
-                <sense>exceeding;extraordinary</sense>
+                <morphs>FACiL |&lt;&lt; "iN"</morphs>
+                <tag>A-----MS2I</tag>
+                <form>_hAriqiN</form>
+                <root>_h r q</root>
                 <cite>
-                  <morphs>xAriq</morphs>
+                  <morphs>FACiL</morphs>
+                  <entity>
+                    <Adj/>
+                  </entity>
                   <reflex>
+                    <LM>violating</LM>
+                    <LM>contravening</LM>
                     <LM>exceeding</LM>
                     <LM>extraordinary</LM>
                   </reflex>
                 </cite>
-                <lemma>خارِق</lemma>
+                <lemma>_hAriq</lemma>
               </Token>
             </LM>
           </with>
@@ -607,22 +668,28 @@
           <note>يعمل</note>
           <score>*1.004039</score>
           <with>
-            <LM form="يَعمَلُ">
+            <LM form="ya`malu">
               <Token id="m-p1w19t1">
-                <morphs>ya+Emal+u</morphs>
+                <morphs>"ya" >>| FCaL |&lt;&lt; "u"</morphs>
                 <tag>VIIA-3MS--</tag>
-                <form>يَعمَلُ</form>
-                <extra>IV3MS+IV+IVSUFF_MOOD:I</extra>
-                <sense>work;function;act</sense>
+                <form>ya`malu</form>
+                <root>` m l</root>
                 <cite>
-                  <morphs>Eamil-a</morphs>
+                  <morphs>FaCiL</morphs>
+                  <entity>
+                    <Verb>
+                      <imperf>
+                        <LM>FCaL</LM>
+                      </imperf>
+                    </Verb>
+                  </entity>
                   <reflex>
                     <LM>work</LM>
                     <LM>function</LM>
                     <LM>act</LM>
                   </reflex>
                 </cite>
-                <lemma>عَمِل-َ</lemma>
+                <lemma>`amil</lemma>
               </Token>
             </LM>
           </with>
@@ -635,29 +702,44 @@
           <note>بمعالجات</note>
           <score>*0.961977</score>
           <with>
-            <LM form="بِمُعالَجات" note="N-----FP-R">
+            <LM form="bi-mu`Ali^gAtiN">
               <Token id="m-p1w20t1">
-                <morphs>bi</morphs>
+                <morphs>_____</morphs>
                 <tag>P---------</tag>
-                <form>بِ</form>
-                <extra>PREP</extra>
-              </Token>
-              <Token id="m-p1w20t2">
-                <morphs>muEAlaj+At</morphs>
-                <tag>N-----FP--</tag>
-                <form>مُعالَجات</form>
-                <note>N-----FP-I</note>
-                <extra>NOUN+NSUFF_FEM_PL</extra>
-                <sense>treatment;therapy;processing</sense>
+                <form>bi</form>
+                <root>bi</root>
                 <cite>
-                  <morphs>muEAlajap</morphs>
+                  <morphs>_____</morphs>
+                  <entity>
+                    <Prep/>
+                  </entity>
                   <reflex>
-                    <LM>treatment</LM>
-                    <LM>therapy</LM>
-                    <LM>processing</LM>
+                    <LM>by</LM>
+                    <LM>with</LM>
                   </reflex>
                 </cite>
-                <lemma>مُعالَجَة</lemma>
+                <lemma>bi</lemma>
+              </Token>
+              <Token id="m-p1w20t2">
+                <morphs>MuFACiL |&lt; At |&lt;&lt; "iN"</morphs>
+                <tag>N------P2I</tag>
+                <form>mu`Ali^gAtiN</form>
+                <root>` l ^g</root>
+                <cite>
+                  <morphs>MuFACiL</morphs>
+                  <entity>
+                    <Noun>
+                      <plural>
+                        <LM>MuFACiL |&lt; At</LM>
+                      </plural>
+                    </Noun>
+                  </entity>
+                  <reflex>
+                    <LM>processor</LM>
+                    <LM>CPU</LM>
+                  </reflex>
+                </cite>
+                <lemma>mu`Ali^g</lemma>
               </Token>
             </LM>
           </with>
@@ -670,22 +752,24 @@
           <note>صممت</note>
           <score>*0.845615</score>
           <with>
-            <LM form="صَمَّمَت" note="V-----FS-I">
+            <LM form=".summimat">
               <Token id="m-p1w21t1">
-                <morphs>Sam~am+at</morphs>
-                <tag>VP-A-3FS--</tag>
-                <form>صَمَّمَت</form>
-                <note>VPIA-3FS--</note>
-                <extra>PV+PVSUFF_SUBJ:3FS</extra>
-                <sense>be determined;be persistent</sense>
+                <morphs>FuCCiL |&lt;&lt; "at"</morphs>
+                <tag>VP-P-3FS--</tag>
+                <form>.summimat</form>
+                <root>.s m m</root>
                 <cite>
-                  <morphs>Sam~am</morphs>
+                  <morphs>FaCCaL</morphs>
+                  <entity>
+                    <Verb/>
+                  </entity>
                   <reflex>
-                    <LM>be determined</LM>
-                    <LM>be persistent</LM>
+                    <LM>determine</LM>
+                    <LM>decide</LM>
+                    <LM>design</LM>
                   </reflex>
                 </cite>
-                <lemma>صَمَّم</lemma>
+                <lemma>.sammam</lemma>
               </Token>
             </LM>
           </with>
@@ -698,30 +782,44 @@
           <note>وصنعت</note>
           <score>*1.000050</score>
           <with>
-            <LM form="وَصُنِعَت">
+            <LM form="wa-.suni`at">
               <Token id="m-p1w22t1">
-                <morphs>wa</morphs>
+                <morphs>_____</morphs>
                 <tag>C---------</tag>
-                <form>وَ</form>
-                <extra>CONJ</extra>
-              </Token>
-              <Token id="m-p1w22t2">
-                <morphs>SuniE+at</morphs>
-                <tag>VP-P-3FS--</tag>
-                <form>صُنِعَت</form>
-                <note>VPIP-3FS--</note>
-                <extra>PV_PASS+PVSUFF_SUBJ:3FS</extra>
-                <sense>be made; be fabricated;be designed;be built</sense>
+                <form>wa</form>
+                <root>wa</root>
                 <cite>
-                  <morphs>SanaE-a</morphs>
+                  <morphs>_____</morphs>
+                  <entity>
+                    <Conj/>
+                  </entity>
                   <reflex>
-                    <LM>be made</LM>
-                    <LM> be fabricated</LM>
-                    <LM>be designed</LM>
-                    <LM>be built</LM>
+                    <LM>and</LM>
                   </reflex>
                 </cite>
-                <lemma>صَنَع-َ</lemma>
+                <lemma>wa</lemma>
+              </Token>
+              <Token id="m-p1w22t2">
+                <morphs>FuCiL |&lt;&lt; "at"</morphs>
+                <tag>VP-P-3FS--</tag>
+                <form>.suni`at</form>
+                <root>.s n `</root>
+                <cite>
+                  <morphs>FaCaL</morphs>
+                  <entity>
+                    <Verb>
+                      <imperf>
+                        <LM>FCaL</LM>
+                      </imperf>
+                    </Verb>
+                  </entity>
+                  <reflex>
+                    <LM>fabricate</LM>
+                    <LM>design</LM>
+                    <LM>build</LM>
+                  </reflex>
+                </cite>
+                <lemma>.sana`</lemma>
               </Token>
             </LM>
           </with>
@@ -734,21 +832,22 @@
           <note>محليا</note>
           <score>*1.002760</score>
           <with>
-            <LM form="مَحَلِّيّاً">
+            <LM form="ma.hallIyaN">
               <Token id="m-p1w23t1">
-                <morphs>maHal~iy~+AF</morphs>
-                <tag>A-------4I</tag>
-                <form>مَحَلِّيّاً</form>
-                <note>A-----MS4I</note>
-                <extra>ADJ+CASE_INDEF_ACC</extra>
-                <sense>local</sense>
+                <morphs>MaFaCL |&lt; Iy |&lt;&lt; "aN"</morphs>
+                <tag>A-----MS4I</tag>
+                <form>ma.hallIyaN</form>
+                <root>.h l l</root>
                 <cite>
-                  <morphs>maHal~iy~</morphs>
+                  <morphs>MaFaCL |&lt; Iy</morphs>
+                  <entity>
+                    <Adj/>
+                  </entity>
                   <reflex>
                     <LM>local</LM>
                   </reflex>
                 </cite>
-                <lemma>مَحَلِّيّ</lemma>
+                <lemma>ma.hallIy</lemma>
               </Token>
             </LM>
           </with>
