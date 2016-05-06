@@ -2,12 +2,12 @@ name:               ElixirFM
 version:            1.2.1
 license:            GPL
 license-file:       LICENSE
-extra-source-files: INSTALL, Setup.PL, elixir.svg
-copyright:          2014
+extra-source-files: README.md
+copyright:          2016
 author:             Otakar Smrz
 maintainer:         otakar-smrz users.sf.net
 homepage:           http://otakar-smrz.users.sf.net/
-package-url:        http://sourceforge.net/projects/elixir-fm/
+package-url:        http://github.com/otakar-smrz/elixir-fm/
 category:           Text, Natural Language Processing
 build-depends:      Encode, Cabal, base < 5.0, containers, wl-pprint > 1.0
 build-type:         Simple
