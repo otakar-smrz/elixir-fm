@@ -4,8 +4,8 @@
     <schema href="elixir.schema.xml"/>
   </head>
   <meta>
-    <revision>$Revision: 731 $</revision>
-    <date>$Date: 2016-05-05 02:00:53 +0200 (Thu, 05 May 2016) $</date>
+    <revision>$Revision: 732 $</revision>
+    <date>$Date: 2016-05-05 04:49:19 +0200 (Thu, 05 May 2016) $</date>
   </meta>
   <data>
     <Cluster>
@@ -67978,18 +67978,7 @@
             <entity>
               <Noun>
                 <plural>MuFACiL |&lt; At</plural>
-              </Noun>
-            </entity>
-            <reflex>
-              <LM>processor</LM>
-              <LM>CPU</LM>
-            </reflex>
-          </Entry>
-          <Entry>
-            <morphs>MuFACiL |&lt; aT</morphs>
-            <entity>
-              <Noun>
-                <plural>MuFACiL |&lt; At</plural>
+                <femini>MuFACiL |&lt; aT</femini>
               </Noun>
             </entity>
             <reflex>
@@ -134469,7 +134458,7 @@
           <Entry>
             <morphs>FaCiL</morphs>
             <entity>
-              <Noun/>
+              <Adj/>
             </entity>
             <reflex>smooth</reflex>
           </Entry>

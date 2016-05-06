@@ -4,8 +4,8 @@
     <schema href="elixir.schema.xml"/>
   </head>
   <meta>
-    <revision>$Revision: 730 $</revision>
-    <date>$Date: 2016-05-05 01:04:12 +0200 (Thu, 05 May 2016) $</date>
+    <revision>$Revision: 732 $</revision>
+    <date>$Date: 2016-05-05 04:49:19 +0200 (Thu, 05 May 2016) $</date>
   </meta>
   <data>
     <Cluster>
@@ -83675,8 +83675,13 @@
           <Entry>
             <morphs>_____ |&lt;&lt; "At"</morphs>
             <entity>
-              <Noun/>
+              <Noun>
+                <plural>_____ |&lt;&lt; "At"</plural>
+              </Noun>
             </entity>
+            <limits>
+              <fst>-------P--</fst>
+            </limits>
             <reflex>no's</reflex>
           </Entry>
         </ents>
