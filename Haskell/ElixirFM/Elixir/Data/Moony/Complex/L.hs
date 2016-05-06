@@ -1399,7 +1399,10 @@ cluster_76  = cluster
 
  |> ['k','a','m','b','y','U','t','i','r'] <| [
 
-    _____                     `noun`    {- <kambyUtir> -}      [ ['c','o','m','p','u','t','e','r'] ],
+    _____                     `noun`    {- <kambyUtir> -}      [ ['c','o','m','p','u','t','e','r'] ]
+                              `plural`     _____ |< At
+                           
+    `excepts` Triptote,
 
     _____ |< Iy               `adj`     {- <kambyUtirIy> -}    [ ['c','o','m','p','u','t','e','r'] ] ]
 

@@ -242,7 +242,7 @@ cluster_14  = cluster
 
     FaCaL                     `noun`    {- <malas> -}          [ unwords [ ['s','i','l','k'], ['f','a','b','r','i','c'] ] ],
 
-    FaCiL                     `noun`    {- <malis> -}          [ ['s','m','o','o','t','h'] ],
+    FaCiL                     `adj`     {- <malis> -}          [ ['s','m','o','o','t','h'] ],
 
     FaCAL |< aT               `noun`    {- <malAsaT> -}        [ ['s','m','o','o','t','h','n','e','s','s'] ],
 

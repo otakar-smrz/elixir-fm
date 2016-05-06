@@ -1417,7 +1417,8 @@ cluster_51  = cluster
  |> "n w m" <| [
 
     FAL                       `verb`    {- <nAm> -}            [ ['s','l','e','e','p'], unwords [ ['l','i','e'], ['d','o','w','n'] ] ]
-                              `imperf`     FAL,
+                              `imperf`     FAL
+                              `masdar`     FaCL,
 
     FaCCaL                    `verb`    {- <nawwam> -}         [ unwords [ ['l','u','l','l'], ['t','o'], ['s','l','e','e','p'] ], unwords [ ['l','a','y'], ['d','o','w','n'] ], ['a','n','e','s','t','h','e','t','i','z','e'] ],
 

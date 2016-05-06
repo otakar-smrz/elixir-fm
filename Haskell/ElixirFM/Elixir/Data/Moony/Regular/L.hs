@@ -92,7 +92,8 @@ cluster_6   = cluster
  |> ".g r q" <| [
 
     FaCiL                     `verb`    {- <.gariq> -}         [ ['s','i','n','k'], ['d','r','o','w','n'], unwords [ ['b','e'], ['s','u','b','m','e','r','g','e','d'] ] ]
-                              `imperf`     FCaL,
+                              `imperf`     FCaL
+                              `masdar`     FaCaL,
 
     FaCCaL                    `verb`    {- <.garraq> -}        [ ['s','u','b','m','e','r','g','e'], ['d','r','o','w','n'], ['i','n','u','n','d','a','t','e'] ],
 
@@ -737,7 +738,10 @@ cluster_36  = cluster
  |> ".g f l" <| [
 
     FaCaL                     `verb`    {- <.gafal> -}         [ ['n','e','g','l','e','c','t'], unwords [ ['b','e'], ['f','o','r','g','e','t','f','u','l'] ] ]
-                              `imperf`     FCuL,
+                              `imperf`     FCuL
+                              `masdar`     FuCUL
+                              `masdar`     FaCL |< aT
+                              `masdar`     FaCaL,
 
     FaCCaL                    `verb`    {- <.gaffal> -}        [ ['s','t','u','l','t','i','f','y'], unwords [ ['m','a','k','e'], ['n','e','g','l','i','g','e','n','t'] ] ],
 
@@ -801,7 +805,10 @@ cluster_38  = cluster
  |> ".g l b" <| [
 
     FaCaL                     `verb`    {- <.galab> -}         [ ['d','e','f','e','a','t'], ['o','v','e','r','c','o','m','e'] ]
-                              `imperf`     FCiL,
+                              `imperf`     FCiL
+                              `masdar`     FaCL
+                              `masdar`     FaCaL
+                              `masdar`     FaCL |< aT,
 
     FACaL                     `verb`    {- <.gAlab> -}         [ ['o','v','e','r','c','o','m','e'], ['s','u','r','m','o','u','n','t'] ],
 
@@ -1116,7 +1123,8 @@ cluster_53  = cluster
                               `imperf`     FCuL,
 
     FaCaL                     `verb`    {- <.gamar> -}         [ ['i','m','m','e','r','s','e'], ['f','l','o','o','d'] ]
-                              `imperf`     FCuL,
+                              `imperf`     FCuL
+                              `masdar`     FaCL,
 
     FACaL                     `verb`    {- <.gAmar> -}         [ ['v','e','n','t','u','r','e'], ['r','i','s','k'], ['g','a','m','b','l','e'] ],
 

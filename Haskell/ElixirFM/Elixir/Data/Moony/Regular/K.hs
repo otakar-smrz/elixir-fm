@@ -1065,10 +1065,8 @@ cluster_36  = cluster
                               `plural`     TaFACuL |< At,
 
     MuFACiL                   `noun`    {- <mu`Ali^g> -}       [ ['p','r','o','c','e','s','s','o','r'], ['C','P','U'] ]
-                              `plural`     MuFACiL |< At,
-
-    MuFACiL |< aT             `noun`    {- <mu`Ali^gaT> -}     [ ['p','r','o','c','e','s','s','o','r'], ['C','P','U'] ]
-                              `plural`     MuFACiL |< At ]
+                              `plural`     MuFACiL |< At
+                              `femini`     MuFACiL |< aT ]
 
 
 cluster_37  = cluster
@@ -2427,7 +2425,8 @@ cluster_96  = cluster
  |> ".g r b" <| [
 
     FaCaL                     `verb`    {- <.garab> -}         [ ['d','e','p','a','r','t'], ['l','e','a','v','e'] ]
-                              `imperf`     FCuL,
+                              `imperf`     FCuL
+                              `masdar`     FuCUL,
 
     FaCCaL                    `verb`    {- <.garrab> -}        [ ['b','a','n','i','s','h'] ],
 

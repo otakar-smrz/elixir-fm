@@ -1575,7 +1575,10 @@ cluster_78  = cluster
 
     "kal" >>| _____           `part`    {- <kallA> -}          [ unwords [ ['n','o','t'], ['a','t'], ['a','l','l'] ], unwords [ ['d','e','f','i','n','i','t','e','l','y'], ['n','o','t'] ] ],
 
-    _____ |<< "At"            `noun`    {- <lA'At> -}          [ ['n','o','\'','s'] ] ]
+    _____ |<< "At"            `noun`    {- <lA'At> -}          [ ['n','o','\'','s'] ]
+                              `plural`     _____ |<< "At"
+                           
+    `limited` "-------P--" ]
 
 
 cluster_79  = cluster

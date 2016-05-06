@@ -245,12 +245,17 @@ cluster_22  = cluster
 
  |> "t l w" <| [
 
-    FaCA                      `verb`    {- <talA> -}           [ ['f','o','l','l','o','w'], ['r','e','c','i','t','e'] ]
-                              `imperf`     FCU,
+    FaCA                      `verb`    {- <talA> -}           [ ['f','o','l','l','o','w'], unwords [ ['c','o','m','e'], ['a','f','t','e','r'] ] ]
+                              `imperf`     FCU
+                              `masdar`     FuCUL,
 
-    TaFACY                    `verb`    {- <tatAlY> -}         [ unwords [ ['f','o','l','l','o','w'], ['o','n','e'], ['a','n','o','t','h','e','r'] ], unwords [ ['b','e'], ['s','u','c','c','e','s','s','i','v','e'] ] ],
+    FaCA                      `verb`    {- <talA> -}           [ ['r','e','c','i','t','e'], unwords [ ['r','e','a','d'], ['a','l','o','u','d'] ] ]
+                              `imperf`     FCU
+                              `masdar`     FiCAL |< aT,
 
     HaFCY                     `verb`    {- <'atlY> -}          [ unwords [ ['m','a','k','e'], ['f','o','l','l','o','w'] ], unwords [ ['p','u','t'], ['n','e','x','t'] ] ],
+
+    TaFACY                    `verb`    {- <tatAlY> -}         [ unwords [ ['f','o','l','l','o','w'], ['o','n','e'], ['a','n','o','t','h','e','r'] ], unwords [ ['b','e'], ['s','u','c','c','e','s','s','i','v','e'] ] ],
 
     IstaFCY                   `verb`    {- <istatlY> -}        [ ['c','o','n','t','i','n','u','e'] ],
 
@@ -281,7 +286,9 @@ cluster_24  = cluster
 
     FaCL                      `verb`    {- <tamm> -}           [ ['c','o','n','c','l','u','d','e'], unwords [ ['t','a','k','e'], ['p','l','a','c','e'] ] ]
                               `imperf`     FiCL
-                              `pfirst`     FaCaL,
+                              `pfirst`     FaCaL
+                              `masdar`     FaCL
+                              `masdar`     FaCAL,
 
     FaCCaL                    `verb`    {- <tammam> -}         [ ['c','o','m','p','l','e','t','e'], ['c','o','n','c','l','u','d','e'] ],
 
@@ -489,7 +496,10 @@ cluster_38  = cluster
  |> "t y h" <| [
 
     FAL                       `verb`    {- <tAh> -}            [ unwords [ ['g','e','t'], ['l','o','s','t'] ], ['p','e','r','i','s','h'] ]
-                              `imperf`     FIL,
+                              `imperf`     FIL
+                              `masdar`     FaCL
+                              `masdar`     FIL
+                              `masdar`     FaCaLAn,
 
     FaCCaL                    `verb`    {- <tayyah> -}         [ ['m','i','s','l','e','a','d'], ['c','o','n','f','u','s','e'] ],
 

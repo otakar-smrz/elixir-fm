@@ -183,7 +183,8 @@ cluster_9   = cluster
 
     FaCaL                     `verb`    {- <.ha^gaz> -}        [ ['r','e','t','a','i','n'], ['r','e','s','e','r','v','e'] ]
                               `imperf`     FCuL
-                              `imperf`     FCiL,
+                              `imperf`     FCiL
+                              `masdar`     FaCL,
 
     FaCaL                     `verb`    {- <.ha^gaz> -}        [ ['r','e','s','t','r','a','i','n'], ['b','l','o','c','k'] ]
                               `imperf`     FCuL
@@ -993,7 +994,8 @@ cluster_42  = cluster
  |> ".h r q" <| [
 
     FaCaL                     `verb`    {- <.haraq> -}         [ ['b','u','r','n'], ['h','u','r','t'] ]
-                              `imperf`     FCiL,
+                              `imperf`     FCiL
+                              `masdar`     FaCL,
 
     FaCaL                     `verb`    {- <.haraq> -}         [ ['r','u','b'], ['g','r','i','n','d'] ]
                               `imperf`     FCuL,

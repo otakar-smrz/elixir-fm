@@ -1973,9 +1973,7 @@ cluster_91  = cluster
     IFtiCAL                   `noun`    {- <i_htirAq> -}       [ ['p','e','n','e','t','r','a','t','i','o','n'], ['c','r','o','s','s','i','n','g'] ]
                               `plural`     IFtiCAL |< At,
 
-    FACiL                     `noun`    {- <_hAriq> -}         [ ['v','i','o','l','a','t','i','n','g'], ['c','o','n','t','r','a','v','e','n','i','n','g'], ['e','x','c','e','e','d','i','n','g'], ['e','x','t','r','a','o','r','d','i','n','a','r','y'] ]
-                              `plural`     FACiL |< Un
-                              `femini`     FACiL |< aT,
+    FACiL                     `adj`     {- <_hAriq> -}         [ ['v','i','o','l','a','t','i','n','g'], ['c','o','n','t','r','a','v','e','n','i','n','g'], ['e','x','c','e','e','d','i','n','g'], ['e','x','t','r','a','o','r','d','i','n','a','r','y'] ],
 
     FACiL |< aT               `noun`    {- <_hAriqaT> -}       [ ['m','i','r','a','c','l','e'], ['s','u','p','e','r','n','a','t','u','r','a','l'] ]
                               `plural`     FawACiL,

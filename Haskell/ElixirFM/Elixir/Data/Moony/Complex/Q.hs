@@ -99,7 +99,9 @@ cluster_10  = cluster
 
     FaCiL                     `verb`    {- <ya'is> -}          [ ['d','e','s','p','a','i','r'], unwords [ ['b','e'], ['h','o','p','e','l','e','s','s'] ] ]
                               `imperf`     FCiL
-                              `imperf`     FCaL,
+                              `imperf`     FCaL
+                              `masdar`     FaCL
+                              `masdar`     FaCAL |< aT,
 
     HaFCaL                    `verb`    {- <'ay'as> -}         [ unwords [ ['m','a','k','e'], ['d','e','s','p','a','i','r'] ] ],
 
@@ -130,7 +132,9 @@ cluster_12  = cluster
  |> "y b s" <| [
 
     FaCiL                     `verb`    {- <yabis> -}          [ unwords [ ['b','e','c','o','m','e'], ['d','r','y'] ] ]
-                              `imperf`     FCaL,
+                              `imperf`     FCaL
+                              `masdar`     FuCL
+                              `masdar`     FuCUL,
 
     FaCCaL                    `verb`    {- <yabbas> -}         [ unwords [ ['m','a','k','e'], ['d','r','y'] ], ['d','e','s','i','c','c','a','t','e'] ],
 

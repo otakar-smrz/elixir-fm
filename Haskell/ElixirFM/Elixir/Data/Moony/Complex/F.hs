@@ -370,7 +370,8 @@ cluster_23  = cluster
  |> "b q y" <| [
 
     FaCI                      `verb`    {- <baqI> -}           [ ['r','e','m','a','i','n'], ['l','a','s','t'] ]
-                              `imperf`     FCY,
+                              `imperf`     FCY
+                              `masdar`     FaCA',
 
     HaFCY                     `verb`    {- <'abqY> -}          [ ['m','a','i','n','t','a','i','n'], ['p','r','e','s','e','r','v','e'] ],
 
@@ -557,13 +558,13 @@ cluster_32  = cluster
     FaCA                      `verb`    {- <balA> -}           [ ['a','f','f','l','i','c','t'], ['t','e','s','t'] ]
                               `imperf`     FCU,
 
-    FaCwY                     `noun`    {- <balwY> -}          [ ['a','f','f','l','i','c','t','i','o','n'], ['n','e','c','e','s','s','i','t','y'] ],
-
     FACY                      `verb`    {- <bAlY> -}           [ ['c','a','r','e'], ['c','o','n','c','e','r','n'], ['w','o','r','r','y'] ],
 
     HaFCY                     `verb`    {- <'ablY> -}          [ unwords [ ['w','e','a','r'], ['o','u','t'] ], ['g','r','i','n','d'] ],
 
     IFtaCY                    `verb`    {- <ibtalY> -}         [ ['t','e','s','t'], ['a','f','f','l','i','c','t'] ],
+
+    FaCwY                     `noun`    {- <balwY> -}          [ ['a','f','f','l','i','c','t','i','o','n'], ['n','e','c','e','s','s','i','t','y'] ],
 
     FaCA'                     `noun`    {- <balA'> -}          [ ['t','r','i','b','u','l','a','t','i','o','n'], ['a','f','f','l','i','c','t','i','o','n'] ],
 
@@ -686,7 +687,8 @@ cluster_39  = cluster
 
     FaCY                      `verb`    {- <banY> -}           [ ['b','u','i','l','d'], ['e','r','e','c','t'] ]
                               `imperf`     FCI
-                              `masdar`     FiCA',
+                              `masdar`     FiCA'
+                              `masdar`     FuCLAn,
 
     TaFaCCY                   `verb`    {- <tabannY> -}        [ unwords [ ['b','e'], ['b','u','i','l','t'] ] ],
 
@@ -1170,7 +1172,10 @@ cluster_69  = cluster
  |> "b y t" <| [
 
     FAL                       `verb`    {- <bAt> -}            [ ['b','e','c','o','m','e'], ['r','e','m','a','i','n'] ]
-                              `imperf`     FIL,
+                              `imperf`     FIL
+                              `masdar`     FaCL
+                              `masdar`     MaFIL
+                              `masdar`     MaFAL,
 
     FaCCaL                    `verb`    {- <bayyat> -}         [ ['p','l','o','t'], ['s','c','h','e','m','e'] ],
 
@@ -1341,7 +1346,8 @@ cluster_75  = cluster
 
     FAL                       `verb`    {- <bA`> -}            [ ['s','e','l','l'] ]
                               `imperf`     FIL
-                              `masdar`     FaCL,
+                              `masdar`     FaCL
+                              `masdar`     MaFIL,
 
     FACaL                     `verb`    {- <bAya`> -}          [ unwords [ ['p','l','e','d','g','e'], ['a','l','l','e','g','i','a','n','c','e'], ['t','o'] ], unwords [ ['r','e','c','o','g','n','i','z','e'], ['a','s'], ['l','e','a','d','e','r'] ] ],
 
@@ -1861,7 +1867,8 @@ cluster_100 = cluster
 
     FaCL                      `verb`    {- <^garr> -}          [ ['p','u','l','l'], ['d','r','a','g'] ]
                               `imperf`     FuCL
-                              `pfirst`     FaCaL,
+                              `pfirst`     FaCaL
+                              `masdar`     FaCL,
 
     HaFaCL                    `verb`    {- <'a^garr> -}        [ ['r','u','m','i','n','a','t','e'] ],
 

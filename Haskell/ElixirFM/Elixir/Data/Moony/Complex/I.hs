@@ -2397,7 +2397,8 @@ cluster_81  = cluster
  |> ".g d w" <| [
 
     FaCA                      `verb`    {- <.gadA> -}          [ ['d','e','p','a','r','t'], unwords [ ['b','e','c','o','m','e'], ['c','u','r','r','e','n','t'] ] ]
-                              `imperf`     FCU,
+                              `imperf`     FCU
+                              `masdar`     FuCUL,
 
     FaCI                      `verb`    {- <.gadI> -}          [ unwords [ ['h','a','v','e'], ['b','r','e','a','k','f','a','s','t'] ] ]
                               `imperf`     FCY,
@@ -2449,7 +2450,8 @@ cluster_83  = cluster
  |> ".g _d w" <| [
 
     FaCA                      `verb`    {- <.ga_dA> -}         [ ['f','e','e','d'], ['n','o','u','r','i','s','h'] ]
-                              `imperf`     FCU,
+                              `imperf`     FCU
+                              `masdar`     FaCL,
 
     FaCCY                     `verb`    {- <.ga_d_dY> -}       [ ['f','e','e','d'], ['n','o','u','r','i','s','h'] ],
 
@@ -2596,7 +2598,8 @@ cluster_87  = cluster
  |> ".g z w" <| [
 
     FaCA                      `verb`    {- <.gazA> -}          [ ['i','n','v','a','d','e'], ['c','o','n','q','u','e','r'] ]
-                              `imperf`     FCU,
+                              `imperf`     FCU
+                              `masdar`     FaCL,
 
     FaCL                      `noun`    {- <.gazw> -}          [ ['i','n','v','a','s','i','o','n'], ['a','t','t','a','c','k'], ['a','g','g','r','e','s','s','i','o','n'], ['f','o','r','a','y'], ['i','n','c','u','r','s','i','o','n'] ]
                               `plural`     FaCA |< At,

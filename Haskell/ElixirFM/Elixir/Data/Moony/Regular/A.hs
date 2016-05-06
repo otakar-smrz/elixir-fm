@@ -701,10 +701,12 @@ cluster_54  = cluster
  |> "b _h l" <| [
 
     FaCiL                     `verb`    {- <ba_hil> -}         [ unwords [ ['b','e'], ['m','i','s','e','r','l','y'] ], ['s','k','i','m','p'] ]
-                              `imperf`     FCaL,
+                              `imperf`     FCaL
+                              `masdar`     FaCaL,
 
     FaCuL                     `verb`    {- <ba_hul> -}         [ unwords [ ['b','e'], ['m','i','s','e','r','l','y'] ], ['s','k','i','m','p'] ]
-                              `imperf`     FCuL,
+                              `imperf`     FCuL
+                              `masdar`     FuCL,
 
     TaFACaL                   `verb`    {- <tabA_hal> -}       [ unwords [ ['g','i','v','e'], ['r','e','l','u','c','t','a','n','t','l','y'] ] ],
 

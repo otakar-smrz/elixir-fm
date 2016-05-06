@@ -49,7 +49,8 @@ cluster_6   = cluster
 
     FaCaL                     `verb`    {- <^galab> -}         [ ['b','r','i','n','g'], ['a','t','t','r','a','c','t'] ]
                               `imperf`     FCuL
-                              `imperf`     FCiL,
+                              `imperf`     FCiL
+                              `masdar`     FaCL,
 
     FaCCaL                    `verb`    {- <^gallab> -}        [ ['c','l','a','m','o','r'], ['s','h','o','u','t'] ],
 
@@ -252,7 +253,8 @@ cluster_16  = cluster
  |> "^g l s" <| [
 
     FaCaL                     `verb`    {- <^galas> -}         [ ['s','i','t'] ]
-                              `imperf`     FCiL,
+                              `imperf`     FCiL
+                              `masdar`     FuCUL,
 
     FACaL                     `verb`    {- <^gAlas> -}         [ unwords [ ['s','i','t'], ['w','i','t','h'] ] ],
 
@@ -1408,7 +1410,9 @@ cluster_80  = cluster
  |> "^g h l" <| [
 
     FaCiL                     `verb`    {- <^gahil> -}         [ ['i','g','n','o','r','e'] ]
-                              `imperf`     FCaL,
+                              `imperf`     FCaL
+                              `masdar`     FaCL
+                              `masdar`     FaCAL |< aT,
 
     FaCCaL                    `verb`    {- <^gahhal> -}        [ unwords [ ['c','a','l','l'], ['s','t','u','p','i','d'] ], ['s','t','u','p','e','f','y'] ],
 

@@ -26,7 +26,8 @@ cluster_2   = cluster
  |> "b l .g" <| [
 
     FaCaL                     `verb`    {- <bala.g> -}         [ ['r','e','a','c','h'], ['a','t','t','a','i','n'] ]
-                              `imperf`     FCuL,
+                              `imperf`     FCuL
+                              `masdar`     FuCUL,
 
     FaCuL                     `verb`    {- <balu.g> -}         [ unwords [ ['b','e'], ['e','l','o','q','u','e','n','t'] ] ]
                               `imperf`     FCuL,
@@ -834,7 +835,9 @@ cluster_71  = cluster
  |> "b h r" <| [
 
     FaCaL                     `verb`    {- <bahar> -}          [ ['b','l','i','n','d'], ['d','a','z','z','l','e'] ]
-                              `imperf`     FCaL,
+                              `imperf`     FCaL
+                              `masdar`     FaCL
+                              `masdar`     FuCUL,
 
     HaFCaL                    `verb`    {- <'abhar> -}         [ ['d','a','z','z','l','e'] ],
 

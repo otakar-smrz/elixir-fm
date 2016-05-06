@@ -513,7 +513,8 @@ cluster_32  = cluster
  |> "^g d r" <| [
 
     FaCuL                     `verb`    {- <^gadur> -}         [ unwords [ ['b','e'], ['s','u','i','t','a','b','l','e'] ], ['b','e','h','o','o','v','e'] ]
-                              `imperf`     FCuL,
+                              `imperf`     FCuL
+                              `masdar`     FaCAL |< aT,
 
     HaFCaL                    `verb`    {- <'a^gdar> -}        [ unwords [ ['m','a','k','e'], ['w','o','r','t','h','y'] ], unwords [ ['b','e','c','o','m','e'], ['w','o','r','t','h','y'] ] ],
 
@@ -1689,7 +1690,8 @@ cluster_95  = cluster
  |> "^g ` l" <| [
 
     FaCaL                     `verb`    {- <^ga`al> -}         [ ['m','a','k','e'], unwords [ ['b','r','i','n','g'], ['a','b','o','u','t'] ], ['a','p','p','o','i','n','t'] ]
-                              `imperf`     FCaL,
+                              `imperf`     FCaL
+                              `masdar`     FaCL,
 
     FACaL                     `verb`    {- <^gA`al> -}         [ unwords [ ['t','r','y'], ['t','o'], ['b','r','i','b','e'] ], unwords [ ['t','r','y'], ['t','o'], ['w','i','n'] ] ],
 
