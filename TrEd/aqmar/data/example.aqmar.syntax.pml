@@ -25,7 +25,7 @@
               <w.rf>m#m-p1w1</w.rf>
               <m.rf>m#m-p1w1t1</m.rf>
               <ord>1</ord>
-              <role>TPC</role>
+              <role>MOD</role>
               <with>
                 <Node id="s-p1w2t1">
                   <w.rf>m#m-p1w2</w.rf>
@@ -101,7 +101,7 @@
               <w.rf>m#m-p1w11</w.rf>
               <m.rf>m#m-p1w11t1</m.rf>
               <ord>11</ord>
-              <role>---</role>
+              <role>MOD</role>
             </Node>
             <Node id="s-p1w13t1">
               <w.rf>m#m-p1w13</w.rf>
@@ -167,7 +167,7 @@
                                               <w.rf>m#m-p1w22</w.rf>
                                               <m.rf>m#m-p1w22t1</m.rf>
                                               <ord>23</ord>
-                                              <role>---</role>
+                                              <role>MOD</role>
                                               <with>
                                                 <Node id="s-p1w22t2">
                                                   <w.rf>m#m-p1w22</w.rf>
@@ -199,13 +199,13 @@
                 </Node>
               </with>
             </Node>
+            <Node id="s-p1w24t1">
+              <w.rf>m#m-p1w24</w.rf>
+              <m.rf>m#m-p1w24t1</m.rf>
+              <ord>26</ord>
+              <role>MOD</role>
+            </Node>
           </with>
-        </Node>
-        <Node id="s-p1w24t1">
-          <w.rf>m#m-p1w24</w.rf>
-          <m.rf>m#m-p1w24t1</m.rf>
-          <ord>26</ord>
-          <role>---</role>
         </Node>
       </with>
     </Tree>
