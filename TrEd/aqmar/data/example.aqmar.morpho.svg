@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" onload="init(evt)" onmousemove="mouse_move(evt)" onmouseout="mouse_out(evt)" height="317" width="2575">
+ <script type="text/ecmascript">
+      var doc = null;
+      var root = null;
+      var css = null;
+      var last_target = null;
+      var svgNs = "http://www.w3.org/2000/svg";
+
+      function init(event) {
+         doc = event.target.ownerDocument;
+         root = doc.documentElement;
+         if (root.styleSheets != null &amp;&amp; root.styleSheets[0] != null) css = root.styleSheets[0]
+         else if (doc.styleSheets != null &amp;&amp; doc.styleSheets[0] != null) css = doc.styleSheets[0];
+     top.zoomSVG = zoom;
+         if (top.svg_loaded) top.svg_loaded(doc);
+         if (top.setSVGTitle) top.setSVGTitle(get_title());
+         if (top.setSVGDesc) top.setSVGDesc(get_desc());
+         if (top.highlightSVGNodes) top.highlightSVGNodes(css);
+      }
+      function mouse_out (event) {
+        hide_tooltip(event);
+      }
+      function mouse_move (event) {
+         show_tooltip(event);
+      }
+      function get_title () {
+        var title = root.getElementsByTagName('title').item(0);
+        if (title &amp;&amp; title.parentNode == root) {
+           return title.firstChild.nodeValue;
+        } else {
+           return '';
+        }
+      }
+      function get_desc () {
+        var desc = root.getElementsByTagName('desc').item(0);
+        if (desc &amp;&amp; desc.parentNode == root) {
+           var n = desc.firstChild;
+           while (n &amp;&amp; n.nodeType != 1) n=n.nextSibling;
+           if (!n) n=desc.firstChild;
+           return n; // desc.firstChild.nodeValue;
+        } else {
+           return '';
+        }
+      }
+      function zoom (amount) {
+        var old_scale = root.currentScale;
+        var new_scale = old_scale + amount;
+        var rescale = new_scale/old_scale;
+        root.currentScale = new_scale;
+    root.setAttribute('width',Number(root.getAttribute('width'))*rescale);
+    root.setAttribute('height',Number(root.getAttribute('height'))*rescale);
+      }
+      function hide_tooltip(event) {
+     if (event.target == last_target &amp;&amp; top.changeToolTip) {
+        top.changeToolTip("");
+     }
+      }
+      function show_tooltip(event) {
+         var target = event.target;
+     if (!top.placeTip) return;
+     var x = event.clientX;
+     var y = event.clientY;
+     top.placeTip(x,y,root,event);
+         if ( last_target != target ) {
+        last_target = target;
+            if (top.onSVGMouseOver) top.onSVGMouseOver(target);
+            if (target==root) return;
+            var desc;
+            for (var i=0; i&lt;target.childNodes.length; i++) {
+              var n = target.childNodes[i];
+              if (n.nodeName == 'desc') {
+                desc = n;
+                break;
+              }
+            }
+            if ( desc ) {
+               tooltip_text = desc.firstChild.nodeValue;
+           if (tooltip_text == null) {
+             top.changeToolTip('');
+           } else {
+             top.changeToolTip(tooltip_text.split(/\n/).join("&lt;br /&gt;"));
+               }
+            }
+         }
+      }
+
+</script>
+ <defs>
+  <style type="text/css"></style>
+ </defs>
+ <g transform="translate(5 5)">
+  <path id="i1" d="M91,197 L115,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i8" d="M115,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i14" d="M195,197 L219,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i21" d="M219,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i27" d="M293,197 L396,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i34" d="M372,197 L396,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i41" d="M396,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i47" d="M474,197 L498,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i54" d="M498,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i60" d="M579,197 L681,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i67" d="M657,197 L681,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i74" d="M681,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i80" d="M754,197 L778,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i87" d="M778,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i93" d="M847,197 L871,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i100" d="M871,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i106" d="M958,197 L982,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i113" d="M982,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i119" d="M1057,197 L1081,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i126" d="M1081,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i132" d="M1150,197 L1174,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i139" d="M1174,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i145" d="M1228,197 L1252,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i152" d="M1252,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i158" d="M1322,197 L1346,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i165" d="M1346,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i171" d="M1421,197 L1445,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i178" d="M1445,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i184" d="M1501,197 L1525,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i191" d="M1525,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i197" d="M1628,197 L1652,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i204" d="M1652,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i210" d="M1727,197 L1751,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i217" d="M1751,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i223" d="M1805,197 L1829,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i230" d="M1829,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i236" d="M1899,197 L1928,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i243" d="M1928,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i251" d="M1992,197 L2016,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i258" d="M2016,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i264" d="M2127,197 L2151,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i271" d="M2151,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i277" d="M2220,197 L2244,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i284" d="M2244,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i290" d="M2323,197 L2347,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i297" d="M2347,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i305" d="M2429,197 L2453,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i312" d="M2453,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i318" d="M2507,197 L2531,106" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <path id="i325" d="M2531,106 L2555,15" fill="none" stroke-dasharray="none" stroke="#ff0000" stroke-width="1" stroke-linecap="butt" stroke-linejoin="round" class="line scale_width scale_arrow seg:0.0"></path>
+  <ellipse id="i2" cx="91.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>graphical symbol</desc>
+  </ellipse>
+  <ellipse id="i9" cx="115.5" cy="106" rx="3.49999999999999" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i15" cx="195.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>adjective, masculine, singular, accusative, indefinite</desc>
+  </ellipse>
+  <ellipse id="i22" cx="219.5" cy="106" rx="3.49999999999999" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i28" cx="293.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>perfective verb, passive, third person, feminine, singular</desc>
+  </ellipse>
+  <ellipse id="i35" cx="372.5" cy="197" rx="3.49999999999997" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>conjunction</desc>
+  </ellipse>
+  <ellipse id="i42" cx="396.5" cy="106" rx="3.50000000000003" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i48" cx="474.5" cy="197" rx="3.49999999999997" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>perfective verb, passive, third person, feminine, singular</desc>
+  </ellipse>
+  <ellipse id="i55" cx="498.5" cy="106" rx="3.49999999999997" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i61" cx="579.5" cy="197" rx="3.50000000000006" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>noun, plural, genitive, indefinite</desc>
+  </ellipse>
+  <ellipse id="i68" cx="657.5" cy="197" rx="3.49999999999994" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>preposition</desc>
+  </ellipse>
+  <ellipse id="i75" cx="681.5" cy="106" rx="3.50000000000006" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i81" cx="754.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>imperfective verb, indicative, active, third person, masculine, singular</desc>
+  </ellipse>
+  <ellipse id="i88" cx="778.5" cy="106" rx="3.49999999999994" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i94" cx="847.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>adjective, masculine, singular, genitive, indefinite</desc>
+  </ellipse>
+  <ellipse id="i101" cx="871.5" cy="106" rx="3.49999999999994" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i107" cx="958.5" cy="197" rx="3.49999999999994" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>noun, singular, genitive, indefinite</desc>
+  </ellipse>
+  <ellipse id="i114" cx="982.5" cy="106" rx="3.50000000000006" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i120" cx="1057.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>adjective, masculine, singular, genitive, reduced/construct</desc>
+  </ellipse>
+  <ellipse id="i127" cx="1081.5" cy="106" rx="3.5" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i133" cx="1150.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>noun, singular, genitive, reduced/construct</desc>
+  </ellipse>
+  <ellipse id="i140" cx="1174.5" cy="106" rx="3.49999999999989" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i146" cx="1228.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>preposition</desc>
+  </ellipse>
+  <ellipse id="i153" cx="1252.5" cy="106" rx="3.5" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i159" cx="1322.5" cy="197" rx="3.49999999999989" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>noun, singular, nominative, definite</desc>
+  </ellipse>
+  <ellipse id="i166" cx="1346.5" cy="106" rx="3.50000000000011" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i172" cx="1421.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>perfective verb, active, third person, feminine, singular</desc>
+  </ellipse>
+  <ellipse id="i179" cx="1445.5" cy="106" rx="3.49999999999989" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i185" cx="1501.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>graphical symbol</desc>
+  </ellipse>
+  <ellipse id="i192" cx="1525.5" cy="106" rx="3.5" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i198" cx="1628.5" cy="197" rx="3.49999999999989" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>adjective, feminine, singular, genitive, definite</desc>
+  </ellipse>
+  <ellipse id="i205" cx="1652.5" cy="106" rx="3.50000000000011" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i211" cx="1727.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>noun, plural, genitive, definite</desc>
+  </ellipse>
+  <ellipse id="i218" cx="1751.5" cy="106" rx="3.49999999999989" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i224" cx="1805.5" cy="197" rx="3.50000000000011" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>preposition</desc>
+  </ellipse>
+  <ellipse id="i231" cx="1829.5" cy="106" rx="3.5" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i237" cx="1899.5" cy="197" rx="3.49999999999989" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>noun, singular, genitive, definite</desc>
+  </ellipse>
+  <ellipse id="i244" cx="1928.5" cy="106" rx="3.50000000000011" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i252" cx="1992.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>adjective, feminine, singular, genitive, lifted/underdetermined</desc>
+  </ellipse>
+  <ellipse id="i259" cx="2016.5" cy="106" rx="3.50000000000011" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i265" cx="2127.5" cy="197" rx="3.49999999999977" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>noun, plural, genitive, definite</desc>
+  </ellipse>
+  <ellipse id="i272" cx="2151.5" cy="106" rx="3.5" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i278" cx="2220.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>noun, plural, accusative, reduced/construct</desc>
+  </ellipse>
+  <ellipse id="i285" cx="2244.5" cy="106" rx="3.50000000000023" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i291" cx="2323.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>perfective verb, active, third person, masculine, singular</desc>
+  </ellipse>
+  <ellipse id="i298" cx="2347.5" cy="106" rx="3.49999999999977" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i306" cx="2429.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>noun, singular, genitive, indefinite</desc>
+  </ellipse>
+  <ellipse id="i313" cx="2453.5" cy="106" rx="3.5" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i319" cx="2507.5" cy="197" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0">
+   <desc>preposition</desc>
+  </ellipse>
+  <ellipse id="i326" cx="2531.5" cy="106" rx="3.5" ry="3.50000000000001" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <ellipse id="i331" cx="2555.5" cy="15" rx="3.5" ry="3.5" stroke-width="1" stroke-dasharray="none" stroke="#000000" fill="#ffff00" class="point node seg:0.0"></ellipse>
+  <rect id="i5" x="89" y="208" width="7.00000000000001" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i7" x="38" y="246" width="58" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i11" x="113" y="117" width="6.99999999999999" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i13" x="113" y="136" width="6.99999999999999" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i18" x="118" y="208" width="82" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i20" x="129" y="246" width="71" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i24" x="179" y="117" width="45" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i26" x="142" y="136" width="82" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i31" x="245" y="208" width="53" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i33" x="222" y="246" width="76" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i38" x="354" y="208" width="23" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i40" x="320" y="246" width="57" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i44" x="341" y="117" width="60.0000000000001" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i46" x="324" y="136" width="77" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i51" x="399" y="208" width="79.9999999999999" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i53" x="403" y="246" width="75.9999999999999" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i57" x="452" y="117" width="51" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i59" x="423" y="136" width="80" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i64" x="501" y="208" width="83" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i66" x="519" y="246" width="65" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i71" x="646" y="208" width="16.0000000000001" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i73" x="606" y="246" width="56.0000000000001" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i77" x="611" y="117" width="75" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i79" x="585" y="136" width="101" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i84" x="699" y="208" width="60.0000000000001" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i86" x="684" y="246" width="75" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i90" x="742" y="117" width="41" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i92" x="723" y="136" width="60" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i97" x="800" y="208" width="51.9999999999999" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i99" x="781" y="246" width="70.9999999999999" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i103" x="843" y="117" width="33" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i105" x="824" y="136" width="52" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i110" x="874" y="208" width="89" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i112" x="898" y="246" width="65" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i116" x="911" y="117" width="75.9999999999999" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i118" x="898" y="136" width="88.9999999999999" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i123" x="1006" y="208" width="56" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i125" x="985" y="246" width="77" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i129" x="1063" y="117" width="23.0000000000002" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i131" x="1030" y="136" width="56" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i136" x="1108" y="208" width="47" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i138" x="1084" y="246" width="71.0000000000002" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i142" x="1135" y="117" width="44.0000000000002" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i144" x="1132" y="136" width="47" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i149" x="1209" y="208" width="23.9999999999998" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i151" x="1177" y="246" width="55.9999999999998" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i155" x="1235" y="117" width="22" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i157" x="1233" y="136" width="24.0000000000002" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i162" x="1272" y="208" width="55" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i164" x="1255" y="246" width="72" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i168" x="1296" y="117" width="55" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i170" x="1297" y="136" width="54" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i175" x="1370" y="208" width="56" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i177" x="1349" y="246" width="77" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i181" x="1400" y="117" width="50" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i183" x="1394" y="136" width="56.0000000000002" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i188" x="1499" y="208" width="7" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i190" x="1448" y="246" width="58" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i194" x="1523" y="117" width="6.99999999999977" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i196" x="1523" y="136" width="6.99999999999977" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i201" x="1528" y="208" width="105" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i203" x="1559" y="246" width="74" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i207" x="1595" y="117" width="61.9999999999998" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i209" x="1552" y="136" width="105" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i214" x="1655" y="208" width="77" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i216" x="1660" y="246" width="72" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i220" x="1690" y="117" width="66" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i222" x="1679" y="136" width="77.0000000000002" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i227" x="1782" y="208" width="27.9999999999998" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i229" x="1754" y="246" width="55.9999999999998" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i233" x="1806" y="117" width="28.0000000000002" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i235" x="1823" y="136" width="11.0000000000002" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i240" x="1845" y="208" width="58.9999999999998" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i242" x="1832" y="246" width="71.9999999999998" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i248" x="1856" y="117" width="77" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i250" x="1874" y="136" width="59" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i255" x="1946" y="208" width="50.9999999999998" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i257" x="1926" y="246" width="70.9999999999998" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i261" x="1977" y="117" width="44" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i263" x="1970" y="136" width="50.9999999999998" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i268" x="2019" y="208" width="113" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i270" x="2060" y="246" width="72" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i274" x="2048" y="117" width="108" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i276" x="2043" y="136" width="113" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i281" x="2161" y="208" width="64" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i283" x="2154" y="246" width="71" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i287" x="2208" y="117" width="40.9999999999995" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i289" x="2185" y="136" width="63.9999999999995" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i294" x="2281" y="208" width="47" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i296" x="2247" y="246" width="81" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i302" x="2281" y="117" width="71" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i304" x="2305" y="136" width="47" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i309" x="2350" y="208" width="84" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i311" x="2369" y="246" width="65" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i315" x="2415" y="117" width="42.9999999999995" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i317" x="2374" y="136" width="83.9999999999995" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i322" x="2484" y="208" width="28" height="38" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i324" x="2456" y="246" width="56" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i328" x="2508" y="117" width="28.0000000000005" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i330" x="2525" y="136" width="11" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <rect id="i335" x="2495" y="26" width="65.0000000000005" height="19" stroke-width="0" stroke-dasharray="none" stroke="#ffffff" fill="#ffffff" fill-opacity="0.9" stroke-opacity="0.9" class="textbg seg:0.0"></rect>
+  <text x="114" y="132" id="i10" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">.</text>
+  <text x="180" y="132" id="i23" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">محليا</text>
+  <text x="342" y="132" id="i43" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">وصنعت</text>
+  <text x="453" y="132" id="i56" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">صممت</text>
+  <text x="612" y="132" id="i76" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">بمعالجات</text>
+  <text x="743" y="132" id="i89" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">يعمل</text>
+  <text x="844" y="132" id="i102" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">خارق</text>
+  <text x="912" y="132" id="i115" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">كمبيوتر</text>
+  <text x="1064" y="132" id="i128" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">اول</text>
+  <text x="1136" y="132" id="i141" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">انتاج</text>
+  <text x="1236" y="132" id="i154" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">عن</text>
+  <text x="1297" y="132" id="i167" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">الصين</text>
+  <text x="1401" y="132" id="i180" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">اعلنت</text>
+  <text x="1524" y="132" id="i193" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">،</text>
+  <text x="1596" y="132" id="i206" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">المتحدة</text>
+  <text x="1691" y="132" id="i219" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">الولايات</text>
+  <text x="1807" y="132" id="i232" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">في</text>
+  <text x="1857" y="132" id="i245" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ff00ff" width="0" class="text text_item seg:0.0">الاداء</text>
+  <text x="1897" y="132" id="i247" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">الأداء</text>
+  <text x="1978" y="132" id="i260" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">عالية</text>
+  <text x="2049" y="132" id="i273" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">الكمبيوترات</text>
+  <text x="2209" y="132" id="i286" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">علماء</text>
+  <text x="2282" y="132" id="i299" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ff00ff" width="0" class="text text_item seg:0.0">فاجا</text>
+  <text x="2319" y="132" id="i301" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">فاجأ</text>
+  <text x="2416" y="132" id="i314" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">تطور</text>
+  <text x="2509" y="132" id="i327" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">في</text>
+  <text x="2496" y="41" id="i332" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="text text_item seg:0.0">TEXT</text>
+  <text x="90" y="223" id="i3" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">.</text>
+  <text x="90" y="242" id="i4" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">.</text>
+  <text x="39" y="261" id="i6" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">G---------</text>
+  <text x="114" y="151" id="i12" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">.</text>
+  <text x="119" y="223" id="i16" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">مَحَلِّيًّا</text>
+  <text x="119" y="242" id="i17" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">maḥallīyan</text>
+  <text x="130" y="261" id="i19" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">A-----MS4I</text>
+  <text x="143" y="151" id="i25" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">maḥallīyan</text>
+  <text x="246" y="223" id="i29" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">صُنِعَت</text>
+  <text x="246" y="242" id="i30" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">ṣuniʿat</text>
+  <text x="223" y="261" id="i32" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">VP-P-3FS--</text>
+  <text x="355" y="223" id="i36" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">وَ</text>
+  <text x="355" y="242" id="i37" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">wa</text>
+  <text x="321" y="261" id="i39" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">C---------</text>
+  <text x="325" y="151" id="i45" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">wa-ṣuniʿat</text>
+  <text x="400" y="223" id="i49" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">صُمِّمَت</text>
+  <text x="400" y="242" id="i50" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">ṣummimat</text>
+  <text x="404" y="261" id="i52" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">VP-P-3FS--</text>
+  <text x="424" y="151" id="i58" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">ṣummimat</text>
+  <text x="502" y="223" id="i62" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">مُعَالِجَاتٍ</text>
+  <text x="502" y="242" id="i63" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">muʿāliǧātin</text>
+  <text x="520" y="261" id="i65" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">N------P2I</text>
+  <text x="647" y="223" id="i69" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">بِ</text>
+  <text x="647" y="242" id="i70" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">bi</text>
+  <text x="607" y="261" id="i72" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">P---------</text>
+  <text x="586" y="151" id="i78" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">bi-muʿāliǧātin</text>
+  <text x="700" y="223" id="i82" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">يَعمَلُ</text>
+  <text x="700" y="242" id="i83" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">yaʿmalu</text>
+  <text x="685" y="261" id="i85" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">VIIA-3MS--</text>
+  <text x="724" y="151" id="i91" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">yaʿmalu</text>
+  <text x="801" y="223" id="i95" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">خَارِقٍ</text>
+  <text x="801" y="242" id="i96" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">ḫāriqin</text>
+  <text x="782" y="261" id="i98" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">A-----MS2I</text>
+  <text x="825" y="151" id="i104" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">ḫāriqin</text>
+  <text x="875" y="223" id="i108" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">كَمبيُوتِرٍ</text>
+  <text x="875" y="242" id="i109" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">kambyūtirin</text>
+  <text x="899" y="261" id="i111" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">N------S2I</text>
+  <text x="899" y="151" id="i117" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">kambyūtirin</text>
+  <text x="1007" y="223" id="i121" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">أَوَّلِ</text>
+  <text x="1007" y="242" id="i122" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">ʾawwali</text>
+  <text x="986" y="261" id="i124" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">A-----MS2R</text>
+  <text x="1031" y="151" id="i130" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">ʾawwali</text>
+  <text x="1109" y="223" id="i134" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">إِنتَاجِ</text>
+  <text x="1109" y="242" id="i135" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">ʾintāǧi</text>
+  <text x="1085" y="261" id="i137" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">N------S2R</text>
+  <text x="1133" y="151" id="i143" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">ʾintāǧi</text>
+  <text x="1210" y="223" id="i147" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">عَن</text>
+  <text x="1210" y="242" id="i148" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">ʿan</text>
+  <text x="1178" y="261" id="i150" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">P---------</text>
+  <text x="1234" y="151" id="i156" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">ʿan</text>
+  <text x="1273" y="223" id="i160" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">اَلصِّينُ</text>
+  <text x="1273" y="242" id="i161" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">aṣ-ṣīnu</text>
+  <text x="1256" y="261" id="i163" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">N------S1D</text>
+  <text x="1298" y="151" id="i169" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">aṣ-ṣīnu</text>
+  <text x="1371" y="223" id="i173" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">أَعلَنَت</text>
+  <text x="1371" y="242" id="i174" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">ʾaʿlanat</text>
+  <text x="1350" y="261" id="i176" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">VP-A-3FS--</text>
+  <text x="1395" y="151" id="i182" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">ʾaʿlanat</text>
+  <text x="1500" y="223" id="i186" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">،</text>
+  <text x="1500" y="242" id="i187" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">,</text>
+  <text x="1449" y="261" id="i189" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">G---------</text>
+  <text x="1524" y="151" id="i195" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">,</text>
+  <text x="1529" y="223" id="i199" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">اَلمُتَّحِدَةِ</text>
+  <text x="1529" y="242" id="i200" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">al-muttaḥidati</text>
+  <text x="1560" y="261" id="i202" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">A-----FS2D</text>
+  <text x="1553" y="151" id="i208" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">al-muttaḥidati</text>
+  <text x="1656" y="223" id="i212" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">اَلوِلَايَاتِ</text>
+  <text x="1656" y="242" id="i213" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">al-wilāyāti</text>
+  <text x="1661" y="261" id="i215" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">N------P2D</text>
+  <text x="1680" y="151" id="i221" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">al-wilāyāti</text>
+  <text x="1783" y="223" id="i225" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">فِي</text>
+  <text x="1783" y="242" id="i226" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">fī</text>
+  <text x="1755" y="261" id="i228" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">P---------</text>
+  <text x="1824" y="151" id="i234" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">fī</text>
+  <text x="1846" y="223" id="i238" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">اَلأَدَاءِ</text>
+  <text x="1846" y="242" id="i239" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">al-ʾadāʾi</text>
+  <text x="1833" y="261" id="i241" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">N------S2D</text>
+  <text x="1892" y="132" id="i246" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ff00ff" width="0" class="plaintext text_item seg:0.0"> </text>
+  <text x="1875" y="151" id="i249" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">al-ʾadāʾi</text>
+  <text x="1947" y="223" id="i253" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">عَالِيَةِ</text>
+  <text x="1947" y="242" id="i254" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">ʿāliyati</text>
+  <text x="1927" y="261" id="i256" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">A-----FS2L</text>
+  <text x="1971" y="151" id="i262" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">ʿāliyati</text>
+  <text x="2020" y="223" id="i266" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">اَلكَمبيُوتِرَاتِ</text>
+  <text x="2020" y="242" id="i267" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">al-kambyūtirāti</text>
+  <text x="2061" y="261" id="i269" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">N------P2D</text>
+  <text x="2044" y="151" id="i275" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">al-kambyūtirāti</text>
+  <text x="2162" y="223" id="i279" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">عُلَمَاءَ</text>
+  <text x="2162" y="242" id="i280" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">ʿulamāʾa</text>
+  <text x="2155" y="261" id="i282" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">N------P4R</text>
+  <text x="2186" y="151" id="i288" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">ʿulamāʾa</text>
+  <text x="2282" y="223" id="i292" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">فَاجَأَ</text>
+  <text x="2282" y="242" id="i293" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">fāǧaʾa</text>
+  <text x="2248" y="261" id="i295" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">VP-A-3MS--</text>
+  <text x="2314" y="132" id="i300" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ff00ff" width="0" class="plaintext text_item seg:0.0"> </text>
+  <text x="2306" y="151" id="i303" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">fāǧaʾa</text>
+  <text x="2351" y="223" id="i307" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">تَطَوُّرٍ</text>
+  <text x="2351" y="242" id="i308" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">taṭawwurin</text>
+  <text x="2370" y="261" id="i310" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">N------S2I</text>
+  <text x="2375" y="151" id="i316" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">taṭawwurin</text>
+  <text x="2485" y="223" id="i320" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">فِي</text>
+  <text x="2485" y="242" id="i321" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">fī</text>
+  <text x="2457" y="261" id="i323" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#8b0000" width="0" class="plaintext text_item seg:0.0">P---------</text>
+  <text x="2526" y="151" id="i329" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#ffa500" width="0" class="plaintext text_item seg:0.0">fī</text>
+  <text x="2533" y="41" id="i333" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0"> </text>
+  <text x="2538" y="41" id="i334" text-anchor="start" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="plaintext text_item seg:0.0">#1</text>
+  <text x="2562" y="301" id="i336" text-anchor="end" font-family="DejaVu Sans Condensed" font-weight="normal" font-size="16" font-slant="roman" fill="#000000" width="0" class="vline text_item">. في تطور فاجأ علماء الكمبيوترات عالية الأداء في الولايات المتحدة ، اعلنت الصين عن انتاج اول كمبيوتر خارق يعمل بمعالجات صممت وصنعت محليا TEXT #1</text>
+ </g>
+</svg>
