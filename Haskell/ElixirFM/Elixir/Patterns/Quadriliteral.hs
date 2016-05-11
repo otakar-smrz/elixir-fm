@@ -1,7 +1,7 @@
 -- |
 --
 -- Module      :  Elixir.Patterns.Quadriliteral
--- Copyright   :  Otakar Smrz 2005-2011
+-- Copyright   :  Otakar Smrz 2005-2016
 -- License     :  GPL
 --
 -- Maintainer  :  otakar-smrz users.sf.net
@@ -118,7 +118,7 @@ instance Forming PatternQ where
 
     nounStems II _ = [
 
-        (   TaKaRDaS,   MutaKaRDiS, MutaKaRDaS, morph   TaKaRDaS        ),
+        (   TaKaRDaS,   MutaKaRDiS, MutaKaRDaS, morph   TaKaRDuS        ),
         (   TaKaRDY,    MutaKaRDI,  MutaKaRDY,  morph   TaKaRDI         )
 
         ]
