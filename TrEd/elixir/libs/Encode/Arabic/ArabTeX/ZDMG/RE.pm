@@ -4,6 +4,8 @@
 
 package Encode::Arabic::ArabTeX::ZDMG::RE;
 
+our $VERSION = '14.1';
+
 use 5.008;
 
 use strict;
@@ -11,6 +13,7 @@ use warnings;
 
 sub import {            # perform import as if Encode were used one level before this module
     require Encode;
+    push @Encode::ISA, 'Exporter' unless Encode->can('export_to_level');
     Encode->export_to_level(1, @_);
 }
 

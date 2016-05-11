@@ -4,6 +4,8 @@
 
 package Encode::Arabic::Habash;
 
+our $VERSION = '14.1';
+
 use 5.008;
 
 use strict;
@@ -60,6 +62,8 @@ sub import {            # perform import as if Encode were used one level before
     splice @_, 1, 1;
 
     require Encode;
+
+    push @Encode::ISA, 'Exporter' unless Encode->can('export_to_level');
 
     Encode->export_to_level(1, @_);
 }
@@ -216,9 +220,11 @@ sub demode ($$;$$) {
                     : q [\x{0640}] ) .
                 q [\x{0623}\x{0624}\x{0625}] .
                 q [\x{060C}\x{061B}\x{061F}] .
-                q [\x{0621}\x{0622}\x{0626}-\x{063A}\x{0641}-\x{064A}] .
+                q [\x{0621}\x{0622}\x{0626}\x{0627}\x{0628}\x{0629}\x{062A}\x{062B}\x{062C}\x{062D}\x{062E}] .
+                q [\x{062F}\x{0630}\x{0631}\x{0632}\x{0633}\x{0634}\x{0635}\x{0636}\x{0637}\x{0638}\x{0639}] .
+                q [\x{063A}\x{0641}\x{0642}\x{0643}\x{0644}\x{0645}\x{0646}\x{0647}\x{0648}\x{0649}\x{064A}] .
                 q [\x{067E}\x{0686}\x{0698}\x{06A4}\x{06AF}] .
-                q [\x{0660}-\x{0669}] .
+                q [\x{0660}\x{0661}\x{0662}\x{0663}\x{0664}\x{0665}\x{0666}\x{0667}\x{0668}\x{0669}] .
                 ( $mode == 0
                     ? q [\x{0671}]
                     : q [\x{0627}] ) .
@@ -226,7 +232,7 @@ sub demode ($$;$$) {
                     ? ''
                     : q [\x{0651}] . ( $mode == 2
                                     ? ''
-                                    : q [\x{064B}-\x{0650}\x{0670}] . ( $mode == 3
+                                    : q [\x{064B}\x{064C}\x{064D}\x{064E}\x{064F}\x{0650}\x{0670}] . ( $mode == 3
                                                         ? ''
                                                         : q [\x{0652}] ) ) )
 
@@ -240,7 +246,7 @@ sub demode ($$;$$) {
             sub decoder ($) {
 
                 $_[0] =~ tr[/ . $set[0] . q /]
-                           [/ . $set[1] . q /]d;
+                           [/ . $set[1] . q /]/ . (($kshd or $mode > 0) ? 'd' : '') . q /;
 
                 return $_[0];
             }
@@ -298,7 +304,7 @@ Otakar Smrz C<< <otakar-smrz users.sf.net> >>, L<http://otakar-smrz.users.sf.net
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2003-2012 Otakar Smrz
+Copyright (C) 2003-2016 Otakar Smrz
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

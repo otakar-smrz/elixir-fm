@@ -4,14 +4,14 @@
 
 package Encode::Arabic;
 
+our $VERSION = '14.2';
+
 use 5.008;
 
 use strict;
 use warnings;
 
 use Carp;
-
-our $VERSION = '1.9';
 
 
 sub import {            # perform import as if Encode were used one level before this module
@@ -29,6 +29,8 @@ sub import {            # perform import as if Encode were used one level before
     }
 
     require Encode;
+
+    push @Encode::ISA, 'Exporter' unless Encode->can('export_to_level');
 
     Encode->export_to_level(1, @_);
 }
@@ -249,7 +251,7 @@ Otakar Smrz C<< <otakar-smrz users.sf.net> >>, L<http://otakar-smrz.users.sf.net
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2003-2012 Otakar Smrz
+Copyright (C) 2003-2016 Otakar Smrz
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

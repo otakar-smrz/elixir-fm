@@ -15,7 +15,7 @@ use File::Copy;
 
 use File::Basename;
 
-our $VERSION = '1.2.1';
+our $VERSION = '1.2.2';
 
 # ##################################################################################################
 #
@@ -1152,8 +1152,8 @@ ElixirFM - Context for Annotation of the ElixirFM Lexicon in the TrEd Environmen
 =head1 DESCRIPTION
 
 ElixirFM is a high-level implementation of Functional Arabic Morphology documented at
-L<http://sourceforge.net/p/elixir-fm/wiki/>. The core of ElixirFM is written in Haskell,
-while interfaces in Perl support lexicon editing and other interactions.
+L<http://github.com/otakar-smrz/elixir-fm/>. The core of ElixirFM is written in Haskell,
+while interfaces in Perl and Python support lexicon editing and other interactions.
 
 TrEd Tree Editor L<http://ufal.mff.cuni.cz/tred/>
 
@@ -1167,7 +1167,7 @@ Otakar Smrz C<< <otakar-smrz users.sf.net> >>, L<http://otakar-smrz.users.sf.net
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2006-2013 Otakar Smrz
+Copyright (C) 2006-2016 Otakar Smrz
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

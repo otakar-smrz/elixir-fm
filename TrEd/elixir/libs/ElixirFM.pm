@@ -8,7 +8,7 @@ use 5.008;
 
 use strict;
 
-our $VERSION = '1.2.1';
+our $VERSION = '1.2.2';
 
 use Encode::Arabic;
 
@@ -1094,8 +1094,8 @@ sub assimVIII {
 
                     "_t"    =>    $c . "_t",
 
-                    "_d"    =>  [ "d" . "d",
-                                  $c . "_d" ],
+                    "_d"    =>  [ $c . "_d",
+                                  "d" . "d" ],
 
                     "d"     =>  $c . "d",
 
@@ -1475,7 +1475,7 @@ ElixirFM - Interfaces to the ElixirFM system implementing Functional Arabic Morp
 The L<ElixirFM|ElixirFM> module reimplements some of the functionality of the ElixirFM system
 written in Haskell.
 
-You can find documentation for this module at L<http://sourceforge.net/projects/elixir-fm/>.
+You can find documentation for this module at L<http://github.com/otakar-smrz/elixir-fm/>.
 
 
 =head1 AUTHOR
@@ -1485,7 +1485,7 @@ Otakar Smrz C<< <otakar-smrz users.sf.net> >>, L<http://otakar-smrz.users.sf.net
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright (C) 2005-2013 Otakar Smrz
+Copyright (C) 2005-2016 Otakar Smrz
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of the GNU General Public License version 3.

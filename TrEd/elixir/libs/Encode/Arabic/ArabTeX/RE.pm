@@ -4,6 +4,8 @@
 
 package Encode::Arabic::ArabTeX::RE;
 
+our $VERSION = '14.1';
+
 use 5.008;
 
 use strict;
@@ -44,6 +46,7 @@ our %modemap = (
 
 sub import {            # perform import as if Encode were used one level before this module
     require Encode;
+    push @Encode::ISA, 'Exporter' unless Encode->can('export_to_level');
     Encode->export_to_level(1, @_);
 }
 
@@ -57,67 +60,67 @@ sub encode ($$;$) {
 
     $text = join '', map { exists $encode_used{$_} ? $encode_used{$_} : $_ } split '', $text;
 
-    $text =~ s/([\_\.\^]?\w)\\shadda{}/$1$1/g;
-    $text =~ s/(\\ham{.})\\shadda{}/$1$1/g;
+    $text =~ s/([\_\.\^]?\w)\\shadda\{\}/$1$1/g;
+    $text =~ s/(\\ham\{.\})\\shadda\{\}/$1$1/g;
 
-    $text =~ s/([\=\s\-\%])\\alif{}\\vow{a}l/$1"al-/g;
-    $text =~ s/([\=\s\-\%])\\alif{}l/$1al-/g;
-    $text =~ s/(b\\vow{i})\\alif{}l/$1-al-/g;
-    $text =~ s/([\=\s\-\%])\\alif{}\\vow{([ui])}/$1"$2/g;
-    $text =~ s/([\=\s\-\%])\\alif{}/$1i/g;
-    $text =~ s/(\\vow{aN})\\alif{}/$1/g;
-    $text =~ s/\\alif{}(\\vow{aN})/$1/g;
-    $text =~ s/\\vow{a}\\alif{}/\\vow{A}/g;
-    $text =~ s/\\alif{}/\\aux{A}/g;
+    $text =~ s/([\=\s\-\%])\\alif\{\}\\vow\{a\}l/$1"al-/g;
+    $text =~ s/([\=\s\-\%])\\alif\{\}l/$1al-/g;
+    $text =~ s/(b\\vow\{i\})\\alif\{\}l/$1-al-/g;
+    $text =~ s/([\=\s\-\%])\\alif\{\}\\vow\{([ui])\}/$1"$2/g;
+    $text =~ s/([\=\s\-\%])\\alif\{\}/$1i/g;
+    $text =~ s/(\\vow\{aN\})\\alif\{\}/$1/g;
+    $text =~ s/\\alif\{\}(\\vow\{aN\})/$1/g;
+    $text =~ s/\\vow\{a\}\\alif\{\}/\\vow{A}/g;
+    $text =~ s/\\alif\{\}/\\aux{A}/g;
 
-    $text =~ s/\\madda{}/'A/g;
+    $text =~ s/\\madda\{\}/'A/g;
 
-    $text =~ s/\\vow{a}\\maq{}/\\vow{Y}/g;
-    $text =~ s/\\maq{}(\\vow{aN})/\\vow{aNY}/g;
-    $text =~ s/\\vow{aN}\\maq{}/\\vow{aNY}/g;
-    $text =~ s/\\maq{}/\\aux{Y}/g;
+    $text =~ s/\\vow\{a\}\\maq\{\}/\\vow{Y}/g;
+    $text =~ s/\\maq\{\}(\\vow\{aN\})/\\vow{aNY}/g;
+    $text =~ s/\\vow\{aN\}\\maq\{\}/\\vow{aNY}/g;
+    $text =~ s/\\maq\{\}/\\aux{Y}/g;
 
     $text =~ s/i(}?)y([^aiuAIUY])/I$1$2/g;  # produces \ham{I}, too
     $text =~ s/u(}?)w([^aiuAIUY])/U$1$2/g;
 
-    $text =~ s/([iIuU]})(\\ham{a})/$1-$2/g;
-    $text =~ s/([\-\s])\\ham{a}([^\\])/$1'\\aux{a}$2/g;
-    $text =~ s/([^\}\s])\\ham{a}/$1\\aux{a}'/g;
+    $text =~ s/([iIuU]})(\\ham\{a\})/$1-$2/g;
+    $text =~ s/([\-\s])\\ham\{a\}([^\\])/$1'\\aux{a}$2/g;
+    $text =~ s/([^\}\s])\\ham\{a\}/$1\\aux{a}'/g;
 
-    $text =~ s/([^\-\s])(\\ham{i})/$1-$2/g;
-    $text =~ s/\\ham{i}([^\\])/'\\aux{i}$1/g;
+    $text =~ s/([^\-\s])(\\ham\{i\})/$1-$2/g;
+    $text =~ s/\\ham\{i\}([^\\])/'\\aux{i}$1/g;
 
-    $text =~ s/([^\}])(\\ham{w})/$1\\aux{u}$2/g;
-    $text =~ s/(\\ham{w})([^\\])/$1\\aux{u}$2/g;
+    $text =~ s/([^\}])(\\ham\{w\})/$1\\aux{u}$2/g;
+    $text =~ s/(\\ham\{w\})([^\\])/$1\\aux{u}$2/g;
 
-    $text =~ s/([^\}])(\\ham{y})/$1\\aux{i}$2/g;
-    $text =~ s/(\\ham{y})([^\\])/$1\\aux{i}$2/g;
+    $text =~ s/([^\}])(\\ham\{y\})/$1\\aux{i}$2/g;
+    $text =~ s/(\\ham\{y\})([^\\])/$1\\aux{i}$2/g;
 
-    $text =~ s/\\ham{[aiwy]}/'/g;
-    $text =~ s/\\ham{I}/'I/g;
+    $text =~ s/\\ham\{[aiwy]\}/'/g;
+    $text =~ s/\\ham\{I\}/'I/g;
 
-    $text =~ s/(?<![^\=\s\-\%])\\aux{A}/\\aux{i}/g;
+    $text =~ s/(?<![^\=\s\-\%])\\aux\{A\}/\\aux{i}/g;
 
 
     no strict 'refs';
 
     if (defined ${ $cls . '::enmode' } and ${ $cls . '::enmode' } == 3) {
 
-        $text =~ s/\\vow{(.+?)}/$1/g;
-        $text =~ s/\\aux{(.+?)}/"$1/g;
-        $text =~ s/\\sukun{}/"/g;
+        $text =~ s/\\vow\{(.+?)\}/$1/g;
+        $text =~ s/\\aux\{(.+?)\}/"$1/g;
+        $text =~ s/\\sukun\{\}/"/g;
     }
     elsif (defined ${ $cls . '::enmode' } and ${ $cls . '::enmode' } == 2) {
 
-        $text =~ s/\\vow{(.+?)}/"$1/g;
-        $text =~ s/\\aux{(.+?)}/$1/g;
-        $text =~ s/\\sukun{}/"/g;
+        $text =~ s/\\vow\{(.+?)\}/"$1/g;
+        $text =~ s/\\aux\{(.+?)\}/$1/g;
+        $text =~ s/\\sukun\{\}/"/g;
     }
     elsif (defined ${ $cls . '::enmode' } and ${ $cls . '::enmode' } == 4) {
 
-        $text =~ s/\\vow{(.+?)}/$1/g;
-        $text =~ s/\\aux{(.+?)}/$1/g;
-        $text =~ s/\\sukun{}//g;
+        $text =~ s/\\vow\{(.+?)\}/$1/g;
+        $text =~ s/\\aux\{(.+?)\}/$1/g;
+        $text =~ s/\\sukun\{\}//g;
     }
 
     $text = Encode::encode "utf8", $text if Encode::is_utf8($text);
@@ -154,19 +157,19 @@ sub decode ($$;$) {
     $text =~ s/([\s\-])'([iI])/$1\\H{i}$2/gs;
     $text =~ s/([\s\-])'A/$1\\M{}/gs;
 
-    $text =~ s/(I|y\\O{})'(aN[AY]?[\s\-])/$1\\H{y}$2/gs;
-    $text =~ s/a'(|\\D{})(|[au]N?)([\s\-])/a\\H{a}$1$2$3/gs;
-    $text =~ s/a'(|\\D{})(iN?)([\s\-])/a\\H{i}$1$2$3/gs;
-    $text =~ s/i'(|\\D{})(|[aiu]N?)([\s\-])/i\\H{y}$1$2$3/gs;
-    $text =~ s/u'(|\\D{})(|[aiu]N?)([\s\-])/u\\H{w}$1$2$3/gs;
-    $text =~ s/'(|\\D{})(|[aiu]N?)([\s\-])/\\H{}$1$2$3/gs;
+    $text =~ s/(I|y\\O\{\})'(aN[AY]?[\s\-])/$1\\H{y}$2/gs;
+    $text =~ s/a'(|\\D\{\})(|[au]N?)([\s\-])/a\\H{a}$1$2$3/gs;
+    $text =~ s/a'(|\\D\{\})(iN?)([\s\-])/a\\H{i}$1$2$3/gs;
+    $text =~ s/i'(|\\D\{\})(|[aiu]N?)([\s\-])/i\\H{y}$1$2$3/gs;
+    $text =~ s/u'(|\\D\{\})(|[aiu]N?)([\s\-])/u\\H{w}$1$2$3/gs;
+    $text =~ s/'(|\\D\{\})(|[aiu]N?)([\s\-])/\\H{}$1$2$3/gs;
 
-    $text =~ s/([iI]|y\\O{})'(|\\D{})/$1\\H{y}$2/g;
-    $text =~ s/'(|\\D{})([iI])/\\H{y}$1$2/g;
-    $text =~ s/([uU])'(|\\D{})/$1\\H{w}$2/g;
-    $text =~ s/'(|\\D{})([uU])/\\H{w}$1$2/g;
-    $text =~ s/A'(|\\D{})/A\\H{}$1/g; # how do you write <rA''AsuN>?
-    $text =~ s/a'(\\D{})/a\\H{a}$1/g; # how do you write <ra''AsuN>?
+    $text =~ s/([iI]|y\\O\{\})'(|\\D\{\})/$1\\H{y}$2/g;
+    $text =~ s/'(|\\D\{\})([iI])/\\H{y}$1$2/g;
+    $text =~ s/([uU])'(|\\D\{\})/$1\\H{w}$2/g;
+    $text =~ s/'(|\\D\{\})([uU])/\\H{w}$1$2/g;
+    $text =~ s/A'(|\\D\{\})/A\\H{}$1/g; # how do you write <rA''AsuN>?
+    $text =~ s/a'(\\D\{\})/a\\H{a}$1/g; # how do you write <ra''AsuN>?
     $text =~ s/'A/\\M{}/g;
     $text =~ s/'a/\\H{a}a/g;
     $text =~ s/'Y/\\H{a}Y/g;
@@ -178,7 +181,7 @@ sub decode ($$;$) {
     # alas! using $one in the replacing expression produces extra \\
 
     $text =~ s/aNY/\\V{aN}\\Q{}/g;
-    $text =~ s/(?<=A\\H{}|\\H{a})aN/\\V{aN}/g;
+    $text =~ s/(?<=A\\H\{\}|\\H\{a\})aN/\\V{aN}/g;
     $text =~ s/(?<=T)aN/\\V{aN}/g;
 
     $text =~ s/(?<!{)aNA?/\\V{aN}\\L{}/g;
@@ -436,7 +439,7 @@ Otakar Smrz C<< <otakar-smrz users.sf.net> >>, L<http://otakar-smrz.users.sf.net
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2003-2012 Otakar Smrz
+Copyright (C) 2003-2016 Otakar Smrz
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

@@ -4,15 +4,14 @@
 
 package Encode::Mapper;
 
+our $VERSION = '14.1';
+
 use 5.008;
 
 use strict;
 use warnings;
 
 use Carp;
-
-our $VERSION = '1.7';
-
 
 use bytes;                  # ensures splitting into one-byte tokens .. lexically scoped
 
@@ -569,7 +568,7 @@ __END__
 
 =head1 NAME
 
-Encode::Mapper - Intuitive yet efficient mappings for Encode
+Encode::Mapper - Rewrite rules compiler and interpreter
 
 
 =head1 SYNOPSIS
@@ -1019,7 +1018,7 @@ Otakar Smrz C<< <otakar-smrz users.sf.net> >>, L<http://otakar-smrz.users.sf.net
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2003-2012 Otakar Smrz
+Copyright (C) 2003-2014 Otakar Smrz
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

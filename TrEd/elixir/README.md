@@ -1,16 +1,12 @@
-ElixirFM (C) Otakar Smrz 2013, Viktor Bielicky 2013, Tim Buckwalter 2002
+ElixirFM (C) Otakar Smrz 2016, Viktor Bielicky 2016, Tim Buckwalter 2002
              GNU General Public License http://www.gnu.org/licenses/
 
 
-http://ufal.mff.cuni.cz/~pajas/tred/extensions/elixir/documentation/
+http://github.com/otakar-smrz/elixir-fm/
+http://elixir-fm.sf.net/
 
 http://ufal.mff.cuni.cz/tred/
 http://ufal.mff.cuni.cz/padt/online/
-
-http://sourceforge.net/projects/elixir-fm/
-http://sourceforge.net/p/elixir-fm/wiki/
-
-http://elixir-fm.sourceforge.net/
 
 
 Included in this package are the XML source files of the ElixirFM Lexicon.
@@ -78,12 +74,3 @@ To run the script, you need the ElixirFM, Encode::Arabic, and XML::Twig modules.
 You can get them from http://sourceforge.net/ and http://search.cpan.org/.
 
 Please be aware that this work is licensed under the GNU General Public License.
-The ElixirFM project is a complex research work and requires some effort before
-it can be reused.
-
-Please let me know if you have any questions.
-
-Enjoy ^^
-
-
--- Otakar Smrz
