@@ -1327,4 +1327,4 @@ data PatternT =
         |   MuFCanLI    -- Fischer (2002), par. 224 (?)
         |   MuFCanLY
 
-    deriving (Enum, Show, Eq)
+    deriving (Enum, Show, Eq, Read)

@@ -1,7 +1,7 @@
 -- |
 --
 -- Module      :  Elixir.Template
--- Copyright   :  Otakar Smrz 2005-2014
+-- Copyright   :  Otakar Smrz 2005-2016
 -- License     :  GPL
 --
 -- Maintainer  :  otakar-smrz users.sf.net
@@ -23,6 +23,8 @@ import Data.Char
 import Data.List
 
 import qualified Data.Map as Map
+
+import Text.ParserCombinators.ReadP
 
 
 class Template a where
@@ -357,6 +359,26 @@ instance Show a => Show (Morphs a) where
               suffix' y          = (++) " |< "  . shows y
 
 
+instance Read a => Read (Morphs a) where
+
+    readsPrec _ x = [ (z, y) | (z, y) <- readP_to_S ( do p <- many ( do q <- readS_to_P reads
+                                                                        skipSpaces
+                                                                        char '>'
+                                                                        optional (char '>')
+                                                                        char '|'
+                                                                        skipSpaces
+                                                                        return q )
+                                                         t <- readS_to_P reads
+                                                         s <- many ( do skipSpaces
+                                                                        char '|'
+                                                                        char '<'
+                                                                        optional (char '<')
+                                                                        skipSpaces
+                                                                        readS_to_P reads )
+
+                                                         return (Morphs t p (reverse s)) ) x ]
+
+
 instance Forming a => Forming (Morphs a) where
 
     verbStems _ _ = []
@@ -392,6 +414,25 @@ instance Show Prefix where
     show LA = "lA"
 
 
+instance Read Prefix where
+
+    readsPrec _ x = [ (v, s) | (t, s) <- lex x,
+
+                                v <- case t of
+
+                                        '"' : _ -> [Prefix (read t)]
+
+                                        "al"    -> [Al]
+                                        "lA"    -> [LA]
+
+                                        "Al"    -> [Al]
+                                        "LA"    -> [LA]
+
+                                        "laa"   -> [LA]
+
+                                        _       -> [] ]
+
+
 al  =   Al
 lA  =   LA
 laa =   LA
@@ -421,6 +462,45 @@ instance Show Suffix where
     show In = "In"
     show An = "An"
     show Ayn = "ayn"
+
+
+instance Read Suffix where
+
+    readsPrec _ x = [ (v, s) | (t, s) <- lex x,
+
+                                v <- case t of
+
+                                        '"' : _ -> [Suffix (read t)]
+
+                                        "Iy"    -> [Iy]
+                                        "aT"    -> [AT]
+                                        "At"    -> [At]
+                                        "Un"    -> [Un]
+                                        "In"    -> [In]
+                                        "An"    -> [An]
+                                        "ayn"   -> [Ayn]
+
+                                        "iyA"   -> [Suffix "iyA"]
+                                        "iy"    -> [Suffix "iy"]
+
+                                        "aN"    -> [Suffix "aN"]
+                                        "iN"    -> [Suffix "iN"]
+                                        "uN"    -> [Suffix "uN"]
+
+                                        "a"     -> [Suffix "a"]
+                                        "i"     -> [Suffix "i"]
+                                        "u"     -> [Suffix "u"]
+
+                                        "AT"    -> [AT]
+                                        "Ayn"   -> [Ayn]
+
+                                        "iyy"   -> [Iy]
+                                        "aat"   -> [At]
+                                        "uwn"   -> [Un]
+                                        "iyn"   -> [In]
+                                        "aan"   -> [An]
+
+                                        _       -> [] ]
 
 
 iyy   = Iy

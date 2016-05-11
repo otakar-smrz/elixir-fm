@@ -245,7 +245,7 @@ data PatternQ =
         |   MuKRaDiSS
         |   MuKRaDaSS
 
-    deriving (Enum, Show, Eq)
+    deriving (Enum, Show, Eq, Read)
 
 -- CaRQaL
 -- DaHRaJ

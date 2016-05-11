@@ -1,7 +1,7 @@
 -- |
 --
 -- Module      :  Elixir.Patterns.Literal
--- Copyright   :  Otakar Smrz 2005-2011
+-- Copyright   :  Otakar Smrz 2005-2016
 -- License     :  GPL
 --
 -- Maintainer  :  otakar-smrz users.sf.net
@@ -31,15 +31,15 @@ instance Template PatternL where
         where modify t | t `elem` ["`an", "min"] &&
                          last s == Suffix "mA"          = init t ++ "m"
 
-                       | t `elem` ["mA"] &&                       
+                       | t `elem` ["mA"] &&
                          last s == Suffix "mA"          = init t ++ "ah"
 
-                       | t `elem` ["'an", "'in"] &&                       
+                       | t `elem` ["'an", "'in"] &&
                          last s == Suffix "lA"          = init t ++ "l"
-                         
-                       | t `elem` ["'an", "'in"] &&                       
+
+                       | t `elem` ["'an", "'in"] &&
                          last s == Suffix "mA"          = init t ++ "m"
-                         
+
                        | otherwise                      = t
 
 
@@ -66,6 +66,23 @@ data PatternL =  Identity
 instance Show PatternL where
 
     show = const "_____"
+
+
+instance Read PatternL where
+
+    readsPrec _ x = [ (v, s) | (t, s) <- lex x,
+
+                                v <- case t of
+
+                                    "_____"    -> [Identity]
+
+                                    "Identity" -> [Identity]
+
+                                    "____"     -> [Identity]
+                                    "___"      -> [Identity]
+                                    "__"       -> [Identity]
+
+                                    _          -> [] ]
 
 
 _____    = Identity
