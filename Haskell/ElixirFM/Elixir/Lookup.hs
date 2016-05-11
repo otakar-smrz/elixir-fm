@@ -131,6 +131,8 @@ display x = case x of     Verb f p i c m t v  ->
                           Noun l f e          ->
 
                                 eraseEmpty l [("-------P--", l)]
+                                ++
+                                eraseEmpty f [("------F---", f)]
 
                           Adj  l f            ->
 
