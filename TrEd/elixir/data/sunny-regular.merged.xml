@@ -4,8 +4,8 @@
     <schema href="elixir.schema.xml"/>
   </head>
   <meta>
-    <revision>$Revision: 732 $</revision>
-    <date>$Date: 2016-05-05 04:49:19 +0200 (Thu, 05 May 2016) $</date>
+    <revision>$Revision: 733 $</revision>
+    <date>$Date: 2016-05-07 00:28:11 +0200 (Sat, 07 May 2016) $</date>
   </meta>
   <data>
     <Cluster>
@@ -15564,7 +15564,7 @@
         <root>_d _h r	ذ خ ر	ḏ ḫ r</root>
         <ents>
           <Entry>
-            <morphs>"IFtaCaL"	i_d_da_har	اِذَّخَر	iḏḏaḫar</morphs>
+            <morphs>"IFtaCaL"	idda_har	اِدَّخَر	iddaḫar</morphs>
             <entity>
               <Verb>
                 <form>VIII</form>
@@ -15577,10 +15577,10 @@
             </reflex>
           </Entry>
           <Entry>
-            <morphs>"IFtiCAL"	i_d_di_hAr	اِذِّخَار	iḏḏiḫār</morphs>
+            <morphs>"IFtiCAL"	iddi_hAr	اِدِّخَار	iddiḫār</morphs>
             <entity>
               <Noun>
-                <plural>"IFtiCAL" |&lt; At	i_d_di_hArAt	اِذِّخَارَات	iḏḏiḫārāt</plural>
+                <plural>"IFtiCAL" |&lt; At	iddi_hArAt	اِدِّخَارَات	iddiḫārāt</plural>
               </Noun>
             </entity>
             <reflex>
@@ -15589,7 +15589,7 @@
             </reflex>
           </Entry>
           <Entry>
-            <morphs>"IFtiCAL" |&lt; Iy	i_d_di_hArIy	اِذِّخَارِيّ	iḏḏiḫārīy</morphs>
+            <morphs>"IFtiCAL" |&lt; Iy	iddi_hArIy	اِدِّخَارِيّ	iddiḫārīy</morphs>
             <entity>
               <Adj/>
             </entity>
@@ -15599,11 +15599,11 @@
             </reflex>
           </Entry>
           <Entry>
-            <morphs>"MuFtaCiL"	mu_d_da_hir	مُذَّخِر	muḏḏaḫir</morphs>
+            <morphs>"MuFtaCiL"	mudda_hir	مُدَّخِر	muddaḫir</morphs>
             <entity>
               <Noun>
-                <plural>"MuFtaCiL" |&lt; Un	mu_d_da_hirUn	مُذَّخِرُون	muḏḏaḫirūn</plural>
-                <femini>"MuFtaCiL" |&lt; aT	mu_d_da_hiraT	مُذَّخِرَة	muḏḏaḫirat</femini>
+                <plural>"MuFtaCiL" |&lt; Un	mudda_hirUn	مُدَّخِرُون	muddaḫirūn</plural>
+                <femini>"MuFtaCiL" |&lt; aT	mudda_hiraT	مُدَّخِرَة	muddaḫirat</femini>
               </Noun>
             </entity>
             <reflex>
@@ -15630,7 +15630,7 @@
             </reflex>
           </Entry>
           <Entry>
-            <morphs>IFtaCaL	idda_har	اِدَّخَر	iddaḫar</morphs>
+            <morphs>IFtaCaL	i_d_da_har	اِذَّخَر	iḏḏaḫar</morphs>
             <entity>
               <Verb>
                 <form>VIII</form>
@@ -15668,10 +15668,10 @@
             </reflex>
           </Entry>
           <Entry>
-            <morphs>IFtiCAL	iddi_hAr	اِدِّخَار	iddiḫār</morphs>
+            <morphs>IFtiCAL	i_d_di_hAr	اِذِّخَار	iḏḏiḫār</morphs>
             <entity>
               <Noun>
-                <plural>IFtiCAL |&lt; At	iddi_hArAt	اِدِّخَارَات	iddiḫārāt</plural>
+                <plural>IFtiCAL |&lt; At	i_d_di_hArAt	اِذِّخَارَات	iḏḏiḫārāt</plural>
               </Noun>
             </entity>
             <reflex>
@@ -15680,7 +15680,7 @@
             </reflex>
           </Entry>
           <Entry>
-            <morphs>IFtiCAL |&lt; Iy	iddi_hArIy	اِدِّخَارِيّ	iddiḫārīy</morphs>
+            <morphs>IFtiCAL |&lt; Iy	i_d_di_hArIy	اِذِّخَارِيّ	iḏḏiḫārīy</morphs>
             <entity>
               <Adj/>
             </entity>
@@ -15727,11 +15727,11 @@
             </reflex>
           </Entry>
           <Entry>
-            <morphs>MuFtaCiL	mudda_hir	مُدَّخِر	muddaḫir</morphs>
+            <morphs>MuFtaCiL	mu_d_da_hir	مُذَّخِر	muḏḏaḫir</morphs>
             <entity>
               <Noun>
-                <plural>MuFtaCiL |&lt; Un	mudda_hirUn	مُدَّخِرُون	muddaḫirūn</plural>
-                <femini>MuFtaCiL |&lt; aT	mudda_hiraT	مُدَّخِرَة	muddaḫirat</femini>
+                <plural>MuFtaCiL |&lt; Un	mu_d_da_hirUn	مُذَّخِرُون	muḏḏaḫirūn</plural>
+                <femini>MuFtaCiL |&lt; aT	mu_d_da_hiraT	مُذَّخِرَة	muḏḏaḫirat</femini>
               </Noun>
             </entity>
             <reflex>
@@ -16262,7 +16262,7 @@
         <root>_d k r	ذ ك ر	ḏ k r</root>
         <ents>
           <Entry>
-            <morphs>"IFtaCaL"	i_d_dakar	اِذَّكَر	iḏḏakar</morphs>
+            <morphs>"IFtaCaL"	iddakar	اِدَّكَر	iddakar</morphs>
             <entity>
               <Verb>
                 <form>VIII</form>
@@ -16339,7 +16339,7 @@
             </reflex>
           </Entry>
           <Entry>
-            <morphs>IFtaCaL	iddakar	اِدَّكَر	iddakar</morphs>
+            <morphs>IFtaCaL	i_d_dakar	اِذَّكَر	iḏḏakar</morphs>
             <entity>
               <Verb>
                 <form>VIII</form>

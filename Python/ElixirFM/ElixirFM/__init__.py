@@ -2,7 +2,7 @@
 
 """ElixirFM Functional Arabic Morphology"""
 
-__version__   = "1.2.1"
+__version__   = "1.2.2"
 __license__   = "GPL"
 __copyright__ = "2016"
 __author__    = "Otakar Smrz"

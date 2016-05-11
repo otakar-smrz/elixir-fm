@@ -347,6 +347,9 @@ cluster_19  = cluster
     TaFCIL                    `noun`    {- <tamlIq> -}         [ ['f','l','a','t','t','e','r','y'] ]
                               `plural`     TaFCIL |< At,
 
+    TiFiCCAL                  `noun`    {- <timillAq> -}       [ ['f','l','a','t','t','e','r','y'] ]
+                              `plural`     TiFiCCAL |< At,
+
     MutaFaCCiL                `noun`    {- <mutamalliq> -}     [ ['f','l','a','t','t','e','r','e','r'] ]
                               `plural`     MutaFaCCiL |< Un
                               `femini`     MutaFaCCiL |< aT ]
@@ -393,7 +396,7 @@ cluster_21  = cluster
                               `plural`     FuCUL,
 
     FaCiL |< aT               `noun`    {- <malikaT> -}        [ ['q','u','e','e','n'] ]
-                              `plural`     FaCiL |< aT |< At,
+                              `plural`     FaCiL |< At,
 
     FuCL |< Iy                `adj`     {- <mulkIy> -}         [ ['p','r','o','p','r','i','e','t','a','r','y'], ['c','i','v','i','l','i','a','n'] ],
 

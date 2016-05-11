@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='ElixirFM',
-    version='1.2.1',
+    version='1.2.2',
     description='ElixirFM Functional Arabic Morphology',
     long_description='https://github.com/otakar-smrz/elixir-fm',
     url='https://github.com/otakar-smrz/elixir-fm',

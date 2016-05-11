@@ -1,7 +1,7 @@
 -- |
 --
 -- Module      :  Elixir.Patterns.Triliteral
--- Copyright   :  Otakar Smrz 2005-2011
+-- Copyright   :  Otakar Smrz 2005-2016
 -- License     :  GPL
 --
 -- Maintainer  :  otakar-smrz users.sf.net
@@ -113,8 +113,8 @@ assimVIII c normal = case c of
 
                     "_t"                ->  (c, "_t")
 
-                    "_d"    | normal    ->  ("d", "d")
-                            | otherwise ->  (c, "_d")
+                    "_d"    | normal    ->  (c, "_d")
+                            | otherwise ->  ("d", "d")
 
                     "d"                 ->  (c, "d")
 
