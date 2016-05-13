@@ -55,6 +55,9 @@ options = [ Option []    ["resolve"]    (NoArg (RunAction elixirResolve))
             Option []    ["lookup"]     (NoArg (RunAction elixirLookup))
                                                 "run the 'lookup' mode\n\n",
 
+            Option []    ["merge"]      (NoArg (RunAction elixirMerge))
+                                                "'merge' templates with roots\n\n",
+
             Option []    ["lexicon"]    (NoArg (RunAction elixirLexicon))
                                                 "dump the 'lexicon' data",
 
@@ -249,3 +252,6 @@ elixirLexicon o p = interact (unlines . map (show . q) . filter r . rows)
 elixirCompose o p = (putDoc . generate e) lexicon
 
     where e = if null p then "Q---------" else head p
+
+
+elixirMerge o p = interact (unlines . map (show . (reads :: ReadS (Wrap Morphs))) . rows)

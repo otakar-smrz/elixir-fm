@@ -589,6 +589,19 @@ takes (x : y) = x : takes y
 takes []      = []
 
 
+first :: [a] -> [a]
+
+first []      = []
+first (x : _) = [x]
+
+
+final :: [a] -> [a]
+
+final []      = []
+final [x]     = [x]
+final (x : y) = final y
+
+
 inside :: Enum a => a -> a -> a -> Bool
 
 inside x l r = fromEnum l <= y && y < fromEnum r

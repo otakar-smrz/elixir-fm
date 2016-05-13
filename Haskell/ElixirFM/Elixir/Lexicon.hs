@@ -1,7 +1,7 @@
 -- |
 --
 -- Module      :  Elixir.Lexicon
--- Copyright   :  Otakar Smrz 2005-2013
+-- Copyright   :  Otakar Smrz 2005-2016
 -- License     :  GPL
 --
 -- Maintainer  :  otakar-smrz users.sf.net
@@ -107,6 +107,17 @@ instance (Pretty (a String), Pretty (a PatternT), Pretty (a PatternQ), Pretty (a
     pretty (WrapT x) = pretty x
     pretty (WrapQ x) = pretty x
     pretty (WrapL x) = pretty x
+
+
+instance Read (Wrap Morphs) where
+
+    readsPrec p x = first ( final [ (wrap (z :: Morphs PatternT), y) | (z, y) <- readsPrec p x ] ++
+                            final [ (wrap (z :: Morphs PatternQ), y) | (z, y) <- readsPrec p x ] ++
+                            final [ (wrap (z :: Morphs PatternL), y) | (z, y) <- readsPrec p x ] ++
+                            final [ (wrap (z :: Morphs String),   y) | (z, y) <- readsPrec p x ] )
+
+                    -- expected parse is first
+                    -- complete parse is final
 
 
 instance Pretty Lexicon => Pretty [Lexicon] where
