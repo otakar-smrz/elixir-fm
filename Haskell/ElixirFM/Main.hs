@@ -237,11 +237,15 @@ elixirLookup o p = interact (unlines . map (encode UTF . decode UCS . show . q .
 
 elixirMerge o p = interact (unlines . map (show . q) . rows)
 
-    where q x = vcat [ f (lists [""] p) y | y <- c x ]
+    where q x = singleline id [ f (lists (lists [""] p) s) y | (y, s) <- c x ]
 
-          f x = unwraps (\ m@(Morphs _ _ _) -> text (show m) <> joinText [ f r m | r <- x, f <- [twine, merge] ])
+          f x = unwraps (\ m@(Morphs _ _ _) -> text (show m) <>
+                                               align ( vcat [ joinText [show (unwords (words r)),
+                                                                        merge r m, twine r m] | r <- x ] ))
 
-          c x = [ y :: Wrap Morphs | (y, _) <- reads x ]
+          c x = [ (y, r s) | (y, s) <- reads x ]
+
+          r = unfoldr (\ x -> let y = reads x in if null y then Nothing else Just (head y))
 
 
 elixirLexicon o p = interact (unlines . map (show . q) . rows)
