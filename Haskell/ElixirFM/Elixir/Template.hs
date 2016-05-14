@@ -343,16 +343,39 @@ instance Morphing (Morphs a) a where
     morph = id
 
 
+twine :: (Morphing a b, Template b, Show b) => Root -> a -> String
+
+twine r y = (prefixes . ((++) (interlock (words r) t)) . suffixes) ""
+
+            -- compare with 'merge' and 'shows'
+
+        where Morphs t p s = morph y
+
+              prefixes x = foldr (     prefix') x p
+              suffixes x = foldl (flip suffix') x s
+
+              prefix' (Prefix x) =  (++) x . (++) "|-"
+              prefix' y          = shows y . (++) "|-"
+
+              suffix' (Suffix x) = (++) "-|" .  (++) x
+              suffix' y          = (++) "-|" . shows y
+
+
 instance Show a => Show (Morphs a) where
 
-    showsPrec _ (Morphs t p s) = foldr ((.) . prefix') id p . shows t .
-                                 foldl (flip ((.) . suffix')) id s
+    showsPrec _ (Morphs t p s) = prefixes . shows t . suffixes
+
+                -- foldr ((.) . prefix') id p . shows t .
+                -- foldl (flip ((.) . suffix')) id s
 
                 -- foldr (((.) . flip (.) ((++) " >| ") . shows)) id p
                 -- . shows t .
                 -- foldl (flip ((.) . (.) ((++) " |< ") . shows)) id s
 
-        where prefix' (Prefix x) = shows x . (++) " >>| "
+        where prefixes x = foldr (     prefix') x p
+              suffixes x = foldl (flip suffix') x s
+
+              prefix' (Prefix x) = shows x . (++) " >>| "
               prefix' y          = shows y . (++)  " >| "
 
               suffix' (Suffix x) = (++) " |<< " . shows x

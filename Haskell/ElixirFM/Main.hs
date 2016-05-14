@@ -181,12 +181,12 @@ elixirResolve o p = interact (unlines . map (encode UTF . decode UCS . show . q 
           e = if null p then "" else map toLower (head p)
 
 
-elixirInflect o p = interact (unlines . map (show . q) . filter r . map cols . rows)
+elixirInflect o p = interact (unlines . map (show . q) . map cols . rows)
 
     where q x = singleline id [ z | (y, p) <- c (unwords x), let t = lists d p, let u = enumerate y,
                                     z <- [ f t u s | r <- regroup u, s <- emanate r ] ]
 
-          f x u = unwraps (\ (Nest r z) -> pretty [ (show y, inflect (Lexeme r e) x) | (y, e) <- zip u z ] )
+          f x u = unwraps (\ (Nest r z) -> pretty [ (show y, inflect (Lexeme r e) x) | (y, e) <- zip u z ])
 
           c x = [ (y, e z) | (y, z) <- reads x ] ++ [ (clips y, e z) | (y, z) <- reads x ]
 
@@ -194,24 +194,19 @@ elixirInflect o p = interact (unlines . map (show . q) . filter r . map cols . r
 
           d = [ z | y <- lists ["----------"] p, z <- convert y ]
 
-          r x = null x || otherwise
-                -- null (words x) || not (null (c x) || any ('"' ==) x)
 
-
-elixirDerive o p = interact (unlines . map (show . q) . filter r . rows)
+elixirDerive o p = interact (unlines . map (show . q) . rows)
 
     where q x = singleline id [ z | (y, p) <- c x, let t = lists d p, let u = enumerate y,
                                     z <- [ f t u s | r <- regroup u, s <- emanate r ] ]
 
-          f x u = unwraps (\ (Nest r z) -> pretty [ (show y, derive (Lexeme r e) x) | (y, e) <- zip u z ] )
+          f x u = unwraps (\ (Nest r z) -> pretty [ (show y, derive (Lexeme r e) x) | (y, e) <- zip u z ])
 
           c x = [ (y, e z) | (y, z) <- reads x ] ++ [ (clips y, e z) | (y, z) <- reads x ]
 
           e x = [ z | y <- words x, z <- convert y ]
 
           d = [ z | y <- lists ["----------"] p, z <- convert y ]
-
-          r x = otherwise -- null (words x) || not (null (c x) || any ('"' ==) x)
 
 
 elixirLookup o p = interact (unlines . map (encode UTF . decode UCS . show . q . encode UCS . decode UTF) . rows)
@@ -240,18 +235,22 @@ elixirLookup o p = interact (unlines . map (encode UTF . decode UCS . show . q .
           e = if null p then "" else map toLower (head p)
 
 
-elixirLexicon o p = interact (unlines . map (show . q) . filter r . rows)
+elixirMerge o p = interact (unlines . map (show . q) . rows)
+
+    where q x = vcat [ f (lists [""] p) y | y <- c x ]
+
+          f x = unwraps (\ m@(Morphs _ _ _) -> text (show m) <> joinText [ f r m | r <- x, f <- [twine, merge] ])
+
+          c x = [ y :: Wrap Morphs | (y, _) <- reads x ]
+
+
+elixirLexicon o p = interact (unlines . map (show . q) . rows)
 
     where q x = vcat [ pretty z | y <- c x, z <- emanate y ]
 
           c x = [ y | (y, _) <- reads x ] ++ [ clips y | (y, _) <- reads x ]
 
-          r x = null (words x) || not (null (c x) || any ('"' ==) x)
-
 
 elixirCompose o p = (putDoc . generate e) lexicon
 
     where e = if null p then "Q---------" else head p
-
-
-elixirMerge o p = interact (unlines . map (show . (reads :: ReadS (Wrap Morphs))) . rows)

@@ -138,11 +138,26 @@ sub cling {
     return join defined $_[1] ? $_[1] : "", split " ", $_[0];
 }
 
+sub twine {
+
+    my ($root, $template) = @_;
+
+    my $morphs = morphs($template);
+
+    $morphs->[0] = merge($root, $morphs->[0]);
+
+    $morphs->[1] = [ map { $_ . "|-" } map { $_ =~ /"/ ? showPrefix($_) : $_ } @{$morphs->[1]} ];
+
+    $morphs->[2] = [ map { "-|" . $_ } map { $_ =~ /"/ ? showSuffix($_) : $_ } @{$morphs->[2]} ];
+
+    return join "", @{$morphs->[1]}, $morphs->[0], @{$morphs->[2]};
+}
+
 sub nice {
 
     my $morphs = morphs($_[0]);
 
-    $morphs->[0] = $morphs->[0] =~ /^(?:_____|Identity)$/ ? '_____' : merge("", $morphs->[0]);
+    $morphs->[0] = merge("", $morphs->[0]);
 
     $morphs->[0] =~ s/([FCL]|[KRDS])/|$1|/g;
 
@@ -1171,7 +1186,7 @@ sub interlocks {
     }
     elsif ($pattern =~ /^(?:_____|Identity)$/) {
 
-        $pattern = join "", @root;
+        $pattern = @root ? join "", @root : '_____';
 
         $pattern = (substr $pattern, 0, -1) . 'm' if $pattern =~ /^(?:`an|min)$/
                                                   and @{$s} and $s->[0] eq '"mA"';

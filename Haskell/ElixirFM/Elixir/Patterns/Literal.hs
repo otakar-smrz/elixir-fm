@@ -24,23 +24,23 @@ instance Morphing PatternL PatternL where
 
 instance Template PatternL where
 
-    interlocks _ [] r _ = concat r
+    interlocks _ s [] _ = show Identity
 
-    interlocks _ s r _ = (modify . concat) r
+    interlocks _ s r _ = (if null s then id else modify) (concat r)
 
         where modify t | t `elem` ["`an", "min"] &&
-                         last s == Suffix "mA"          = init t ++ "m"
+                         last s == Suffix "mA"      = init t ++ "m"
 
                        | t `elem` ["mA"] &&
-                         last s == Suffix "mA"          = init t ++ "ah"
+                         last s == Suffix "mA"      = init t ++ "ah"
 
                        | t `elem` ["'an", "'in"] &&
-                         last s == Suffix "lA"          = init t ++ "l"
+                         last s == Suffix "lA"      = init t ++ "l"
 
                        | t `elem` ["'an", "'in"] &&
-                         last s == Suffix "mA"          = init t ++ "m"
+                         last s == Suffix "mA"      = init t ++ "m"
 
-                       | otherwise                      = t
+                       | otherwise                  = t
 
 
 instance Rules PatternL where
@@ -65,7 +65,7 @@ data PatternL =  Identity
 
 instance Show PatternL where
 
-    show = const "_____"
+    showsPrec _ _ = (++) "_____"
 
 
 instance Read PatternL where
