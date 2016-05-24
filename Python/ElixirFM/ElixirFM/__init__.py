@@ -34,7 +34,16 @@ def derive(text, *opts):
 def lookup(text, *opts):
     return elixir('lookup', text, *opts)
 
-MODE = { 'resolve': 2, 'inflect': 2, 'derive': 2, 'lookup': 4 }
+def merge(text, *opts):
+    return elixir('merge', text, *opts)
+
+MODE = {
+    'resolve': 2,
+    'inflect': 2,
+    'derive': 2,
+    'lookup': 4,
+    'merge': 1,
+    }
 
 def unpretty(data, mode=None):
     return [ groups([ item.split('\t') for word in unwords(line)
