@@ -1,7 +1,7 @@
 -- |
 --
 -- Module      :  Elixir.Entity
--- Copyright   :  Otakar Smrz 2005-2013
+-- Copyright   :  Otakar Smrz 2005-2016
 -- License     :  GPL
 --
 -- Maintainer  :  otakar-smrz users.sf.net
@@ -68,7 +68,7 @@ domain :: Entry a -> TagsType
 domain = fst . limits
 
 
-(<::>) :: (Morphing a b, Forming a, Rules a, Eq a) => a -> String -> Entry b
+(<::>) :: (Morphing a b, Forming b, Rules b) => a -> String -> Entry b
 
 x <::> y = Entry { morphs = morph x, entity = e, limits = (d, []), reflex = [] }
 
@@ -182,25 +182,24 @@ isGrph Grph = True
 isGrph _    = False
 
 
-verb :: (Morphing a b, Forming a, Rules a, Eq a) => a -> Reflex -> Entry b
+verb :: (Morphing a b, Forming b, Rules b) => a -> Reflex -> Entry b
 
-verb m = Entry (morph m) (Verb forms [] [] [] [] justT justV) (TagsVerb [], [])
+verb h = Entry m (Verb forms [] [] [] [] justT justV) (TagsVerb [], [])
 
-    where forms = reduce [ f | f <- [III, I, II] ++ [IV ..], isForm f m ]
+    where m@(Morphs t p s) = morph h
 
-          reduce (x : _) = [x]
-          reduce []      = []
+          forms = first [ f | f <- [III, I, II] ++ [IV ..], isForm f t ]
 
-          roots I = ["F C L", "w C L", "F C C", "r ' y"]
+          roots I = ["F C L", "w C L", "F C C", "F y y", "r ' y"]
           roots X = ["F C L", "w C L"]
-          roots _ = ["F C L"]               -- covered otherwise
+          roots _ = ["F C L"]
 
           stems = [ s | f <- forms, r <- roots f, s <- verbStems f r ]
 
-          notPA = null [ () | (_, x, _, _, _) <- stems, x == m ]
-          notPP = null [ () | (_, _, x, _, _) <- stems, x == m ]
-          notIA = null [ () | (_, _, _, x, _) <- stems, x == m ]
-          notIP = null [ () | (_, _, _, _, x) <- stems, x == m ]
+          notPA = null [ () | (_, x, _, _, _) <- stems, x == t ]
+          notPP = null [ () | (_, _, x, _, _) <- stems, x == t ]
+          notIA = null [ () | (_, _, _, x, _) <- stems, x == t ]
+          notIP = null [ () | (_, _, _, _, x) <- stems, x == t ]
 
           justT = if notPA && notPP then Just Imperfect
                                     else Nothing

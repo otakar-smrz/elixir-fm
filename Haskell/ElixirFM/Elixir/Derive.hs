@@ -1,7 +1,7 @@
 -- |
 --
 -- Module      :  Elixir.Derive
--- Copyright   :  Otakar Smrz 2005-2013
+-- Copyright   :  Otakar Smrz 2005-2016
 -- License     :  GPL
 --
 -- Maintainer  :  otakar-smrz users.sf.net
@@ -94,13 +94,10 @@ instance Derive Lexeme TagsType where
 
     derive x y = case expand y of
 
-        TagsVerb z ->  derive x (reduce z)
-        TagsNoun z ->  derive x (reduce z)
-        TagsAdj  z ->  derive x (reduce z)
+        TagsVerb z ->  derive x (first z)
+        TagsNoun z ->  derive x (first z)
+        TagsAdj  z ->  derive x (first z)
         _          ->  []
-
-        where reduce (x : _) = [x]
-              reduce []      = []
 
 
 instance Derive Lexeme TagsVerb where

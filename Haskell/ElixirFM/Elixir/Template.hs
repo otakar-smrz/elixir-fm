@@ -251,9 +251,9 @@ data Form = I | II | III | IV | V | VI | VII | VIII | IX | X |
 
 class Forming a where
 
-    verbStems :: Form -> String -> [VerbStems a]
+    verbStems :: Form -> Root -> [VerbStems a]
 
-    nounStems :: Morphing a a => Form -> String -> [NounStems a]
+    nounStems :: Morphing a a => Form -> Root -> [NounStems a]
 
 
 type VerbStems a = (Maybe (a, a, a, a), a, a, a, a)
@@ -400,13 +400,6 @@ instance Read a => Read (Morphs a) where
                                                                         readS_to_P reads )
 
                                                          return (Morphs t p (reverse s)) ) x ]
-
-
-instance Forming a => Forming (Morphs a) where
-
-    verbStems _ _ = []
-
-    nounStems _ _ = []
 
 
 instance Rules a => Rules (Morphs a) where
