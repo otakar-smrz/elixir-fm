@@ -1,7 +1,7 @@
 -- |
 --
 -- Module      :  Elixir.Inflect
--- Copyright   :  Otakar Smrz 2005-2013
+-- Copyright   :  Otakar Smrz 2005-2016
 -- License     :  GPL
 --
 -- Maintainer  :  otakar-smrz users.sf.net
@@ -85,7 +85,7 @@ instance (Show a, Template a) => Pretty (Inflected a) where
 
 instance Inflect Lexeme a => Inflect Entry a where
 
-    inflect x = inflect (Lexeme "f ` l" x)
+    inflect x = inflect (Lexeme "" x)
 
 
 instance Inflect Entry TagsVerb where

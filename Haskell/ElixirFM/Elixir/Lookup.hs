@@ -1,7 +1,7 @@
 -- |
 --
 -- Module      :  Elixir.Lookup
--- Copyright   :  Otakar Smrz 2005-2013
+-- Copyright   :  Otakar Smrz 2005-2016
 -- License     :  GPL
 --
 -- Maintainer  :  otakar-smrz users.sf.net
@@ -276,22 +276,38 @@ instance Lookup [[UPoint]] where
 
     lookupWith y [] = []
 
-    lookupWith y x = lookupUsing y (Just . const False) (\ _ e -> flip all z ((flip elem . map (map toLower)) (reflex e)))
+    lookupWith y x = lookupUsing y (Just . const False) (\ _ e -> let r = map (map toLower) (reflex e) in
 
-        where z = map (map toLower . encode UCS) x
+                                                                  all (flip elem r) q)
 
-                  -- lookupUsing y (Just . const False) (\ _ e -> any (flip elem z) (reflex e))
+        where q = map (map toLower . encode UCS) x
+
+                  -- (\ _ e -> flip all q ((flip elem . map (map toLower)) (reflex e)))
+                  -- (\ _ e -> any (flip elem q) (reflex e))
 
 
 instance Lookup [String] where
 
     lookupWith y [] = []
 
-    lookupWith y x = lookupUsing y (Just . const False) (\ _ e -> any (flip all z . flip elem . words . map toLower) (reflex e))
+    lookupWith y x = lookupUsing y (Just . const False) (\ _ e -> let r = map (words . map toLower) (reflex e) in
 
-        where z = map (map toLower) x
+                                                                  all (\ p -> any (\ s -> all (flip elem s) p) r) q)
 
-                  -- lookupUsing y (Just . const False) (\ _ e -> any (any (flip elem x) . words) (reflex e))
+        where q = map (words . map toLower) x
+
+                  -- (\ _ e -> any (flip all (map (map toLower) x) . flip elem . words . map toLower) (reflex e))
+                  -- (\ _ e -> any (any (flip elem x) . words) (reflex e))
+
+
+sense :: String -> [[UPoint]]
+
+sense x = senses [x]
+
+
+senses :: [String] -> [[UPoint]]
+
+senses = map (decode UCS)
 
 
 instance Show a => Lookup (Morphs a) where
@@ -336,12 +352,17 @@ instance Lookup [TagsType] where
 
 
 countNest :: Lexicon -> Int
+
 countNest = length
 
+
 countEntry :: Lexicon -> Int
+
 countEntry = sum . map countEach
 
+
 countEach :: Wrap Nest -> Int
+
 countEach = length . wraps ents
 
 

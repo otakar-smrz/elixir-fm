@@ -185,18 +185,20 @@ instance Wrapping String    where   wrap             = WrapS
                                     unwrap (WrapS x) = x
 
 
-infixl 6 <|
+(|>) :: Wrapping a => [Wrap Nest] -> Nest a -> [Wrap Nest]
 
-(<|) :: (Wrapping a, Morphing a a, Forming a, Rules a) => Root -> [Entry a] -> Wrap Nest
-
-(<|) r l = wrap (Nest r [ e | s <- l, e <- s : entries r s ])
+(|>) x y = wrap y : x       -- (|>) x y = ((:) $! y) $! x
 
 
 infixl 5 |>
 
-(|>) :: [a] -> a -> [a]
 
-(|>) x y = (:) y x        -- (|>) x y = ((:) $! y) $! x
+(<|) :: (Morphing a a, Forming a, Rules a) => Root -> [Entry a] -> Nest a
+
+(<|) r l = Nest r [ e | s <- l, e <- s : entries r s ]
+
+
+infixl 6 <|
 
 
 listing :: a -> [b]

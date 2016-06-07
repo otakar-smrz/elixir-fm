@@ -169,7 +169,7 @@ instance Derive Lexeme TagsAdj where
 
 instance Derive Lexeme a => Derive Entry a where
 
-    derive x = derive (Lexeme "f ` l" x)
+    derive x = derive (Lexeme "" x)
 
 
 lookupForm :: (Morphing a a, Forming a, Eq a) => Root -> Entry a -> [Form]

@@ -26,17 +26,12 @@ import Elixir.Pretty
 data Lexeme a   =   Lexeme Root (Entry a)   deriving (Show, Eq)
 
 
-(>-<) :: Root -> Entry a -> Lexeme a
+(>|<) :: Root -> Entry a -> Lexeme a
 
-(>-<) x y = Lexeme x y
-
-
-(<->) :: Root -> Entry a -> Lexeme a
-
-(<->) x y = Lexeme x y
+(>|<) x y = Lexeme x y
 
 
-infix 2 >-<, <->
+infix 2 >|<
 
 
 data Nest   a   =   Nest   Root [Entry a]   deriving (Show, Eq)
