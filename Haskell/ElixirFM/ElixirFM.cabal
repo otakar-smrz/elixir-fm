@@ -2,7 +2,7 @@ name:               ElixirFM
 version:            1.2.2
 license:            GPL
 license-file:       LICENSE
-extra-source-files: README.md
+extra-source-files: README.md, README.ipynb
 copyright:          2016
 author:             Otakar Smrz
 maintainer:         otakar-smrz users.sf.net
