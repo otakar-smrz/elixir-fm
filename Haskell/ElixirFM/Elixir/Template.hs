@@ -78,12 +78,7 @@ merge r y = (prefixes . suffixes) [interlocks p s (words r) t]
 -}
 
 
-mergeWith :: (Morphing a b, Template b, Show b) => a -> String -> String
-
-mergeWith = flip merge
-
-
-infix 5 `merge`, `mergeWith`
+infix 5 `merge`, `twine`
 
 infix 4 ->-
 infix 4 -<-
