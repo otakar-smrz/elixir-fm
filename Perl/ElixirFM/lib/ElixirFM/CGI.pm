@@ -6,7 +6,7 @@ package ElixirFM::CGI;
 
 use strict;
 
-our $VERSION = '1.2.1';
+our $VERSION = '1.2.2';
 
 
 use base 'CGI::Application::FastCGI';
@@ -137,7 +137,7 @@ sub display_headline ($) {
                 $q->img({-border => '0',
                          -src => 'http://quest.ms.mff.cuni.cz/elixir/elixir.png',
                          -alt => 'ElixirFM',
-                         -style => 'background-color: #FFFFFF; float: left; margin: -2px 8px 0px 0px'}));
+                         -style => 'background-color: #FFFFFF; float: left; margin: -2px 8px 0px 0px; height: 48px'}));
 
     $r .= $q->h1($q->a({'href' => 'http://sourceforge.net/projects/elixir-fm/'}, "ElixirFM"), ( $m eq 'home' ? ('Online', 'Interface') : (ucfirst $m, 'Online') ));
 
@@ -154,7 +154,7 @@ sub display_footline ($) {
     my $r;
 
     $r .= $q->p({'style' => 'margin-top: 30px'},
-                "(C) Otakar Smr\x{017E} 2014, Viktor Bielick\x{00FD} 2014, Tim Buckwalter 2002. GNU General Public License",
+                "(C) Otakar Smr\x{017E} 2016, Viktor Bielick\x{00FD} 2014, Tim Buckwalter 2002. GNU General Public License",
                 $q->a({-href => 'http://www.gnu.org/licenses/'}, "GNU GPL 3") . ".");
 
     $r .= $q->p("ElixirFM is an", $q->a({-href => 'http://sourceforge.net/projects/elixir-fm/'}, "open-source online"), "project.",
@@ -314,8 +314,8 @@ sub main ($) {
 
     $r .= display_twitter $c;
 
-    $r .= $q->p("ElixirFM is further documented at", $q->a({-href => 'http://sourceforge.net/apps/trac/elixir-fm/'},
-                "ElixirFM Wiki") . ".",
+    $r .= $q->p("ElixirFM is further documented at", $q->a({-href => 'http://github.com/otakar-smrz/elixir-fm/'},
+                "GitHub") . ".",
                 "The multiple scripts of this site are best viewed with", 
 		$q->a({-href => 'http://openfontlibrary.org/en/font/droid-arabic-naskh'}, "Droid Arabic Naskh"), "and",
 		$q->a({-href => 'http://sourceforge.net/projects/dejavu/'}, "DejaVu"), "fonts.");
