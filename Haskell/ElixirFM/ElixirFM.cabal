@@ -3,7 +3,7 @@ version:            1.2.2
 license:            GPL
 license-file:       LICENSE
 extra-source-files: README.md, README.ipynb
-copyright:          2016
+copyright:          2017
 author:             Otakar Smrz
 maintainer:         otakar-smrz users.sf.net
 homepage:           http://otakar-smrz.users.sf.net/

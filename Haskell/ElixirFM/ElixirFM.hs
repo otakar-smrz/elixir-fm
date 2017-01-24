@@ -1,7 +1,7 @@
 -- |
 --
 -- Module      :  ElixirFM
--- Copyright   :  Otakar Smrz 2005-2016
+-- Copyright   :  Otakar Smrz 2005-2017
 -- License     :  GPL
 --
 -- Maintainer  :  otakar-smrz users.sf.net

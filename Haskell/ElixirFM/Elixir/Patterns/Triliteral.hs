@@ -1,7 +1,7 @@
 -- |
 --
 -- Module      :  Elixir.Patterns.Triliteral
--- Copyright   :  Otakar Smrz 2005-2016
+-- Copyright   :  Otakar Smrz 2005-2017
 -- License     :  GPL
 --
 -- Maintainer  :  otakar-smrz users.sf.net
@@ -265,6 +265,12 @@ instance Forming PatternT where
 
     verbStems I r
 
+        | words r == ["r", "'", "y"] = [
+
+        (   Nothing,    FaCY,       FuCI,       FY,         FY          )   -- ra'Y
+
+        ]
+
         | (drops . words) r == ["y", "y"] = [
 
         (   Just   (    FaCI,       FuCI,       FCY,        FCY         ),
@@ -293,12 +299,6 @@ instance Forming PatternT where
                         FaCL,       FuCL,       FaCL,       FaCL        ),
         (   Just   (    FaCuL,      FuCiL,      FCuL,       FCaL        ),
                         FaCL,       FuCL,       FuCL,       FaCL        )
-
-        ]
-
-        | words r == ["r", "'", "y"] = [
-
-        (   Nothing,    FaCY,       FuCI,       FY,         FY          )   -- ra'Y
 
         ]
 
@@ -344,8 +344,8 @@ instance Forming PatternT where
 
         (   Nothing,    FaCA,       FuCI,       FCU,        FCY         ),  -- da`A
         (   Nothing,    FaCU,       FuCI,       FCU,        FCY         ),  -- .haluwa
-        (   Nothing,    FaCY,       FuCI,       FCI,        FCY         ),  -- ramY
-        (   Nothing,    FaCY,       FuCI,       FCY,        FCY         ),  -- sa`Y
+        (   Nothing,    FaCY,       FuCI,       FCI,        FCY         ),  -- ramY / 'awY
+        (   Nothing,    FaCY,       FuCI,       FCY,        FCY         ),  -- sa`Y / na'Y
         (   Nothing,    FaCI,       FuCI,       FCY,        FCY         )   -- nasiya
 
         ] }
@@ -386,11 +386,11 @@ instance Forming PatternT where
         (   Nothing,    HACaL,      HUCiL,      FCiL,       FCaL        ),
         (   Just   (    HaFaL,      HuFiL,      FiL,        FaL         ),
                         HaFAL,      HuFIL,      FIL,        FAL         ),
-        (   Nothing,    HaFCY,      HuFCI,      FCI,        FCY         ),
+        (   Nothing,    HaFCY,      HuFCI,      FCI,        FCY         ),  -- 'an'Y
         (   Nothing,    HaFY,       HuFI,       FI,         FY          ),  -- 'arY
         (   Just   (    HaFCaL,     HuFCiL,     FCiL,       FCaL        ),
                         HaFaCL,     HuFiCL,     FiCL,       FaCL        ),
-        (   Nothing,    HACY,       HUCI,       FCI,        FCY         )
+        (   Nothing,    HACY,       HUCI,       FCI,        FCY         )   -- 'AwY
 
         ]
 
@@ -694,14 +694,19 @@ instance Forming PatternT where
 
         ]
 
+        | (takes . takes . words) r == ["'"] = [
+
+        (   HACaL,      MuFCiL,     MuFCaL,     morph   HICAL           ),
+        (   HACY,       MuFCI,      MuFCY,      morph   HICA'           )
+
+        ]
+
         | otherwise = [
 
         (   HaFCaL,     MuFCiL,     MuFCaL,     morph   HiFCAL          ),
-        (   HACaL,      MUCiL,      MUCaL,      morph   HICAL           ),
         (   HaFAL,      MuFIL,      MuFAL,              HiFAL |< aT     ),
         (   HaFCY,      MuFCI,      MuFCY,      morph   HiFCA'          ),
-        (   HaFY,       MuFI,       MuFY,               HiFA' |< aT     ),
-        (   HACY,       MUCI,       MUCY,       morph   HICA'           )
+        (   HaFY,       MuFI,       MuFY,               HiFA' |< aT     )
 
         ]
 
@@ -742,7 +747,7 @@ instance Forming PatternT where
         | (takes . drops . words) r == ["w"] = [
 
         (   InFAL,      MunFAL,     MunFAL,     morph   InFiyAL         ),
-        (   InFaCY,     MunFaCI,    MunFaCY,    morph   InFiCA'         ),
+        (   InFaCY,     MunFaCI,    MunFaCY,    morph   InFiCA'         ),  -- inziwA' z w y
         (   InFaCaL,    MunFaCiL,   MunFaCaL,   morph   InFiCAL         )
 
         ]
@@ -773,8 +778,8 @@ instance Forming PatternT where
 
         | (takes . drops . words) r == ["w"] = [
 
-        (   IFtAL,      MuFtAL,     MuFtAL,     morph   IFtiyAL         ),
-        (   IFtaCY,     MuFtaCI,    MuFtaCY,    morph   IFtiCA'         ),
+        (   IFtAL,      MuFtAL,     MuFtAL,     morph   IFtiyAL         ),  -- istiyA' s w '
+        (   IFtaCY,     MuFtaCI,    MuFtaCY,    morph   IFtiCA'         ),  -- istiwA' s w y
         (   IFtaCaL,    MuFtaCiL,   MuFtaCaL,   morph   IFtiCAL         )
 
         ]

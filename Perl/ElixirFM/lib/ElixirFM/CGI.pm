@@ -154,14 +154,10 @@ sub display_footline ($) {
     my $r;
 
     $r .= $q->p({'style' => 'margin-top: 30px'},
-                "(C) Otakar Smr\x{017E} 2016, Viktor Bielick\x{00FD} 2014, Tim Buckwalter 2002. GNU General Public License",
+                "(C) 2017-2002",
+                $q->a({-href => 'http://github.com/otakar-smrz/'}, "Otakar Smr\x{017E}") . ",",
+                "Viktor Bielick\x{00FD}, Tim Buckwalter. GNU General Public License",
                 $q->a({-href => 'http://www.gnu.org/licenses/'}, "GNU GPL 3") . ".");
-
-    $r .= $q->p("ElixirFM is an", $q->a({-href => 'http://sourceforge.net/projects/elixir-fm/'}, "open-source online"), "project.",
-                "You can contribute to its development with your suggestions!");
-
-    $r .= $q->p("Contact", $q->a({-href => 'http://otakar-smrz.users.sf.net/'}, "otakar-smrz users.sf.net") . ",",
-                "Institute of Formal and Applied Linguistics, Charles University in Prague.");
 
     return $r;
 }
@@ -314,11 +310,10 @@ sub main ($) {
 
     $r .= display_twitter $c;
 
-    $r .= $q->p("ElixirFM is further documented at", $q->a({-href => 'http://github.com/otakar-smrz/elixir-fm/'},
-                "GitHub") . ".",
-                "The multiple scripts of this site are best viewed with", 
-		$q->a({-href => 'http://openfontlibrary.org/en/font/droid-arabic-naskh'}, "Droid Arabic Naskh"), "and",
-		$q->a({-href => 'http://sourceforge.net/projects/dejavu/'}, "DejaVu"), "fonts.");
+    $r .= $q->p("ElixirFM is further documented at", $q->a({-href => 'http://github.com/otakar-smrz/elixir-fm/'}, "GitHub") . ".",
+                "The multiple scripts of this site are best viewed with",
+                $q->a({-href => 'http://openfontlibrary.org/en/font/droid-arabic-naskh'}, "Droid Arabic Naskh"), "and",
+                $q->a({-href => 'http://sourceforge.net/projects/dejavu/'}, "DejaVu"), "fonts.");
 
     $r .= $q->h2($q->a({-href => 'index.fcgi?mode=resolve'}, 'Resolve'));
 
