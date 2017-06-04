@@ -1,7 +1,7 @@
 -- |
 --
 -- Module      :  Elixir.Compose
--- Copyright   :  Otakar Smrz 2005-2013
+-- Copyright   :  Otakar Smrz 2005-2017
 -- License     :  GPL
 --
 -- Maintainer  :  otakar-smrz users.sf.net
@@ -256,18 +256,16 @@ harmony (ParaZero _)    _   = [Nothing]
 harmony (ParaGrph _)    _   = [Nothing]
 
 
-generate :: String -> Lexicon -> Doc
+generate :: [TagsType] -> Lexicon -> Doc
 
-generate x y = doubleline id [ z | let x' = convert x,
-                                   (w, n) <- zip y [1 ..], z <- unwraps (\ (Nest r z) -> [ (list . (:)
+generate x y = doubleline id [ z | (w, n) <- zip y [1 ..], z <- unwraps (\ (Nest r z) -> [ (list . (:)
 
                                     ((list . map text) [show (merge r (morphs e)), show r, (show . show) (morphs e),
                                                         show (reflex e), (show . show) (entity e), show (n, m)])
 
                                     . map (text . show) . process)
 
-                                    (inflect (Lexeme r e) x'') | (e, m) <- zip z [1 ..],
-                                                                 let x'' = restrict (domain e) x', (not . null) x'' ]) w ]
+                                    i | (e, m) <- zip z [1 ..], let i = inflect (Lexeme r e) x, (not . null) i ]) w ]
 
 
 process x = (map (\ (i, x) ->

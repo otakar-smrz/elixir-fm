@@ -183,7 +183,7 @@ elixirResolve o p = interact (unlines . map (encode UTF . decode UCS . show . q 
 
 elixirInflect o p = interact (unlines . map (show . q) . map cols . rows)
 
-    where q x = singleline id [ z | (y, p) <- c (unwords x), let t = lists d p, let u = enumerate y,
+    where q x = singleline id [ z | (y, b) <- c (unwords x), let t = lists d b, let u = enumerate y,
                                     z <- [ f t u s | r <- regroup u, s <- emanate r ] ]
 
           f x u = unwraps (\ (Nest r z) -> pretty [ (show y, inflect (Lexeme r e) x) | (y, e) <- zip u z ])
@@ -197,7 +197,7 @@ elixirInflect o p = interact (unlines . map (show . q) . map cols . rows)
 
 elixirDerive o p = interact (unlines . map (show . q) . rows)
 
-    where q x = singleline id [ z | (y, p) <- c x, let t = lists d p, let u = enumerate y,
+    where q x = singleline id [ z | (y, b) <- c x, let t = lists d b, let u = enumerate y,
                                     z <- [ f t u s | r <- regroup u, s <- emanate r ] ]
 
           f x u = unwraps (\ (Nest r z) -> pretty [ (show y, derive (Lexeme r e) x) | (y, e) <- zip u z ])
@@ -255,6 +255,6 @@ elixirLexicon o p = interact (unlines . map (show . q) . rows)
           c x = [ y | (y, _) <- reads x ] ++ [ clips y | (y, _) <- reads x ]
 
 
-elixirCompose o p = (putDoc . generate e) lexicon
+elixirCompose o p = (putDoc . generate d) lexicon
 
-    where e = if null p then "Q---------" else head p
+    where d = [ z | y <- lists ["Q----------"] p, z <- convert y ]
