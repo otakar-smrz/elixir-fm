@@ -257,4 +257,4 @@ elixirLexicon o p = interact (unlines . map (show . q) . rows)
 
 elixirCompose o p = (putDoc . generate d) lexicon
 
-    where d = [ z | y <- lists ["Q----------"] p, z <- convert y ]
+    where d = [ z | y <- lists ["Q---------", "P[-]--------", "SP--------"] p, z <- convert y ]

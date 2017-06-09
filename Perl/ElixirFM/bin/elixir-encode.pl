@@ -17,19 +17,22 @@ while ($line = <>) {
         $line =~ /^[\t ]+:{1,2}[\t ]+<([^>]+)>/ or                          # elixir resolve
         $line =~ /^[\t ]*[^\t ]+[\t ]+<([^>]+)>[\t ]+[^\t ]+/) {            # elixir-column.pl
 
-        $text = decode "arabtex", $1;
+        $orth = decode "arabtex", $1;
+        $phon = decode "zdmg", $1;
 
         chomp $line;
 
-        $line .= "\t" . (encode "buckwalter", $text);
+        $line .= "\t" . (encode "utf8", $phon);
+
+        $line .= "\t" . (encode "buckwalter", $orth);
 
         $line .= "\t" . (encode "buckwalter", decode "buckwalter",
-                         encode "buckwalter", $text);
+                         encode "buckwalter", $orth);
 
         $line .= "\t" . (encode "utf8", decode "buckwalter",
-                         encode "buckwalter", $text);
+                         encode "buckwalter", $orth);
 
-        $line .= "\t" . (encode "utf8", $text);
+        $line .= "\t" . (encode "utf8", $orth);
 
         $line .= "\n";
     }
