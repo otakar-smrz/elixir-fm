@@ -20,4 +20,4 @@
 
 ## Join us
 
-Since [ElixirFM](http://github.com/otakar-smrz/elixir-fm) is now hosted on [GitHub](http://github.com/otakar-smrz) and [Bitbucket](http://bitbucket.org/otakar-smrz), it becomes yet easier to join the project and contribute to it. We do need new features, applications, interfaces, and documentation. Feel free to [contact us](http://github.com/otakar-smrz/elixir-fm/issues) or clone the project!
+Since [ElixirFM](http://github.com/otakar-smrz/elixir-fm) is now hosted on [GitHub](http://github.com/otakar-smrz), it becomes yet easier to join the project and contribute to it. We do need new features, applications, interfaces, and documentation. Feel free to [contact us](http://github.com/otakar-smrz/elixir-fm/issues) or clone the project!
