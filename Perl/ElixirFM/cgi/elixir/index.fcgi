@@ -4,7 +4,7 @@
 #
 # ElixirFM #####################################################################################
 
-use lib '/home/smrz/share/perl/5.18.2', '/home/smrz/perl5/lib/perl5';
+use lib '/home/smrz/share/perl/5.26.1';
 
 use ElixirFM::CGI;
 
