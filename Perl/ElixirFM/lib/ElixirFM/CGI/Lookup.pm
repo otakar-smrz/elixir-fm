@@ -216,7 +216,7 @@ sub main ($) {
 
 			$q->textfield(  -name       =>  'text',
 					-id         =>  'text',
-					-default    =>  $q->param('text'),
+					-default    =>  scalar $q->param('text'),
 					-accesskey  =>  '4',
 					-size       =>  50,
 					-maxlength  =>  180) ),
@@ -225,7 +225,7 @@ sub main ($) {
 
 			$q->radio_group(-name       =>  'code',
 					-values     =>  [ @enc_list ],
-					-default    =>  $q->param('code'),
+					-default    =>  scalar $q->param('code'),
 					-accesskey  =>  '5',
 					-onchange   =>  "elixirYamli('text')",
 					-labelattributes  =>  { 'ArabTeX'    => {-title => "internal phonology-oriented notation"},
@@ -238,7 +238,7 @@ sub main ($) {
 		    td({-align => 'center'}, $q->button(-name => 'clear',  -value => 'Clear', -onclick => "elixirClear('text')")),
 		    td({-align => 'right'},  $q->submit(-name => 'submit', -value => 'Example')) ) );
 
-    $r .= $q->hidden( -name => $c->mode_param(), -value => $q->param($c->mode_param()) );
+    $r .= $q->hidden( -name => $c->mode_param(), -value => scalar $q->param($c->mode_param()) );
 
     $r .= $q->end_form();
 

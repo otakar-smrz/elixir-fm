@@ -285,7 +285,7 @@ sub main ($) {
 
                         $q->textfield(  -name       =>  'text',
                                         -id         =>  'text',
-                                        -default    =>  $q->param('text'),
+                                        -default    =>  scalar $q->param('text'),
                                         -accesskey  =>  '4',
                                         -size       =>  80,
                                         -maxlength  =>  180) ) ),
@@ -296,7 +296,7 @@ sub main ($) {
                     td({-align => 'center'}, $q->button(-name => 'clear',  -value => 'Clear', -onclick => "elixirClear('text')")),
                     td({-align => 'right'},  $q->submit(-name => 'submit', -value => 'Example')) ) );
 
-    $r .= $q->hidden( -name => $c->mode_param(), -value => $q->param($c->mode_param()) );
+    $r .= $q->hidden( -name => $c->mode_param(), -value => scalar $q->param($c->mode_param()) );
 
     $r .= $q->end_form();
 

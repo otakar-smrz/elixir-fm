@@ -282,7 +282,7 @@ sub main ($) {
 
 			$q->textfield(  -name       =>  'text',
 					-id         =>  'text',
-					-default    =>  $q->param('text'),
+					-default    =>  scalar $q->param('text'),
 					-accesskey  =>  '4',
 					-size       =>  50,
 					-maxlength  =>  180) ),
@@ -291,7 +291,7 @@ sub main ($) {
 
 			$q->radio_group(-name       =>  'code',
 					-values     =>  [ @enc_list ],
-					-default    =>  $q->param('code'),
+					-default    =>  scalar $q->param('code'),
 					-accesskey  =>  '5',
 					-onchange   =>  "elixirYamli('text')",
 					-labelattributes  =>  { 'ArabTeX'    => {-title => "internal phonology-oriented notation"},
@@ -308,7 +308,7 @@ sub main ($) {
 
 			$q->checkbox_group( -name       =>  'quick',
 					    -values     =>  [ 'Tokenized' ],
-					    -default    =>  [ $q->param('quick') ],
+					    -default    =>  [ $q->multi_param('quick') ],
 					    -accesskey  =>  '6',
 					    -labelattributes  =>  { 'Tokenized' => {-title => "consider each input word as one token"} } ) ),
 
@@ -316,11 +316,11 @@ sub main ($) {
 
 			$q->checkbox_group( -name       =>  'fuzzy',
 					    -values     =>  [ 'Fuzzy Notation' ],
-					    -default    =>  [ $q->param('fuzzy') ],
+					    -default    =>  [ $q->multi_param('fuzzy') ],
 					    -accesskey  =>  '7',
 					    -labelattributes  => { 'Fuzzy Notation' => {-title => "less strict resolution of the input"} } ) ) ) );
 
-    $r .= $q->hidden( -name => $c->mode_param(), -value => $q->param($c->mode_param()) );
+    $r .= $q->hidden( -name => $c->mode_param(), -value => scalar $q->param($c->mode_param()) );
 
     $r .= $q->end_form();
 
@@ -334,7 +334,7 @@ sub main ($) {
 
     my $code = exists $enc_hash{$q->param('code')} ? $enc_hash{$q->param('code')} : 'UTF';
 
-    my $text = ElixirFM::normalize $q->param('text'), $code;
+    my $text = ElixirFM::normalize scalar $q->param('text'), $code;
 
     $q->param('text', $text);
 
