@@ -1,7 +1,9 @@
+.DS_Store
+
 # Python build files
 
 Python/**/ElixirFM.egg-info
 Python/**/dist
 Python/**/build
 
-test-example/*
+**/test-example/*
