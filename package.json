@@ -1,0 +1,27 @@
+{
+  "name": "elixir-fm",
+  "version": "1.0.0",
+  "description": "<img align=\"right\" src=\"elixir-fm.png\">",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:build": "docker build -t elixirfm-lite .",
+    "docker:build:full": "docker build -t elixirfm -f ./Dockerfile_build .",
+    "docker:run": "docker run -it -p 3000:3000 --rm -h elixirfm-lite elixirfm-lite ",
+    "docker:run:full": "docker run -it --rm -h elixirfm-full elixirfm",
+    "docker:debug": "docker exec -it elixirfm-lite /bin/bash"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomas-hartman/elixir-fm.git"
+  },
+  "author": "Otakar Smrz, Tomas Hartman",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/tomas-hartman/elixir-fm/issues"
+  },
+  "homepage": "https://github.com/tomas-hartman/elixir-fm#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

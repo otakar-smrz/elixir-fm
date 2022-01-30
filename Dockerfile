@@ -2,9 +2,16 @@
 
 FROM python:2
 
+EXPOSE 3000
+
 WORKDIR /usr/src/app
 
 COPY . .
+
+RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - && \
+    apt-get install -y nodejs
+
+RUN npm install -ci
 
 # Symlink elixir to be able ot run it directly
 RUN cp -s /usr/src/app/Haskell/ElixirFM/build/debian-10/elixir /usr/bin/elixir
@@ -17,6 +24,7 @@ RUN python setup.py install
 # Test
 # RUN python ./test-example/test.py
 
-# CMD [ "echo", "done" ]
-# CMD [ "ls", "-a" ]
-# CMD [ "python", "./test-example/test.py" ]
+# Run the server
+WORKDIR /usr/src/app/
+
+CMD [ "node", "./Nodejs/index.js" ]

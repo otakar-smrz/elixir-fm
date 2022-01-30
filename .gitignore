@@ -1,5 +1,8 @@
 .DS_Store
 
+# Node.js files
+node_modules
+
 # Python build files
 
 Python/**/ElixirFM.egg-info
