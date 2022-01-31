@@ -2,6 +2,8 @@
 
 # Node.js files
 node_modules
+Nodejs/build
+Nodejs/dist
 
 # Python build files
 
