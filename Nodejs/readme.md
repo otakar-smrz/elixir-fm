@@ -48,12 +48,18 @@ GET /resolve/
 
 ```sh
   echo "(1224,[1,5])", 'V[PI]I--3-S--', 'VCJ-------' | elixir inflect
+
+  # NOT WORKING!
+  echo "درس", 'V[PI]I--3-S--', 'VCJ-------' | elixir inflect
 ```
 
 ### Derive
 
 ```sh
   echo "(1224,1)", 'N---------', '[VA]---------' | elixir derive
+
+  # NOT WORKING!
+  echo "درس", 'N---------', '[VA]---------' | elixir derive
 ```
 
 ### Lookup

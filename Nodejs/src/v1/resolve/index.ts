@@ -1,9 +1,10 @@
 import { exec } from "child_process";
 import { RequestHandler } from "express";
 import { sanitize } from "../../utils/helpers";
-import { parseLookup } from "../../utils/parsers/parseLookup";
+import { parseResolve } from "../../utils/parsers/parseResolve";
 
-export const lookup: RequestHandler = (req, res) => {
+
+export const resolve: RequestHandler = (req, res) => {
   const {data} = req.params;
 
   if(!data) {
@@ -16,7 +17,7 @@ export const lookup: RequestHandler = (req, res) => {
 
   const sanitized = sanitize(data);
 
-  exec(`echo "${sanitized}" | elixir lookup`, (error, stdout, stderr) => {
+  exec(`echo "${sanitized}" | elixir resolve`, (error, stdout, stderr) => {
     if (error) {
       console.error(`exec error: ${error}`);
       return;
@@ -27,7 +28,7 @@ export const lookup: RequestHandler = (req, res) => {
 
     res.json({
       status: res.statusCode,
-      result: parseLookup(stdout)
+      result: parseResolve(stdout)
     })
   });
 }

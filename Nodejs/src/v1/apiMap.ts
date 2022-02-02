@@ -5,7 +5,10 @@ export const getApiMap: RequestHandler = (req, res) => {
     "api/v1": {
       "lookup": {
         "GET": "/api/v1/lookup/:data"
-      }
+      },
+      "resolve": {
+        "GET": "/api/v1/resolve/:data"
+      },
     }
   })
 }
