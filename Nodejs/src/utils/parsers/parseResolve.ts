@@ -1,15 +1,15 @@
+import { ResolveEntity, ResolveRes } from "../../types";
 import { convertToObject } from "../helpers";
 
-const keys = ["_", "transcription", "tag", "_transcription", "_form", "root", "form", "lemma", "_2", "meaning"];
+const keys: (keyof ResolveEntity)[] = ["_", "transcription", "tag", "_transcription", "_form", "root", "form", "lemma", "_2", "meaning"];
 
-export const parseResolve = (data: string) => {
+export const parseResolve = (data: string): ResolveRes => {
   const rows = data.split("\n");
   const entries = rows.map(item => item.split("\t"));
-  
-  const result: Record<string, Record<string, any>> = {};
-
   const cleanEntries = entries.filter(entry => entry.length > 1);
 
+  // const result: Record<string, Record<string, any>> = {};
+  const result: ResolveRes = {};
   let currentGroup = "";
 
   while(cleanEntries.length > 0) {
@@ -21,7 +21,7 @@ export const parseResolve = (data: string) => {
     }
 
     if(current) {
-      const output = convertToObject(keys, current);
+      const output: ResolveEntity = convertToObject<ResolveEntity>(keys, current);
       result[currentGroup].push(output);
     }
   }

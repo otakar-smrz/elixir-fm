@@ -1,7 +1,8 @@
+import { LookupEntity, LookupRes } from "../../types";
 import { convertToObject } from "../helpers";
 
-export const parseLookup = (output: string) => {
-  const keys = ["_1", "_2", "tag", "transcription", "root", "form", "meaning", "stem"];
+export const parseLookup = (output: string): LookupRes => {
+  const keys: (keyof LookupEntity)[] = ["_1", "_2", "tag", "transcription", "root", "form", "meaning", "stem"];
 
   const indexOfEntry = output.indexOf("\t");
 
@@ -9,13 +10,13 @@ export const parseLookup = (output: string) => {
   const string = output.substring(indexOfEntry);
   const entries = string.split("\n");
 
-  const medium: any[] = [];
+  const medium: LookupEntity[] = [];
 
   entries.forEach((entry, i) => {
     let split: string | string[] = entry.split("\t");
     split = split.slice(1);
 
-    const object = convertToObject(keys, split);
+    const object = convertToObject<LookupEntity>(keys, split);
     const { length } = split;
 
     // Main entries

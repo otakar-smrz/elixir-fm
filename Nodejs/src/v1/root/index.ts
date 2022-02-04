@@ -1,10 +1,10 @@
 import { exec } from "child_process";
 import { RequestHandler } from "express";
+import { LookupRes } from "../../types";
 import { sanitize } from "../../utils/helpers";
-import { parseResolve } from "../../utils/parsers/parseResolve";
+import { parseLookup } from "../../utils/parsers/parseLookup";
 
-
-export const resolve: RequestHandler = (req, res) => {
+export const root: RequestHandler = (req, res) => {
   const {query} = req.params;
 
   if(!query) {
@@ -17,18 +17,22 @@ export const resolve: RequestHandler = (req, res) => {
 
   const sanitized = sanitize(query);
 
-  exec(`echo "${sanitized}" | elixir resolve`, (error, stdout, stderr) => {
+  exec(`echo "${sanitized}" | elixir lookup`, (error, stdout, stderr) => {
     if (error) {
       console.error(`exec error: ${error}`);
       return;
     }
 
-    // console.log(`stdout: ${stdout}`);
     if(stderr) console.error(`stderr: ${stderr}`);
+
+    const lookupRes: LookupRes = parseLookup(stdout);
+
+    const roots = lookupRes.output.map((item) => item.root);
+    const uniqueRoots = Array.from(new Set(roots));
 
     res.json({
       status: res.statusCode,
-      result: parseResolve(stdout)
+      result: uniqueRoots
     })
   });
 }

@@ -4,9 +4,9 @@ import { sanitize } from "../../utils/helpers";
 import { parseLookup } from "../../utils/parsers/parseLookup";
 
 export const lookup: RequestHandler = (req, res) => {
-  const {data} = req.params;
+  const {query} = req.params;
 
-  if(!data) {
+  if(!query) {
     res.sendStatus(404)
     res.json({
       status: res.statusCode,
@@ -14,7 +14,7 @@ export const lookup: RequestHandler = (req, res) => {
     })
   }
 
-  const sanitized = sanitize(data);
+  const sanitized = sanitize(query);
 
   exec(`echo "${sanitized}" | elixir lookup`, (error, stdout, stderr) => {
     if (error) {
