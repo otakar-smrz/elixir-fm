@@ -1,9 +1,14 @@
 # API Readme
 
+Unlike other implementations, this was created with the intent to provide
+ElixirFM's functionality via REST API. Its current scope is focused on two
+modules in particular - lookup and resolve, which serve as the proof of concept
+of Elixir's API server.
+
 For development run each command in separate terminal:
 
 ```sh
-cd ./Nodejs/
+npm install # installs packages
 
 npm run watch # compiles typescript
 npm run start # runs server locally
@@ -28,8 +33,8 @@ npm run docker:build:full && docker run full
 Note that the latter option is quite time and resource consuming (ca 30 minutes).
 The final image is also quite sizable - 4.3GB compared to 1GB if Elixir binaries
 are built in advance and then copied to the image. Building images in docker on
-the other hand ensures the best compatibility, should for example the version of
-the docker OS change, and the best level of security.
+the other hand ensures the best compatibility, if for example the version of
+the docker OS changes, and the best level of security.
 
 ## Example shell commands
 

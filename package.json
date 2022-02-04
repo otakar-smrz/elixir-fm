@@ -2,16 +2,16 @@
   "name": "elixir-fm",
   "version": "1.0.0",
   "description": "<img align=\"right\" src=\"elixir-fm.png\">",
-  "main": "Nodejs/dist/index.js",
+  "main": "Nodejs/build/index.js",
   "scripts": {
     "start": "nodemon Nodejs/dist/index.js",
     "watch": "tsc --watch --outDir ./Nodejs/dist",
     "build": "tsc --outDir ./Nodejs/build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "docker:build": "docker build -t elixirfm-lite .",
-    "docker:build:full": "docker build -t elixirfm -f ./Dockerfile_build .",
-    "docker:run": "docker run -it -p 3000:3000 --rm -h elixirfm-lite elixirfm-lite ",
-    "docker:run:full": "docker run -it --rm -h elixirfm-full elixirfm",
+    "docker:build:full": "docker build -t elixirfm -f ./build.dockerfile .",
+    "docker:run": "docker run -it -p 3030:3030 --rm -h elixirfm-lite elixirfm-lite ",
+    "docker:run:full": "docker run -it -p 3030:3030 --rm -h elixirfm-full elixirfm",
     "docker:debug": "docker exec -it elixirfm-lite /bin/bash"
   },
   "repository": {

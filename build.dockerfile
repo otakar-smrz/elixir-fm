@@ -3,35 +3,26 @@
 # takes long time (approx 20min) to build and the final image takes considerable amount of space 
 # (about 4.5GB).
 
-FROM python:2
+FROM haskell:8
 
 WORKDIR /usr/src/app
 
 COPY . .
 
-# Install Haskell and build ElixirFM
-## Install Haskell
-RUN apt-get update && apt-get -y install cabal-install
+# Install node and node packeges
+RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - && \
+    apt-get install -y nodejs
+RUN npm install -ci
 
-## Build ElixirFM
+# Build ElixirFM
 WORKDIR /usr/src/app/Haskell/ElixirFM
 
 RUN cabal update
 RUN cabal install
 
-## Create symlinks to be able to directly run "elixir"
-RUN cp -s /root/.cabal/bin/elixir /usr/bin/elixir \
-    cp -s /root/.cabal/bin/encode /usr/bin/encode \
-    cp -s /root/.cabal/bin/decode /usr/bin/decode
+# Build the server
+WORKDIR /usr/src/app/
+RUN npm run build
 
-# Install python elixir
-WORKDIR /usr/src/app/Python/ElixirFM
-
-RUN python setup.py install
-
-# Test
-# RUN python ./test-example/test.py
-
-# CMD [ "echo", "done" ]
-# CMD [ "ls", "-a" ]
-# CMD [ "python", "./test-example/test.py" ]
+# Run the server
+CMD [ "node", "./Nodejs/build/index.js" ]
