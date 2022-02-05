@@ -1,10 +1,10 @@
 export interface LookupEntity {
-  _1: string,
-  _2: string,
+  _ref1: string,
+  _ref2: string,
   tag: string,
   transcription: string,
   root: string,
-  form: string,
+  schema: string,
   meaning: string[],
   stem: string,
   variants: Omit<LookupEntity, "meaning" | "stem" | "variant">[]
@@ -19,15 +19,20 @@ export interface ResolveEntity {
   _: string;
   transcription: string,
   tag: string,
-  _transcription: string,
-  _form: string,
+  inflected: string,
+  schema: string,
   root: string,
-  form: string,
+  shortSchema: string,
   lemma: string,
-  _2: string,
+  _ref: string,
   meaning: string[],
 }
 
 export interface ResolveRes {
   [key: string]: ResolveEntity[]
+}
+
+export interface EntityResponse<T> {
+  token: string;
+  variants: T[]
 }

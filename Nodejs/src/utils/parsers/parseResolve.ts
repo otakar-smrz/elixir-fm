@@ -1,7 +1,7 @@
 import { ResolveEntity, ResolveRes } from "../../types";
 import { convertToObject } from "../helpers";
 
-const keys: (keyof ResolveEntity)[] = ["_", "transcription", "tag", "_transcription", "_form", "root", "form", "lemma", "_2", "meaning"];
+const keys: (keyof ResolveEntity)[] = ["_", "transcription", "tag", "inflected", "schema", "root", "shortSchema", "lemma", "_ref", "meaning"];
 
 export const parseResolve = (data: string): ResolveRes => {
   const rows = data.split("\n");
