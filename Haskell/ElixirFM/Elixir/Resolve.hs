@@ -348,7 +348,7 @@ instance Resolve String where
                                 let x = (expand . domain) e,
                                 let l = Lexeme r e,
 
-                                z <- (Map.foldWithKey (\ k x y -> (k, [foldl (flip ((:) . wrap)) [] x]) : y) []
+                                z <- (Map.foldrWithKey (\ k x y -> (k, [foldl (flip ((:) . wrap)) [] x]) : y) []
 
                                   -- (Map.foldWithKey (\ k x y -> (k, [wrap (Tokens (reverse x))]) : y) []
 
@@ -618,7 +618,7 @@ instance Resolve [UPoint] where
                                 let x = (expand . domain) e,
                                 let l = Lexeme r e,
 
-                                z <- (Map.foldWithKey (\ k x y -> (k, [foldl (flip ((:) . wrap)) [] x]) : y) []
+                                z <- (Map.foldrWithKey (\ k x y -> (k, [foldl (flip ((:) . wrap)) [] x]) : y) []
 
                                   -- (Map.foldWithKey (\ k x y -> (k, [wrap (Tokens (reverse x))]) : y) []
 
