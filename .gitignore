@@ -1,5 +1,8 @@
 .DS_Store
 
+# Haskell builds
+Haskell/**/build
+
 # Node.js files
 node_modules
 Nodejs/build

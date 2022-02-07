@@ -2,7 +2,16 @@ import { LookupEntity, LookupRes } from "../../types";
 import { convertToObject } from "../helpers";
 
 export const parseLookup = (output: string): LookupRes => {
-  const keys: (keyof LookupEntity)[] = ["_ref1", "_ref2", "tag", "transcription", "root", "schema", "meaning", "stem"];
+  const keys: (keyof LookupEntity)[] = [
+    "_ref1",
+    "_ref2",
+    "tag",
+    "transcription",
+    "root",
+    "schema",
+    "meaning",
+    "stem"
+  ];
 
   const indexOfEntry = output.indexOf("\t");
 

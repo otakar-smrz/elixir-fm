@@ -1,3 +1,7 @@
+/**
+ * @todo Better property naming!
+ */
+
 export interface LookupEntity {
   _ref1: string,
   _ref2: string,

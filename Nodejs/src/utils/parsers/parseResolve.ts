@@ -1,14 +1,24 @@
 import { ResolveEntity, ResolveRes } from "../../types";
 import { convertToObject } from "../helpers";
 
-const keys: (keyof ResolveEntity)[] = ["_", "transcription", "tag", "inflected", "schema", "root", "shortSchema", "lemma", "_ref", "meaning"];
-
 export const parseResolve = (data: string): ResolveRes => {
+  const keys: (keyof ResolveEntity)[] = [
+    "_",
+    "transcription",
+    "tag",
+    "inflected",
+    "schema",
+    "root",
+    "shortSchema",
+    "lemma",
+    "_ref",
+    "meaning"
+  ];
+  
   const rows = data.split("\n");
   const entries = rows.map(item => item.split("\t"));
   const cleanEntries = entries.filter(entry => entry.length > 1);
 
-  // const result: Record<string, Record<string, any>> = {};
   const result: ResolveRes = {};
   let currentGroup = "";
 
@@ -25,8 +35,7 @@ export const parseResolve = (data: string): ResolveRes => {
       result[currentGroup].push(output);
     }
   }
-  
-  // console.log(result);
+
   return result;
 }
 
