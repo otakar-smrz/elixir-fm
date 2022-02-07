@@ -1,0 +1,17 @@
+.DS_Store
+
+# Haskell builds
+Haskell/**/build
+
+# Node.js files
+node_modules
+Nodejs/build
+Nodejs/dist
+
+# Python build files
+
+Python/**/ElixirFM.egg-info
+Python/**/dist
+Python/**/build
+
+**/test-example/*

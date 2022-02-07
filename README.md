@@ -21,3 +21,50 @@
 ## Join us
 
 Since [ElixirFM](http://github.com/otakar-smrz/elixir-fm) is now hosted on [GitHub](http://github.com/otakar-smrz), it becomes yet easier to join the project and contribute to it. We do need new features, applications, interfaces, and documentation. Feel free to [contact us](http://github.com/otakar-smrz/elixir-fm/issues) or clone the project!
+
+## Install and build
+<!-- This was tested on linux (debian 10) and macOS.  -->
+
+Steps to do:
+
+1. install haskell (ghc and cabal) and build ElixirFM
+2. install python or perl distributions (perl might not require haskell?)
+3. run your code
+
+## Install flow (linux/docker)
+
+```sh
+# Install haskell
+apt-get update
+apt-get -y install cabal-install # todo optimalize!
+
+cd Haskell/ElixirFM/
+
+cabal update
+cabal install # build and install elixir and other binaries
+
+# create symlinks
+
+cp -s /root/.cabal/bin/elixir /usr/bin/elixir
+cp -s /root/.cabal/bin/encode /usr/bin/encode
+cp -s /root/.cabal/bin/decode /usr/bin/decode
+```
+
+### Docker build commands
+
+```sh
+cd project/root
+docker build -t elixirfm .
+
+docker run -dit elixirFM
+
+docker ps
+
+# runn bash inside docker (native docker ssh alternative)
+docker exec -it __container-name__ /bin/bash 
+```
+
+### Perl
+
+// installs packages
+cpan Encode::Arabic
