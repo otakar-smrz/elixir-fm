@@ -5,14 +5,14 @@ import { sanitize } from "../../utils/helpers";
 import { parseLookup } from "../../utils/parsers/parseLookup";
 
 export const root: RequestHandler = (req, res) => {
-  const {query} = req.params;
+  const { query } = req.params;
 
-  if(!query) {
-    res.sendStatus(404)
+  if (!query) {
+    res.sendStatus(404);
     res.json({
       status: res.statusCode,
-      reason: res.statusMessage
-    })
+      reason: res.statusMessage,
+    });
   }
 
   const sanitized = sanitize(query);
@@ -23,16 +23,16 @@ export const root: RequestHandler = (req, res) => {
       return;
     }
 
-    if(stderr) console.error(`stderr: ${stderr}`);
+    if (stderr) console.error(`stderr: ${stderr}`);
 
-    const lookupRes: LookupRes = parseLookup(stdout);
+    const lookupRes: LookupRes = parseLookup(stdout, null);
 
     const roots = lookupRes.output.map((item) => item.root);
     const uniqueRoots = Array.from(new Set(roots));
 
     res.json({
       status: res.statusCode,
-      result: uniqueRoots
-    })
+      result: uniqueRoots,
+    });
   });
-}
+};

@@ -4,14 +4,14 @@ import { sanitize } from "../../utils/helpers";
 import { parseLookup } from "../../utils/parsers/parseLookup";
 
 export const lookup: RequestHandler = (req, res) => {
-  const {query} = req.params;
-
-  if(!query) {
-    res.sendStatus(404)
+  const { query } = req.params;
+  const { wordType } = req.query;
+  if (!query) {
+    res.sendStatus(404);
     res.json({
       status: res.statusCode,
-      reason: res.statusMessage
-    })
+      reason: res.statusMessage,
+    });
   }
 
   const sanitized = sanitize(query);
@@ -22,12 +22,11 @@ export const lookup: RequestHandler = (req, res) => {
       return;
     }
 
-    // console.log(`stdout: ${stdout}`);
-    if(stderr) console.error(`stderr: ${stderr}`);
+    if (stderr) console.error(`stderr: ${stderr}`);
 
     res.json({
       status: res.statusCode,
-      result: parseLookup(stdout)
-    })
+      result: parseLookup(stdout, wordType),
+    });
   });
-}
+};
