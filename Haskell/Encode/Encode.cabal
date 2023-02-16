@@ -1,0 +1,161 @@
+name:               Encode
+version:            1.3.9
+license:            GPL
+license-file:       LICENSE
+extra-source-files: README.md, README.ipynb
+copyright:          2016
+author:             Otakar Smrz
+maintainer:         otakar-smrz users.sf.net
+homepage:           http://otakar-smrz.users.sf.net/
+package-url:        http://github.com/otakar-smrz/encode-arabic/
+category:           Text, Codec
+build-depends:      Cabal, base < 5.0, mtl, containers
+build-type:         Simple
+synopsis:           Encoding character data
+description:        The "Encode" library provides a unified interface for converting strings
+                    from different encodings into a common representation, and vice versa.
+                    This representation is isomorphic to the Unicode character set, and the
+                    encodings can be both standard and user-defined. For this purpose, the
+                    "Encode" module defines the 'Encode.UPoint' data type and the
+                    'Encode.Encoding' type class with the 'encode' and 'decode' methods.
+                    .
+                    The "Encode" library is being proposed as a Haskell analogy to the
+                    /Encode/ extension in Perl, <http://search.cpan.org/dist/Encode/>.
+                    .
+                    The "Main.Encode" and "Main.Decode" programs mimick the function calls
+                    to 'encode' and 'decode', respectively, with the following usage:
+                    .
+                    >    decode ArabTeX < decode.d | encode Buckwalter > encode.d
+                    >
+                    >    decode MacArabic < data.MacArabic > data.UTF8
+                    >
+                    >    encode WinArabic < data.UTF8 > data.WinArabic
+                    .
+                    The installation instructions are given in "INSTALL".
+                    For the list of supported encoding schemes, please refer
+                    to "Encode" and the source files of the programs. With the
+                    executables, the naming of encodings is /case-insensitive/
+                    and some further options are allowed:
+                    .
+                    >  encode|decode [--OPTIONS] [ENCODING]
+                    >    -h       --help         show usage information
+                    >    -l       --lines        use line-oriented mode
+                    >    -p text  --prefix=text  prefix input with text
+                    >    -s text  --suffix=text  suffix input with text
+                    >    -v       --version      show program's version
+                    .
+                    The "PureFP" library is an edited excerpt from the /Functional Parsing/
+                    library developed by Peter Ljungl&#246;f in his licenciate thesis
+                    /Pure Functional Parsing &#150; an advanced tutorial/, G&#246;teborg
+                    University and Chalmers University of Technology, April 2002,
+                    <http://code.google.com/p/haskell-functional-parsing/>.
+                    .
+                    "Encode" "PureFP"
+exposed-modules:    Encode,
+                        Encode.Arabic,
+                            Encode.Arabic.ArabTeX,
+                                Encode.Arabic.ArabTeX.ZDMG,
+                            Encode.Arabic.Buckwalter,
+                            Encode.Arabic.Parkinson,
+                            Encode.Arabic.Habash,
+                            Encode.Arabic.Byte,
+                        Encode.Extend,
+                        Encode.ExPlus,
+                        Encode.Mapper,
+                        Encode.Unicode,
+                            Encode.Unicode.UTF8,
+                        Encode.Version,
+                    PureFP,
+                        PureFP.OrdMap,
+                        PureFP.OrdSet,
+                        PureFP.Parsers,
+                            PureFP.Parsers.AmbExTrie,
+                            PureFP.Parsers.AmbTrie,
+                            PureFP.Parsers.ExTrie,
+                            PureFP.Parsers.PairTrie,
+                            PureFP.Parsers.Parser,
+                            PureFP.Parsers.Standard,
+                            PureFP.Parsers.Stream,
+                            PureFP.Parsers.Trie
+extensions:         MultiParamTypeClasses,
+                    FunctionalDependencies,
+                    ExistentialQuantification,
+                    PolymorphicComponents,
+                    TypeSynonymInstances,
+                    FlexibleInstances,
+                    FlexibleContexts
+hugs-options:       -98 +o +u -h96M
+
+executable:         encode
+main-is:            Main/Encode.hs
+other-modules:      Encode,
+                        Encode.Arabic,
+                            Encode.Arabic.ArabTeX,
+                                Encode.Arabic.ArabTeX.ZDMG,
+                            Encode.Arabic.Buckwalter,
+                            Encode.Arabic.Parkinson,
+                            Encode.Arabic.Habash,
+                            Encode.Arabic.Byte,
+                        Encode.Extend,
+                        Encode.ExPlus,
+                        Encode.Mapper,
+                        Encode.Unicode,
+                            Encode.Unicode.UTF8,
+                        Encode.Version,
+                    PureFP,
+                        PureFP.OrdMap,
+                        PureFP.OrdSet,
+                        PureFP.Parsers,
+                            PureFP.Parsers.AmbExTrie,
+                            PureFP.Parsers.AmbTrie,
+                            PureFP.Parsers.ExTrie,
+                            PureFP.Parsers.PairTrie,
+                            PureFP.Parsers.Parser,
+                            PureFP.Parsers.Standard,
+                            PureFP.Parsers.Stream,
+                            PureFP.Parsers.Trie
+extensions:         MultiParamTypeClasses,
+                    FunctionalDependencies,
+                    ExistentialQuantification,
+                    PolymorphicComponents,
+                    TypeSynonymInstances,
+                    FlexibleInstances,
+                    FlexibleContexts
+hugs-options:       -98 +o +u -h96M
+
+executable:         decode
+main-is:            Main/Decode.hs
+other-modules:      Encode,
+                        Encode.Arabic,
+                            Encode.Arabic.ArabTeX,
+                                Encode.Arabic.ArabTeX.ZDMG,
+                            Encode.Arabic.Buckwalter,
+                            Encode.Arabic.Parkinson,
+                            Encode.Arabic.Habash,
+                            Encode.Arabic.Byte,
+                        Encode.Extend,
+                        Encode.ExPlus,
+                        Encode.Mapper,
+                        Encode.Unicode,
+                            Encode.Unicode.UTF8,
+                        Encode.Version,
+                    PureFP,
+                        PureFP.OrdMap,
+                        PureFP.OrdSet,
+                        PureFP.Parsers,
+                            PureFP.Parsers.AmbExTrie,
+                            PureFP.Parsers.AmbTrie,
+                            PureFP.Parsers.ExTrie,
+                            PureFP.Parsers.PairTrie,
+                            PureFP.Parsers.Parser,
+                            PureFP.Parsers.Standard,
+                            PureFP.Parsers.Stream,
+                            PureFP.Parsers.Trie
+extensions:         MultiParamTypeClasses,
+                    FunctionalDependencies,
+                    ExistentialQuantification,
+                    PolymorphicComponents,
+                    TypeSynonymInstances,
+                    FlexibleInstances,
+                    FlexibleContexts
+hugs-options:       -98 +o +u -h96M

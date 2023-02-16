@@ -14,6 +14,12 @@ RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get install -y nodejs
 RUN npm install -ci
 
+# Build Encode
+WORKDIR /usr/src/app/Haskell/Encode
+
+RUN cabal update
+RUN cabal install
+
 # Build ElixirFM
 WORKDIR /usr/src/app/Haskell/ElixirFM
 
