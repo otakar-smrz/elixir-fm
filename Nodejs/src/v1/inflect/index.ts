@@ -111,7 +111,7 @@ function buildSiwarTypeMap(code: String, gender: any) {
     wordFormsData.numberWordForm =
       array[7] === "S" ? "1" : array[7] === "D" ? "2" : "3";
     wordFormsData.voice = array[3] === "P" ? "p" : "a";
-    wordFormsData.aspect = array[1];
+    wordFormsData.aspect = array[1] === "I" ? "S" : array[1];
     wordFormsData.person = array[5];
   } else if (array[0] === "A") {
     // TO Do
