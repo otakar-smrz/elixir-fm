@@ -30,15 +30,20 @@ export const inflect: RequestHandler = (req, res) => {
         decoded: item[2].trim(),
       };
     });
+
+    const toBeDocodedString = results.map((x) => x.decoded).join(" ");
+
+    const decodeCommandString = toBeDocodedString.replace(/`/g, "\\`");
+
     exec(
-      `echo ${results.map((x) => x.decoded).join(" ")} | decode tex `,
+      `echo ${decodeCommandString} | decode tex `,
       (error, stdout, stderr) => {
         if (error) {
           console.error(`exec inflect error: ${error}`);
           return;
         }
         if (stderr) console.error(`stderr: ${stderr}`);
-        const arabic_trans = stdout.split(" ");
+        const arabic_trans = stdout.replace(/\\/g, "").split(" ");
 
         results = results.map((item, i) => {
           item.decoded = arabic_trans[i].trim();
