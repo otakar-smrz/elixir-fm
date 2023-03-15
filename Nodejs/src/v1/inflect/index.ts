@@ -13,7 +13,7 @@ export const inflect: RequestHandler = (req, res) => {
     });
   }
 
-  exec(`echo "${query}" | elixir inflect `, (error, stdout, stderr) => {
+  exec(`echo "${query}" | elixir inflect`, (error, stdout, stderr) => {
     if (error) {
       console.error(`exec inflect error: ${error}`);
       return;
@@ -24,12 +24,18 @@ export const inflect: RequestHandler = (req, res) => {
     const entries = rows.map((item) => item.split("\t"));
     const cleanEntries = entries.filter((entry) => entry.length > 1);
 
-    let results = cleanEntries.map((item) => {
-      return {
-        type: buildSiwarTypeMap(item[1], gender),
-        decoded: item[2].trim(),
-      };
-    });
+    let results = cleanEntries
+      .filter(
+        (item) =>
+          item[1].split("")[1] !== "I" ||
+          (item[1].split("")[1] === "I" && item[1].split("")[2] === "I")
+      )
+      .map((item) => {
+        return {
+          type: buildSiwarTypeMap(item[1], gender),
+          decoded: item[2].trim(),
+        };
+      });
 
     const toBeDocodedString = results.map((x) => x.decoded).join(" ");
 
